@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muscle Guard — The GLP-1 companion built around muscle preservation</title>
+<meta name="description" content="Track your GLP-1 journey and protect your muscle. Built for Ozempic, Wegovy, Mounjaro, Zepbound, Rybelsus, Saxenda and compounded semaglutide / tirzepatide. AI plate scan, doctor PDF, body composition, 75 milestones.">
+<script>
+(function() {
+  try {
+    var lang = (navigator.language || navigator.userLanguage || 'en-ZA').toLowerCase();
+    var region = 'za';
+    if (lang === 'en-us' || lang === 'en-ca' || lang.indexOf('en-us') === 0 || lang.indexOf('en-ca') === 0) {
+      region = 'us';
+    } else if (lang.indexOf('de') === 0 || lang.indexOf('fr') === 0 || lang.indexOf('es') === 0 ||
+               lang.indexOf('it') === 0 || lang.indexOf('nl') === 0 || lang.indexOf('pt') === 0 ||
+               lang.indexOf('pl') === 0 || lang.indexOf('sv') === 0 || lang.indexOf('da') === 0 ||
+               lang.indexOf('en-gb') === 0 || lang.indexOf('en-ie') === 0) {
+      region = 'eu';
+    }
+    document.documentElement.setAttribute('data-region', region);
+  } catch (e) { document.documentElement.setAttribute('data-region', 'za'); }
+})();
+</script>
+<link rel="canonical" href="https://muscleguardglp.com/">
+
+<meta property="og:title" content="Muscle Guard — The GLP-1 companion built around muscle preservation">
+<meta property="og:description" content="Track your GLP-1 journey and protect your muscle. Built for Ozempic, Wegovy, Mounjaro, Zepbound, Rybelsus, Saxenda and compounded semaglutide / tirzepatide. AI plate scan, doctor PDF, body composition, 75 milestones.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://muscleguardglp.com/">
+<meta property="og:image" content="https://muscleguardglp.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muscle Guard — The GLP-1 companion built around muscle preservation">
+<meta name="twitter:description" content="Track your GLP-1 journey and protect your muscle. Built for Ozempic, Wegovy, Mounjaro, Zepbound, Rybelsus, Saxenda and compounded semaglutide / tirzepatide. AI plate scan, doctor PDF, body composition, 75 milestones.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Muscle Guard",
+  "legalName": "Brand Expert (Pty) Ltd",
+  "url": "https://muscleguardglp.com",
+  "logo": "https://muscleguardglp.com/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Johannesburg",
+    "addressCountry": "ZA"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "support@muscleguardglp.com",
+    "contactType": "customer support"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Muscle Guard",
+  "operatingSystem": "iOS, ANDROID",
+  "applicationCategory": "HealthApplication",
+  "description": "A GLP-1 companion app built around muscle preservation. Tracks injections, plate-scans meals with AI, generates a doctor report, monitors body composition, and helps users on Ozempic, Wegovy, Mounjaro, Zepbound, Rybelsus, Saxenda, and compounded semaglutide and tirzepatide protect their lean mass.",
+  "offers": [
+    { "@type": "Offer", "name": "Free",        "price": "0",  "priceCurrency": "ZAR" },
+    { "@type": "Offer", "name": "Pro Monthly", "price": "99", "priceCurrency": "ZAR" },
+    { "@type": "Offer", "name": "Pro Annual",  "price": "899","priceCurrency": "ZAR" },
+    { "@type": "Offer", "name": "Pro Monthly (US)",  "price": "5.99",  "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Pro Annual (US)",   "price": "59.99", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Pro Monthly (EU)",  "price": "5.99",  "priceCurrency": "EUR" },
+    { "@type": "Offer", "name": "Pro Annual (EU)",   "price": "59.99", "priceCurrency": "EUR" },
+    { "@type": "Offer", "name": "Pro Monthly (UK)",  "price": "4.99",  "priceCurrency": "GBP" },
+    { "@type": "Offer", "name": "Pro Annual (UK)",   "price": "49.99", "priceCurrency": "GBP" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Muscle Guard a medical device?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Muscle Guard is a self-tracking companion app for people on GLP-1 medications. It is not a medical device and does not provide medical advice. Always consult your prescriber for medical decisions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which GLP-1 medications does Muscle Guard support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Muscle Guard supports Ozempic and Wegovy (semaglutide), Mounjaro and Zepbound (tirzepatide), Rybelsus (oral semaglutide), Saxenda (liraglutide), and compounded semaglutide and tirzepatide. The app knows the standard titration schedule for each."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does muscle preservation matter on a GLP-1?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GLP-1 medications suppress appetite so effectively that many users enter a severe calorie and protein deficit. Muscle is built from protein, so a sustained deficit can lead to loss of lean mass. Resistance training plus 1.2 to 1.6 g/kg/day of protein helps preserve muscle while you lose fat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Muscle Guard cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Muscle Guard Free is free forever. Muscle Guard Pro is R99 per month or R899 per year (about USD 6 / month or EUR 6 / month in equivalent regions), with a 7-day free trial. No card needed to start."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work with my doctor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Doctor PDF export produces a one-page, branded report a prescriber can read in 60 seconds \u2014 injections logged, side effects flagged, weight and body composition trend, and the Muscle Guard Score. Hand it to them at your next consult."
+      }
+    }
+  ]
+}
+</script>
+<!-- ───────────────────────────────────────────────────────────
+     Analytics placeholder
+     Drop in the snippet for Plausible or Fathom when ready.
+     Privacy-friendly, no cookie banner required.
+     ──────────────────────────────────────────────────────────
+     Plausible:
+     <script defer data-domain="muscleguardglp.com" src="https://plausible.io/js/script.js"></script>
+     Fathom:
+     <script src="https://cdn.usefathom.com/script.js" data-site="YOUR_SITE_ID" defer></script>
+─────────────────────────────────────────────────────────── -->
+</head>
+<body>
+<!-- Dismissible regional banner — appears for non-default regions -->
+<div class="region-banner" data-r="us" hidden>
+  <div class="wrap">
+    <span>Looks like you're in the United States — see our <a href="/regions/us.html">US page</a> for USD pricing, body composition tracking, and insurance context.</span>
+    <button class="region-banner-close" aria-label="Dismiss" onclick="this.parentElement.parentElement.hidden=true; try{sessionStorage.setItem('mg-banner-dismissed','1')}catch(e){}">×</button>
+  </div>
+</div>
+<div class="region-banner" data-r="eu" hidden>
+  <div class="wrap">
+    <span>Looks like you're in Europe — see our <a href="/regions/eu.html">EU page</a> for EUR pricing, GDPR-native architecture, and oral semaglutide context.</span>
+    <button class="region-banner-close" aria-label="Dismiss" onclick="this.parentElement.parentElement.hidden=true; try{sessionStorage.setItem('mg-banner-dismissed','1')}catch(e){}">×</button>
+  </div>
+</div>
+<header class="site-header">
+<div class="wrap">
+<a class="brand-mark" href="/"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M16 3 L27 7 V16 C27 22.6 22.6 27.6 16 30 C9.4 27.6 5 22.6 5 16 V7 Z"
+fill="none" stroke="#0F7B6C" stroke-width="2.2" stroke-linejoin="round"/>
+<path d="M11 16.5 L14.5 20 L21 13" fill="none" stroke="#0F7B6C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span><span class="brand-wordmark">MUSCLE GUARD</span><br><span class="brand-tag">GLP-1 Companion</span></span></a>
+<button class="mobile-toggle" aria-label="Menu" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+<nav class="nav">
+<a href="/muscle-loss-on-glp1.html">Muscle preservation</a>
+<a href="/guides/">Guides</a>
+<a href="/for-doctors.html">For doctors</a>
+<a href="/faq.html">FAQ</a>
+<a href="/#pricing">Pricing</a>
+<a class="nav-cta" href="/#download">Download</a>
+</nav>
+</div>
+</header>
+<section class="hero">
+<div class="wrap">
+<div class="hero-grid">
+<div>
+<h1>Track your GLP-1 journey. <span class="accent">Protect your muscle.</span></h1>
+<!-- Sub-headline — region-aware. Same positioning, different emphasis per persona. -->
+<p class="lede" data-r="za">GLP-1 medications burn fat. They can also burn muscle. Muscle Guard is built in Johannesburg, around preserving your lean mass while you lose weight — across every GLP-1 South Africans actually take, including compounded semaglutide and tirzepatide.</p>
+<p class="lede" data-r="us">GLP-1 medications burn fat. They can also burn muscle — and the lifting community has been saying so for two years. Muscle Guard is built around the muscle-preservation playbook you already know: protein adherence, resistance training, body composition, and the Doctor PDF that turns your data into something a prescriber will actually use.</p>
+<p class="lede" data-r="eu">GLP-1 medications burn fat. They can also burn muscle. Muscle Guard is the companion app built around preserving your lean mass — quietly, privately, GDPR-native by architecture, with EU-region data hosting and oral semaglutide ready.</p>
+
+<!-- Drug list — region-aware ordering. Highest local relevance first. -->
+<p class="drugs muted" data-r="za">Built for <strong>compounded semaglutide and tirzepatide</strong>, plus <strong>Ozempic, Wegovy, Mounjaro, Zepbound, Rybelsus and Saxenda</strong>.</p>
+<p class="drugs muted" data-r="us">Built for <strong>Wegovy, Zepbound, Mounjaro and Ozempic</strong>, plus <strong>Rybelsus, Saxenda</strong> and compounded preparations.</p>
+<p class="drugs muted" data-r="eu">Built for <strong>Wegovy, Rybelsus, Saxenda and Mounjaro</strong>, plus <strong>Ozempic</strong> and compounded preparations. Oral semaglutide-ready.</p>
+<div class="cta-row">
+<a class="store-btn" href="#download"><span><span class="store-label">Download on the</span><span class="store-name">App Store</span></span></a>
+<a class="store-btn" href="#download"><span><span class="store-label">Get it on</span><span class="store-name">Google Play</span></span></a>
+</div>
+<!-- Trust line — region-aware. -->
+<p class="trust" data-r="za">Free to start  ·  R99/month or R899/year  ·  7-day Pro trial, no card needed</p>
+<p class="trust" data-r="us">Free to start  ·  $5.99/month  ·  7-day Pro trial, no card needed  ·  Cancel anytime</p>
+<p class="trust" data-r="eu">Free to start  ·  €5.99/month  ·  7-day Pro trial, no card needed  ·  GDPR-native, EU-hosted</p>
+</div>
+<div>
+<div class="mockup" aria-label="Muscle Guard dashboard preview">
+<div class="mockup-title">Muscle Guard Score</div>
+<div class="score-gauge">
+<svg viewBox="0 0 180 180" style="position:absolute; inset:0;" aria-hidden="true">
+<circle cx="90" cy="90" r="76" fill="none" stroke="#E8F4F1" stroke-width="10"/>
+<circle cx="90" cy="90" r="76" fill="none" stroke="#0F7B6C" stroke-width="10" stroke-dasharray="380" stroke-dashoffset="95" stroke-linecap="round" transform="rotate(-90 90 90)"/>
+</svg>
+<div style="position: relative; text-align: center;"><div class="num">78</div><div class="label">Excellent</div></div>
+</div>
+<div class="mockup-title" style="margin-top:24px;">This week's check-ins</div>
+<div class="circle-grid">
+<div class="on"></div><div class="on"></div><div class="on"></div>
+<div class="on"></div><div class="partial"></div><div class="on"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="features">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow eyebrow-green">Built around muscle preservation</div>
+<h2>Everything you need on a GLP-1, in one app</h2>
+<p>Nine features, all working together. Lead with the differentiator — track every drug, every metric, every milestone.</p>
+</div>
+<div class="feature-grid">
+<div class="feature hero-feature"><div class="feature-icon">★</div><h3>Muscle Guard Score</h3><p>The hero metric. Combines protein adherence, resistance training, weight trend and body composition into one number that captures fat-loss-without-muscle-loss.</p></div>
+<div class="feature hero-feature"><div class="feature-icon">⌂</div><h3>Privacy first</h3><p>Delete your account in one tap, all data is gone. No cookie banner. No third-party trackers. POPIA, GDPR and CCPA-ready.</p></div>
+<div class="feature"><div class="feature-icon">💉</div><h3>Injection &amp; tablet tracking</h3><p>Knows the standard titration schedule for every approved GLP-1 — including Rybelsus oral pill and compounded vials.</p></div>
+<div class="feature"><div class="feature-icon">📷</div><h3>AI plate scan</h3><p>Snap your meal — get macros, protein target progress, and a quick logging interface. Powered by Open Food Facts + Google Gemini, transparently disclosed.</p></div>
+<div class="feature"><div class="feature-icon">🤖</div><h3>Personal Coach</h3><p>Pattern detection across symptoms, mood and logs. Spots stalls, side-effect clusters and protein gaps before they derail your journey.</p></div>
+<div class="feature"><div class="feature-icon">📄</div><h3>Doctor PDF export</h3><p>A branded one-page report your prescriber can read in 60 seconds. Hand it over instead of 12 weeks of WhatsApp screenshots.</p></div>
+<div class="feature"><div class="feature-icon">📸</div><h3>Progress photos</h3><p>Built-in pose guide, side-by-side compare, monthly reminders. Comparable photos that tell the truth.</p></div>
+<div class="feature"><div class="feature-icon">📊</div><h3>Body composition</h3><p>Waist, hip, neck, body-fat estimate, visceral-fat rating. The numbers that prove muscle is being preserved while fat is lost.</p></div>
+<div class="feature"><div class="feature-icon">🏆</div><h3>75 milestones</h3><p>Built for the emotional reality of a GLP-1 journey. Not “lost 1 kg” — milestones that respect the work.</p></div>
+</div>
+</div>
+</section>
+
+<section class="alt">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">The differentiator</div>
+<h2>How muscle preservation works on a GLP-1</h2>
+<p>The single concern that surfaces in every Reddit thread, every clinical paper, and every analysis of online discourse — and the one no other GLP-1 app puts in their headline.</p>
+</div>
+<div style="max-width: 760px; margin: 0 auto; font-size: 16px;">
+<p>GLP-1 medications suppress appetite so effectively that many users enter a severe calorie and protein deficit. Muscle is built from protein, so a sustained deficit can lead to loss of lean mass — what users call “muscle drain” or “Ozempic face”. Research from Penn and Nature Health, analysing more than 400,000 Reddit posts, surfaced this as one of the top user concerns missing from clinical trial reporting.</p>
+<p>The prevention plan is well-established: aim for <strong>1.2 to 1.6 g of protein per kg of body weight per day</strong> (about 90 to 120 g for many adults), perform <strong>resistance training 2 to 4 times per week</strong>, avoid extreme calorie restriction, and track strength and body composition — not just weight.</p>
+<p>Muscle Guard is built around that plan. Every feature, every milestone, every metric is in service of one thing: fat loss without muscle loss.</p>
+<p style="text-align: center; margin-top: 32px;"><a class="btn" href="/muscle-loss-on-glp1.html">Read the full muscle-preservation guide →</a></p>
+</div>
+</div>
+</section>
+
+<section id="pricing">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow eyebrow-green">Pricing</div>
+<h2>Free to start. Pro covers what AI costs us.</h2>
+<p>Honest pricing. No card needed for the 7-day Pro trial.</p>
+<div class="pricing-toggle" role="tablist" aria-label="Region">
+<button class="active" data-region="za">ZAR</button>
+<button data-region="us">USD</button>
+<button data-region="eu">EUR</button>
+<button data-region="gb">GBP</button>
+</div>
+</div>
+<div class="price-grid">
+<div class="plan popular">
+<span class="popular-pill">Most popular</span>
+<h3>Pro</h3>
+<div class="trial-banner">⚡ 7-day free trial — no card needed</div>
+<div class="price" data-price="za">R99<small>/month</small></div>
+<div class="price" data-price="us" hidden>$5.99<small>/month</small></div>
+<div class="price" data-price="eu" hidden>€5.99<small>/month</small></div>
+<div class="price" data-price="gb" hidden>£4.99<small>/month</small></div>
+<div class="plan-yr" data-yr="za">or R899 / year — save 24%</div>
+<div class="plan-yr" data-yr="us" hidden>or $59.99 / year</div>
+<div class="plan-yr" data-yr="eu" hidden>or €59.99 / year</div>
+<div class="plan-yr" data-yr="gb" hidden>or £49.99 / year</div>
+<ul>
+<li>Muscle Guard Score &amp; full body composition</li>
+<li>Unlimited AI plate scans</li>
+<li>Personal Coach pattern detection</li>
+<li>Branded Doctor PDF export</li>
+<li>Progress photos &amp; comparison</li>
+<li>All 75 milestones unlocked</li>
+<li>Priority support</li>
+</ul>
+<a class="btn" href="#download">Start free trial</a>
+</div>
+<div class="plan">
+<h3>Free</h3>
+<div class="price">R0<small> forever</small></div>
+<div class="plan-yr">Track your basics, no card needed</div>
+<ul>
+<li>Injection &amp; tablet tracking</li>
+<li>3 AI plate scans per day</li>
+<li>Basic weight &amp; trend tracking</li>
+<li>10 milestones</li>
+<li>Privacy-first deletion in one tap</li>
+</ul>
+<a class="btn btn-outline" href="#download">Download free</a>
+</div>
+</div>
+<div class="ai-cost-callout">
+<strong>AI cost transparency.</strong> Plate scan, Personal Coach and Gemini-powered features cost us money per request. Pro covers that and keeps the app honest. We will never sell your data to subsidise free AI.
+</div>
+</div>
+</section>
+
+<section id="download" 
