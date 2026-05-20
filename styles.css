@@ -738,3 +738,225 @@ html:not([data-region]) [data-r="za"] { display: revert !important; }
 }
 .stat-strip-unit { font-size: 16px; color: var(--muted); font-weight: 400; }
 .stat-strip-lbl { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+/* ════════════════════════════════════════════════════════════════════
+   Visual confidence pass — bolder headings, dramatic hero,
+   statement band, distinct hero feature cards
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Bolder headings sitewide ──────────────────────────────────── */
+h1 { font-weight: 700; letter-spacing: -0.022em; line-height: 1.05; }
+h2 { font-weight: 600; letter-spacing: -0.018em; line-height: 1.1; }
+h3 { font-weight: 600; letter-spacing: -0.01em; }
+h4 { font-weight: 600; letter-spacing: -0.005em; }
+
+/* Refine hero h1 size + spacing */
+.hero h1 { font-size: clamp(38px, 5.6vw, 60px); margin-bottom: 0.4em; }
+.hero h1 .accent { color: var(--brand-green); }
+.hero .lede {
+  font-size: 18px; line-height: 1.55;
+  color: var(--text-dark); opacity: 0.78;
+  margin: 4px 0 28px; max-width: 42ch;
+  font-weight: 400;
+}
+
+/* Section headings — bigger, tighter */
+.section-head h2 { font-size: clamp(30px, 4vw, 42px); margin-bottom: 14px; }
+.section-head p { font-size: 17px; line-height: 1.55; max-width: 56ch; margin: 0 auto; }
+
+/* Eyebrow — more presence */
+.eyebrow {
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+/* ── Hero — more drama on the phone ────────────────────────────── */
+.hero { padding: 80px 0 100px; }
+.hero-grid { gap: 64px; }
+.hero .phone-mockup.phone-hero {
+  width: min(360px, 100%);
+  transform: rotate(2deg);
+  transition: transform 0.6s cubic-bezier(.2,.8,.2,1);
+}
+.hero .phone-mockup.phone-hero:hover { transform: rotate(0deg) translateY(-4px); }
+.hero .phone-frame {
+  box-shadow:
+    0 50px 100px -30px rgba(15, 123, 108, 0.45),
+    0 20px 40px -20px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1.5px rgba(255, 255, 255, 0.08);
+}
+
+/* Add a subtle glow behind the phone */
+.hero-grid > div:last-child {
+  position: relative;
+}
+.hero-grid > div:last-child::before {
+  content: "";
+  position: absolute;
+  top: 10%; left: 10%; right: 10%; bottom: 10%;
+  background: radial-gradient(ellipse, rgba(15, 123, 108, 0.22) 0%, transparent 65%);
+  filter: blur(40px);
+  z-index: -1;
+}
+
+/* Trust line — better presence */
+.hero .trust { font-size: 13px; color: var(--muted); margin-top: 20px; font-weight: 500; }
+
+/* ── Statement band — the "wow" moment ─────────────────────────── */
+.statement-band {
+  background:
+    radial-gradient(ellipse at top right, rgba(201, 126, 26, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom left, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+    linear-gradient(135deg, var(--brand-green) 0%, var(--brand-green-dark) 100%);
+  color: var(--white);
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.statement-band::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  background-position: center;
+  pointer-events: none;
+}
+.statement-band > .wrap { position: relative; z-index: 1; }
+.statement-eyebrow {
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(255, 220, 130, 0.95);
+  margin-bottom: 20px;
+}
+.statement-headline {
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--white);
+  max-width: 22ch;
+  margin: 0 auto 56px;
+}
+.statement-accent { color: rgba(255, 220, 130, 0.95); }
+.statement-accent em { font-style: italic; font-weight: 700; }
+.statement-split {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 32px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+@media (max-width: 720px) {
+  .statement-split { grid-template-columns: 1fr; }
+  .statement-divider { display: none; }
+}
+.statement-stat { text-align: center; }
+.statement-stat-num {
+  font-size: clamp(56px, 8vw, 88px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.96);
+}
+.statement-stat-good .statement-stat-num { color: rgba(255, 220, 130, 0.98); }
+.statement-pct { font-size: 0.5em; font-weight: 600; opacity: 0.85; margin-left: 2px; }
+.statement-stat-lbl {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.55;
+  margin-top: 16px;
+}
+.statement-stat-lbl strong { color: var(--white); font-weight: 600; }
+.statement-stat-source {
+  font-size: 12px; opacity: 0.65; display: inline-block; margin-top: 6px;
+  letter-spacing: 0.3px;
+}
+.statement-divider {
+  width: 1px; height: 80px;
+  background: linear-gradient(180deg, transparent, rgba(255,255,255,0.3), transparent);
+}
+.statement-footer {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 56px;
+  letter-spacing: 0.3px;
+}
+
+/* ── Features — make the 2 hero features visually dominant ─────── */
+.feature-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+@media (min-width: 881px) {
+  .feature-grid {
+    grid-template-columns: 1.4fr 1.4fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-auto-flow: row;
+  }
+  .feature.hero-feature {
+    grid-column: span 2;
+    grid-row: span 1;
+    padding: 36px;
+  }
+  .feature:not(.hero-feature) {
+    padding: 22px;
+  }
+}
+@media (max-width: 880px) {
+  .feature-grid { grid-template-columns: 1fr; }
+}
+.feature {
+  background: var(--white); border: 1px solid var(--rule);
+  border-radius: 14px;
+  transition: transform 0.3s cubic-bezier(.2,.8,.2,1), box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.feature:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px -20px rgba(15, 123, 108, 0.18);
+}
+.feature.hero-feature {
+  border: 2px solid var(--brand-green);
+  background: linear-gradient(135deg, var(--white) 0%, var(--brand-green-bg) 100%);
+}
+.feature.hero-feature::after {
+  content: "Hero feature";
+  position: absolute;
+  top: 14px; right: 14px;
+  background: var(--brand-green);
+  color: var(--white);
+  font-size: 9px; font-weight: 700; letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 4px 9px; border-radius: 999px;
+}
+.feature.hero-feature .feature-icon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  font-size: 24px;
+  background: var(--brand-green);
+  color: var(--white);
+}
+.feature.hero-feature h3 { font-size: 22px; }
+.feature.hero-feature p { font-size: 15px; color: var(--text-dark); opacity: 0.78; line-height: 1.55; }
+
+/* ── Stat strip — bigger, heavier ──────────────────────────────── */
+.stat-strip-num {
+  font-size: clamp(36px, 4.5vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.stat-strip-unit { font-size: 0.42em; }
+.stat-strip-lbl { font-size: 14px; line-height: 1.55; }
+.stat-strip-item { padding: 36px 24px; }
+
+/* ── Section spacing — more breathing room ────────────────────── */
+section { padding: 88px 0; }
+.section-head { margin-bottom: 56px; }
