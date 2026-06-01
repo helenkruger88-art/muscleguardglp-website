@@ -1447,3 +1447,27 @@ section { padding: 88px 0; }
 }
 .feature-row-text p:last-child { margin-bottom: 0; }
 .feature-row-text p strong { color: var(--text-dark); font-weight: 600; }
+
+/* ── Feature grid override — uniform 3×3 layout ─────────────────
+   Drops the special 5-col layout with hero-feature spans so all
+   9 tiles render the same size, in 3 rows of 3. Looks tidier
+   than the lopsided 5+4 layout. */
+@media (min-width: 881px) {
+  .feature-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: auto !important;
+    gap: 20px !important;
+  }
+  .feature.hero-feature {
+    grid-column: span 1 !important;
+    padding: 22px !important;
+  }
+  .feature.hero-feature h3 { font-size: 17px !important; }
+  .feature.hero-feature p { font-size: 14px !important; }
+  .feature.hero-feature .feature-icon {
+    width: 40px !important; height: 40px !important;
+    border-radius: 10px !important; font-size: 16px !important;
+  }
+  /* Drop the "Hero feature" badge — no longer visually different */
+  .feature.hero-feature::after { display: none !important; }
+}
