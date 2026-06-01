@@ -45,7 +45,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles.css?v=20260601-3">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <script type="application/ld+json">
 {
@@ -206,83 +206,7 @@ fill="none" stroke="#0F7B6C" stroke-width="2.2" stroke-linejoin="round"/>
 </div>
 <div class="hero-phone-wrap">
 <div class="phone-glow"></div>
-<div class="phone-mockup phone-hero" aria-label="Muscle Guard app — dashboard view">
-  <div class="phone-frame">
-    <div class="phone-notch"></div>
-    <div class="phone-screen">
-      <div class="phone-status"><span class="phone-time">9:41</span><span class="phone-status-icons"><span class="phone-signal"></span><span class="phone-wifi"></span><span class="phone-battery"></span></span></div>
-      <div class="phone-app">
-        <div class="phone-app-brand">
-  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="phone-shield" aria-hidden="true">
-<path d="M16 3 L27 7 V16 C27 22.6 22.6 27.6 16 30 C9.4 27.6 5 22.6 5 16 V7 Z"
-fill="none" stroke="#0F7B6C" stroke-width="2.2" stroke-linejoin="round"/>
-<path d="M11 16.5 L14.5 20 L21 13" fill="none" stroke="#0F7B6C" stroke-width="2.5"
-stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-  <span class="phone-wordmark">MUSCLE GUARD</span>
-  <span class="phone-bell" aria-hidden="true">🔔</span>
-</div>
-        <div class="phone-app-head">
-          <div class="phone-greeting">
-            <div class="phone-greet-tag">Wednesday · Week 9</div>
-            <div class="phone-greet-name">Good morning, Sarah</div>
-          </div>
-          <div class="phone-avatar">SK</div>
-        </div>
-        <div class="phone-score-card">
-          <div class="phone-score-label">Muscle Guard Score</div>
-          <div class="phone-score-wrap">
-            <svg class="phone-score-ring" viewBox="0 0 200 200" aria-hidden="true">
-              <circle cx="100" cy="100" r="84" fill="none" stroke="#E8F4F1" stroke-width="14"/>
-              <circle cx="100" cy="100" r="84" fill="none" stroke="#0F7B6C" stroke-width="14"
-                      stroke-dasharray="528" stroke-dashoffset="132"
-                      stroke-linecap="round" transform="rotate(-90 100 100)"/>
-            </svg>
-            <div class="phone-score-num">
-              <span class="phone-score-big">78</span>
-              <span class="phone-score-small">/ 100</span>
-            </div>
-          </div>
-          <div class="phone-score-trend"><span class="phone-arrow-up">▲</span> 4 vs last week  ·  <span class="muted">On track</span></div>
-        </div>
-        <div class="phone-mini-row">
-          <div class="phone-mini-card">
-            <div class="phone-mini-num">112<span class="phone-mini-unit">g</span></div>
-            <div class="phone-mini-lbl">Protein today</div>
-            <div class="phone-mini-bar"><span style="width: 88%"></span></div>
-          </div>
-          <div class="phone-mini-card">
-            <div class="phone-mini-num">3<span class="phone-mini-unit">/4</span></div>
-            <div class="phone-mini-lbl">Training this week</div>
-            <div class="phone-mini-bar"><span style="width: 75%"></span></div>
-          </div>
-        </div>
-        <div class="phone-section-label">This week's check-ins</div>
-        <div class="phone-week-grid">
-          <div class="phone-week-cell on"><span class="phone-week-day">M</span></div>
-          <div class="phone-week-cell on"><span class="phone-week-day">T</span></div>
-          <div class="phone-week-cell on"><span class="phone-week-day">W</span></div>
-          <div class="phone-week-cell partial"><span class="phone-week-day">T</span></div>
-          <div class="phone-week-cell"><span class="phone-week-day">F</span></div>
-          <div class="phone-week-cell"><span class="phone-week-day">S</span></div>
-          <div class="phone-week-cell"><span class="phone-week-day">S</span></div>
-        </div>
-        <div class="phone-shot-card">
-          <div class="phone-shot-icon">💉</div>
-          <div class="phone-shot-text">
-            <div class="phone-shot-title">Tirzepatide · Thursday</div>
-            <div class="phone-shot-meta">7.5 mg · Compounded · Due tomorrow</div>
-          </div>
-        </div>
-      </div>
-      <div class="phone-nav">
-        <div class="phone-nav-item active">⌂</div>
-        <div class="phone-nav-item">📊</div>
-        <div class="phone-nav-item">📷</div>
-        <div class="phone-nav-item">⚕</div>
-      </div>
-    </div>
-  </div>
+<img class="hero-screenshot" src="/screenshots/01-home-dashboard.png" alt="Muscle Guard home dashboard — Muscle Guard Score, daily circles, body check" width="340">
 </div>
 </div>
 </div>
@@ -335,57 +259,74 @@ GLP-1 medications work.<br>
 </div>
 </section>
 
-<section class="screenshot-showcase">
+<section class="drug-grid-section">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow eyebrow-green">Built for every GLP-1</div>
+<h2>One app. Every approved medication.</h2>
+<p>Every brand. Every titration. Every protocol. Switch drugs without losing your data.</p>
+</div>
+<div class="drug-grid">
+<div class="drug-card"><div class="drug-badge" style="background:#0F7B6C">Oz</div><span>Ozempic</span></div>
+<div class="drug-card"><div class="drug-badge" style="background:#5B6AB5">We</div><span>Wegovy</span></div>
+<div class="drug-card"><div class="drug-badge" style="background:#C97E1A">Mo</div><span>Mounjaro</span></div>
+<div class="drug-card"><div class="drug-badge" style="background:#A0563B">Ze</div><span>Zepbound</span></div>
+<div class="drug-card"><div class="drug-badge" style="background:#2E86AB">Ry</div><span>Rybelsus</span></div>
+<div class="drug-card"><div class="drug-badge" style="background:#7E4B85">Sa</div><span>Saxenda</span></div>
+<div class="drug-card"><div class="drug-badge" style="background:#0A5A4F">Tr</div><span>Trulicity</span></div>
+<div class="drug-card"><div class="drug-badge" style="background:#3A4A55">Cp</div><span>Compounded</span></div>
+</div>
+</div>
+</section>
+
+<section class="feature-rows">
 <div class="wrap">
 <div class="section-head">
 <div class="eyebrow eyebrow-green">See it in the app</div>
 <h2>Real screens from the real app</h2>
-<p>Not concept art. These are the screens you'll use every day on a GLP-1 — built around protein, body composition, and the data your prescriber actually wants to see.</p>
+<p>Not concept art. These are the screens you'll use every day on a GLP-1.</p>
 </div>
-<div class="screenshot-grid">
-<figure class="screenshot-card">
-<img src="/screenshots/01-home-dashboard.png" alt="Home dashboard with Muscle Guard Score, daily circles, and body check">
-<figcaption>
-<h3>Home dashboard</h3>
-<p>The Muscle Guard Score, daily circles for protein, calories, water and workouts, and your week-at-a-glance — the first thing you see every morning.</p>
-</figcaption>
-</figure>
-<figure class="screenshot-card">
-<img src="/screenshots/05-daily-protocol-checklist.png" alt="Daily protocol checklist with injection, hydration, protein and movement reminders">
-<figcaption>
-<h3>Daily protocol</h3>
-<p>The muscle-preservation playbook, drug-aware and titration-aware. Today's injections, hydration, protein floor and movement — checked off as you go.</p>
-</figcaption>
-</figure>
-<figure class="screenshot-card">
-<img src="/screenshots/03-body-check-measurements.png" alt="Body check measurements screen with waist, hip, neck and body-fat estimates">
-<figcaption>
-<h3>Body Check</h3>
-<p>Waist, hip, neck, body-fat estimate and visceral-fat rating. The numbers that prove muscle is being preserved while fat is lost — not just a scale that lies.</p>
-</figcaption>
-</figure>
-<figure class="screenshot-card">
-<img src="/screenshots/04-body-check-weight-trend.png" alt="Body check weight trend chart with 1, 3, 6 and 12-month ranges">
-<figcaption>
-<h3>Weight &amp; waist trends</h3>
-<p>1, 3, 6 and 12-month longitudinal ranges. The longer windows are where the actual pattern shows — not the daily noise that derails most journeys.</p>
-</figcaption>
-</figure>
-<figure class="screenshot-card">
-<img src="/screenshots/02-visceral-fat-actions.png" alt="Visceral fat rating tile with educational guidance">
-<figcaption>
-<h3>Visceral fat tracking</h3>
-<p>A 1&ndash;30 visceral fat rating estimated from your waist-to-height ratio, with educational guidance on the &ldquo;dangerous&rdquo; fat the scale never shows you.</p>
-</figcaption>
-</figure>
-<figure class="screenshot-card">
-<img src="/screenshots/06-home-protocols.png" alt="Home dashboard protocols section with plateau breaker and nausea management">
-<figcaption>
-<h3>Protocols</h3>
-<p>Plateau Breaker for when weight loss stalls, Nausea Mode for rough days. The interventions the GLP-1 journey actually needs, ready when you need them.</p>
-</figcaption>
-</figure>
+
+<div class="feature-row">
+<div class="feature-row-img"><img width="320" loading="lazy" src="/screenshots/01-home-dashboard.png" alt="Home dashboard with Muscle Guard Score and daily circles"></div>
+<div class="feature-row-text">
+<div class="feature-row-eyebrow">Hero metric</div>
+<h3>The Muscle Guard Score — fat loss, without muscle loss</h3>
+<p>One number that captures whether you're losing fat the right way. Combines protein adherence, resistance training, weight trend and body composition. Updated every day from your actual logs.</p>
+<p>Plus daily circles for protein, calories, water and workouts — your week at a glance, the first thing you see every morning.</p>
 </div>
+</div>
+
+<div class="feature-row feature-row-reverse">
+<div class="feature-row-img"><img width="320" loading="lazy" src="/screenshots/03-body-check-measurements.png" alt="Body check measurements with waist, hip, neck and body-fat"></div>
+<div class="feature-row-text">
+<div class="feature-row-eyebrow">Body composition</div>
+<h3>The numbers that prove muscle is being preserved</h3>
+<p>Waist, hip, neck, chest. Body-fat estimate. Visceral-fat rating. The numbers your prescriber actually wants &mdash; and the ones that tell the truth when the scale lies during a recomposition phase.</p>
+<p>Body Check tracks your trends across 1, 3, 6 and 12-month ranges, so the pattern is visible long before the daily noise derails you.</p>
+</div>
+</div>
+
+<div class="feature-row">
+<div class="feature-row-img"><img width="320" loading="lazy" src="/screenshots/05-daily-protocol-checklist.png" alt="Daily protocol checklist with injection, hydration, protein and movement"></div>
+<div class="feature-row-text">
+<div class="feature-row-eyebrow">Daily playbook</div>
+<h3>The muscle-preservation protocol, drug-aware</h3>
+<p>Today's injection or tablet (if it's a dose day), hydration target, protein floor, and movement target &mdash; checked off as you go. Drug-aware and titration-aware: the protocol adjusts to your phase of treatment.</p>
+<p>Never wonder &ldquo;am I doing this right today.&rdquo; The app already knows.</p>
+</div>
+</div>
+
+<div class="feature-row feature-row-reverse">
+<div class="feature-row-img"><img width="320" loading="lazy" src="/screenshots/06-home-protocols.png" alt="Plateau Breaker and Nausea Mode protocols on Home dashboard"></div>
+<div class="feature-row-text">
+<div class="feature-row-eyebrow">When things go sideways</div>
+<h3>Plateau Breaker. Nausea Mode. For the real GLP-1 moments.</h3>
+<p><strong>Plateau Breaker</strong> &mdash; a 14-day metabolic reset for when weight loss stalls. Three pillars, daily auto-logging, gracefully restarts after a missed day. The intervention nobody tells you you'll need.</p>
+<p><strong>Nausea Mode</strong> &mdash; a guided protocol for rough days, with safe-bite suggestions and gentle re-introduction tracking. Because GLP-1s are great, except when they're not.</p>
+</div>
+</div>
+
 </div>
 </section>
 

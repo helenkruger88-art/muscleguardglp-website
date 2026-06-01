@@ -1298,3 +1298,152 @@ section { padding: 88px 0; }
   color: var(--muted);
   margin: 0;
 }
+
+/* ── Screenshot sizing — !important to bulletproof against cached CSS ── */
+.screenshot-card img,
+.screenshot-grid img,
+.screenshot-showcase img {
+  width: 100% !important;
+  max-width: 280px !important;
+  height: auto !important;
+}
+
+/* ── Hero — real screenshot replacing the SVG mockup ─────────── */
+.hero-screenshot {
+  position: relative;
+  z-index: 1;
+  width: min(340px, 100%) !important;
+  max-width: 340px !important;
+  height: auto !important;
+  border-radius: 36px;
+  box-shadow:
+    0 0 60px rgba(15, 200, 175, 0.4),
+    0 40px 80px -20px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+  transform: rotate(-3deg);
+  transition: transform 0.6s cubic-bezier(.2,.8,.2,1);
+  display: block;
+  margin: 0 auto;
+}
+.hero-screenshot:hover { transform: rotate(0deg) translateY(-6px); }
+
+/* ── Drug grid ────────────────────────────────────────────────── */
+.drug-grid-section {
+  background: var(--bg);
+  padding: 80px 0;
+}
+.drug-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+@media (max-width: 880px) { .drug-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; } }
+@media (max-width: 480px) { .drug-grid { grid-template-columns: repeat(2, 1fr); } }
+.drug-card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 20px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.drug-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px -8px rgba(15, 123, 108, 0.15);
+}
+.drug-badge {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+}
+.drug-card span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dark);
+  letter-spacing: 0.2px;
+}
+
+/* ── Alternating feature rows — editorial layout ──────────────── */
+.feature-rows {
+  background: linear-gradient(180deg, var(--white) 0%, var(--brand-green-bg) 100%);
+  padding: 96px 0 120px;
+}
+.feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto 96px;
+}
+.feature-row:last-child { margin-bottom: 0; }
+@media (max-width: 880px) {
+  .feature-row { grid-template-columns: 1fr; gap: 32px; margin-bottom: 64px; }
+  .feature-row-reverse > .feature-row-img { order: -1; }
+}
+.feature-row-reverse > .feature-row-img { order: 2; }
+.feature-row-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.feature-row-img::before {
+  content: "";
+  position: absolute;
+  width: 80%; height: 60%;
+  top: 20%; left: 10%;
+  background: radial-gradient(ellipse, rgba(15, 123, 108, 0.18) 0%, transparent 60%);
+  filter: blur(40px);
+  z-index: 0;
+}
+.feature-row-img img {
+  position: relative;
+  z-index: 1;
+  width: 100% !important;
+  max-width: 320px !important;
+  height: auto !important;
+  border-radius: 28px;
+  box-shadow:
+    0 30px 60px -20px rgba(15, 123, 108, 0.3),
+    0 8px 16px -4px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+.feature-row-text { max-width: 460px; }
+.feature-row-eyebrow {
+  display: inline-block;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 1.8px; text-transform: uppercase;
+  color: var(--brand-green);
+  background: var(--brand-green-bg);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+.feature-row-text h3 {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin: 0 0 18px;
+  color: var(--text-dark);
+}
+.feature-row-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+.feature-row-text p:last-child { margin-bottom: 0; }
+.feature-row-text p strong { color: var(--text-dark); font-weight: 600; }
