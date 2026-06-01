@@ -9,13 +9,23 @@
 (function() {
   try {
     var lang = (navigator.language || navigator.userLanguage || 'en-ZA').toLowerCase();
+    var tz = '';
+    try { tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || '').toLowerCase(); } catch (e) {}
+    // Default to ZA. Override only if BOTH timezone AND language agree.
+    // Catches SA users running default Windows en-US locale — they get ZA
+    // because their timezone is Africa/Johannesburg, not the false-positive
+    // US banner the old language-only detect would have shown.
     var region = 'za';
-    if (lang === 'en-us' || lang === 'en-ca' || lang.indexOf('en-us') === 0 || lang.indexOf('en-ca') === 0) {
+    var isUsLang = lang === 'en-us' || lang === 'en-ca' || lang.indexOf('en-us') === 0 || lang.indexOf('en-ca') === 0;
+    var isEuLang = lang.indexOf('de') === 0 || lang.indexOf('fr') === 0 || lang.indexOf('es') === 0 ||
+                   lang.indexOf('it') === 0 || lang.indexOf('nl') === 0 || lang.indexOf('pt') === 0 ||
+                   lang.indexOf('pl') === 0 || lang.indexOf('sv') === 0 || lang.indexOf('da') === 0 ||
+                   lang.indexOf('en-gb') === 0 || lang.indexOf('en-ie') === 0;
+    if (tz.indexOf('africa/') === 0) {
+      region = 'za';
+    } else if (tz.indexOf('america/') === 0 && isUsLang) {
       region = 'us';
-    } else if (lang.indexOf('de') === 0 || lang.indexOf('fr') === 0 || lang.indexOf('es') === 0 ||
-               lang.indexOf('it') === 0 || lang.indexOf('nl') === 0 || lang.indexOf('pt') === 0 ||
-               lang.indexOf('pl') === 0 || lang.indexOf('sv') === 0 || lang.indexOf('da') === 0 ||
-               lang.indexOf('en-gb') === 0 || lang.indexOf('en-ie') === 0) {
+    } else if (tz.indexOf('europe/') === 0 || (isEuLang && tz.indexOf('europe/') === 0)) {
       region = 'eu';
     }
     document.documentElement.setAttribute('data-region', region);
@@ -42,7 +52,7 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Muscle Guard",
-  "legalName": "Brand Expert (Pty) Ltd",
+  "legalName": "HK Brand Expert (Pty) Ltd",
   "url": "https://muscleguardglp.com",
   "logo": "https://muscleguardglp.com/logo.png",
   "address": {
@@ -325,116 +335,56 @@ GLP-1 medications work.<br>
 </div>
 </section>
 
-<section class="product-gallery">
+<section class="screenshot-showcase">
 <div class="wrap">
 <div class="section-head">
-<div class="eyebrow eyebrow-green">Inside the app</div>
-<h2>Three screens that do most of the work</h2>
-<p>The Muscle Guard Score, the AI plate scan, and the Doctor PDF — the three surfaces your week actually lives on.</p>
+<div class="eyebrow eyebrow-green">See it in the app</div>
+<h2>Real screens from the real app</h2>
+<p>Not concept art. These are the screens you'll use every day on a GLP-1 — built around protein, body composition, and the data your prescriber actually wants to see.</p>
 </div>
-<div class="gallery-grid">
-
-  <div class="gallery-item">
-    <div class="phone-mockup phone-small" aria-label="Muscle Guard Score detail">
-      <div class="phone-frame">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="phone-status"><span class="phone-time">9:41</span><span class="phone-status-icons"><span class="phone-signal"></span><span class="phone-wifi"></span><span class="phone-battery"></span></span></div>
-          <div class="phone-app">
-            <div class="phone-app-head"><div class="phone-screen-title">Muscle Guard Score</div></div>
-            <div class="phone-score-card phone-score-card-large">
-              <div class="phone-score-wrap">
-                <svg class="phone-score-ring" viewBox="0 0 200 200" aria-hidden="true">
-                  <circle cx="100" cy="100" r="84" fill="none" stroke="#E8F4F1" stroke-width="14"/>
-                  <circle cx="100" cy="100" r="84" fill="none" stroke="#0F7B6C" stroke-width="14" stroke-dasharray="528" stroke-dashoffset="132" stroke-linecap="round" transform="rotate(-90 100 100)"/>
-                </svg>
-                <div class="phone-score-num"><span class="phone-score-big">78</span><span class="phone-score-small">Excellent</span></div>
-              </div>
-            </div>
-            <div class="phone-subscores">
-              <div class="phone-subscore"><span class="phone-sub-lbl">Protein</span><div class="phone-sub-bar"><span style="width: 71%"></span></div><span class="phone-sub-val">71</span></div>
-              <div class="phone-subscore"><span class="phone-sub-lbl">Training</span><div class="phone-sub-bar"><span style="width: 75%"></span></div><span class="phone-sub-val">75</span></div>
-              <div class="phone-subscore"><span class="phone-sub-lbl">Weight</span><div class="phone-sub-bar"><span style="width: 85%"></span></div><span class="phone-sub-val">85</span></div>
-              <div class="phone-subscore"><span class="phone-sub-lbl">Body comp</span><div class="phone-sub-bar"><span style="width: 82%"></span></div><span class="phone-sub-val">82</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <h3>The Muscle Guard Score</h3>
-    <p>One number that captures fat-loss-without-muscle-loss. Combines protein, training, weight trend, and body composition.</p>
-  </div>
-
-  <div class="gallery-item">
-    <div class="phone-mockup phone-small" aria-label="AI plate scan in action">
-      <div class="phone-frame">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="phone-status"><span class="phone-time">9:41</span><span class="phone-status-icons"><span class="phone-signal"></span><span class="phone-wifi"></span><span class="phone-battery"></span></span></div>
-          <div class="phone-app">
-            <div class="phone-app-head"><div class="phone-screen-title">AI plate scan</div></div>
-            <div class="phone-camera">
-              <div class="phone-camera-bg"></div>
-              <div class="phone-camera-frame"></div>
-              <div class="phone-detect-card">
-                <div class="phone-detect-row">
-                  <strong>Grilled chicken bowl</strong>
-                  <span class="phone-detect-conf">Detected ✓</span>
-                </div>
-                <div class="phone-macros">
-                  <span class="phone-macro"><span class="phone-macro-val">412</span><span class="phone-macro-lbl">kcal</span></span>
-                  <span class="phone-macro highlight"><span class="phone-macro-val">38g</span><span class="phone-macro-lbl">protein</span></span>
-                  <span class="phone-macro"><span class="phone-macro-val">42g</span><span class="phone-macro-lbl">carbs</span></span>
-                  <span class="phone-macro"><span class="phone-macro-val">14g</span><span class="phone-macro-lbl">fat</span></span>
-                </div>
-                <div class="phone-detect-cta">Add to today's log</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <h3>AI plate scan</h3>
-    <p>Snap your meal — macros and protein land in seconds. Powered by Open Food Facts and Google Gemini, transparently disclosed.</p>
-  </div>
-
-  <div class="gallery-item">
-    <div class="phone-mockup phone-small" aria-label="Doctor PDF preview">
-      <div class="phone-frame">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="phone-status"><span class="phone-time">9:41</span><span class="phone-status-icons"><span class="phone-signal"></span><span class="phone-wifi"></span><span class="phone-battery"></span></span></div>
-          <div class="phone-app">
-            <div class="phone-app-head"><div class="phone-screen-title">Doctor PDF</div></div>
-            <div class="phone-pdf-preview">
-              <div class="phone-pdf-page">
-                <div class="phone-pdf-letterhead">
-                  <div class="phone-pdf-shield">⚕</div>
-                  <div class="phone-pdf-brand">
-                    <div class="phone-pdf-wm">MUSCLE GUARD</div>
-                    <div class="phone-pdf-sub">12-week summary · 19 May 2026</div>
-                  </div>
-                </div>
-                <div class="phone-pdf-body">
-                  <div class="phone-pdf-line wide"></div>
-                  <div class="phone-pdf-line"></div>
-                  <div class="phone-pdf-line wide"></div>
-                  <div class="phone-pdf-chart"></div>
-                  <div class="phone-pdf-line"></div>
-                  <div class="phone-pdf-line wide"></div>
-                  <div class="phone-pdf-pill">Muscle Guard Score: 78 / 100  ·  On track</div>
-                </div>
-              </div>
-            </div>
-            <div class="phone-share-cta">Share with your prescriber</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <h3>Doctor PDF export</h3>
-    <p>A one-page summary your prescriber reads in 60 seconds. <a href="/sample-doctor-pdf.pdf">Download a sample →</a></p>
-  </div>
-
+<div class="screenshot-grid">
+<figure class="screenshot-card">
+<img src="/screenshots/01-home-dashboard.png" alt="Home dashboard with Muscle Guard Score, daily circles, and body check">
+<figcaption>
+<h3>Home dashboard</h3>
+<p>The Muscle Guard Score, daily circles for protein, calories, water and workouts, and your week-at-a-glance — the first thing you see every morning.</p>
+</figcaption>
+</figure>
+<figure class="screenshot-card">
+<img src="/screenshots/05-daily-protocol-checklist.png" alt="Daily protocol checklist with injection, hydration, protein and movement reminders">
+<figcaption>
+<h3>Daily protocol</h3>
+<p>The muscle-preservation playbook, drug-aware and titration-aware. Today's injections, hydration, protein floor and movement — checked off as you go.</p>
+</figcaption>
+</figure>
+<figure class="screenshot-card">
+<img src="/screenshots/03-body-check-measurements.png" alt="Body check measurements screen with waist, hip, neck and body-fat estimates">
+<figcaption>
+<h3>Body Check</h3>
+<p>Waist, hip, neck, body-fat estimate and visceral-fat rating. The numbers that prove muscle is being preserved while fat is lost — not just a scale that lies.</p>
+</figcaption>
+</figure>
+<figure class="screenshot-card">
+<img src="/screenshots/04-body-check-weight-trend.png" alt="Body check weight trend chart with 1, 3, 6 and 12-month ranges">
+<figcaption>
+<h3>Weight &amp; waist trends</h3>
+<p>1, 3, 6 and 12-month longitudinal ranges. The longer windows are where the actual pattern shows — not the daily noise that derails most journeys.</p>
+</figcaption>
+</figure>
+<figure class="screenshot-card">
+<img src="/screenshots/02-visceral-fat-actions.png" alt="Visceral fat rating tile with educational guidance">
+<figcaption>
+<h3>Visceral fat tracking</h3>
+<p>A 1&ndash;30 visceral fat rating estimated from your waist-to-height ratio, with educational guidance on the &ldquo;dangerous&rdquo; fat the scale never shows you.</p>
+</figcaption>
+</figure>
+<figure class="screenshot-card">
+<img src="/screenshots/06-home-protocols.png" alt="Home dashboard protocols section with plateau breaker and nausea management">
+<figcaption>
+<h3>Protocols</h3>
+<p>Plateau Breaker for when weight loss stalls, Nausea Mode for rough days. The interventions the GLP-1 journey actually needs, ready when you need them.</p>
+</figcaption>
+</figure>
 </div>
 </div>
 </section>
@@ -518,25 +468,32 @@ GLP-1 medications work.<br>
 <div class="plan-yr" data-yr="eu" hidden>or €59.99 / year</div>
 <div class="plan-yr" data-yr="gb" hidden>or £49.99 / year</div>
 <ul>
-<li>Muscle Guard Score &amp; full body composition</li>
-<li>Unlimited AI plate scans</li>
-<li>Personal Coach pattern detection</li>
-<li>Branded Doctor PDF export</li>
-<li>Progress photos &amp; comparison</li>
-<li>All 75 milestones unlocked</li>
-<li>Priority support</li>
+<li><strong>Unlimited AI plate scans</strong> — camera, label, and barcode-AI rescue</li>
+<li><strong>Plateau Breaker</strong> — 14-day metabolic reset protocol</li>
+<li><strong>Doctor Report</strong> — PDF &amp; email export, branded one-pager</li>
+<li><strong>Pattern Detection</strong> across symptoms, mood, meals &amp; workouts</li>
+<li><strong>Pro Coach Insights</strong> — drug-aware titration &amp; rest-vs-training analysis</li>
+<li><strong>Long-Term Trend Analytics</strong> — 1, 3, 6 &amp; 12-month ranges</li>
+<li><strong>Unlimited progress photos</strong> &amp; side-by-side compares</li>
+<li><strong>All 75 milestones</strong> unlocked</li>
+<li><strong>Support independent development</strong> — built in South Africa for the global GLP-1 community</li>
 </ul>
 <a class="btn" href="#download">Start free trial</a>
 </div>
 <div class="plan">
 <h3>Free</h3>
-<div class="price">R0<small> forever</small></div>
-<div class="plan-yr">Track your basics, no card needed</div>
+<div class="price">Free</div>
+<div class="plan-yr">Daily logging never blocks. No card needed.</div>
 <ul>
-<li>Injection &amp; tablet tracking</li>
-<li>3 AI plate scans per day</li>
-<li>Basic weight &amp; trend tracking</li>
-<li>10 milestones</li>
+<li>Injection &amp; tablet tracking — every approved GLP-1</li>
+<li>Manual &amp; barcode food logging — unlimited</li>
+<li>2 AI plate scans (lifetime trial, to see how it works)</li>
+<li>Muscle Guard Score &amp; body composition</li>
+<li>Daily weight, waist, mood &amp; symptom tracking</li>
+<li>14-day Trends analytics</li>
+<li>8 progress photos with 2 side-by-side compares</li>
+<li>Doctor Report — view in-app (PDF export is Pro)</li>
+<li>10 starter milestones</li>
 <li>Privacy-first deletion in one tap</li>
 </ul>
 <a class="btn btn-outline" href="#download">Download free</a>
@@ -548,4 +505,101 @@ GLP-1 medications work.<br>
 </div>
 </section>
 
-<section id="download" 
+<section id="download" class="download-band">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow eyebrow-green">Download</div>
+<h2>Get Muscle Guard</h2>
+<p>Available on Google Play. Apple App Store version coming soon.</p>
+</div>
+<div class="cta-row download-cta">
+<a class="store-btn store-btn-glow" href="#" aria-disabled="true"><span><span class="store-label">Coming soon</span><span class="store-name">App Store</span></span></a>
+<a class="store-btn store-btn-glow" href="https://play.google.com/store/apps/details?id=com.muscleguard.app"><span><span class="store-label">Get it on</span><span class="store-name">Google Play</span></span></a>
+</div>
+<p class="trust" data-r="za">Free to start  ·  R99/month or R899/year  ·  7-day Pro trial, no card needed</p>
+<p class="trust" data-r="us">Free to start  ·  $5.99/month  ·  7-day Pro trial, no card needed  ·  Cancel anytime</p>
+<p class="trust" data-r="eu">Free to start  ·  €5.99/month  ·  7-day Pro trial, no card needed  ·  GDPR-native, EU-hosted</p>
+</div>
+</section>
+
+<section class="story-band">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow eyebrow-green">Built independently</div>
+<h2>Built in South Africa for the global GLP-1 community</h2>
+<p>Muscle Guard is made by a small independent team at HK Brand Expert (Pty) Ltd in Johannesburg. Your Pro subscription covers our AI costs, server costs, and lets us keep shipping features the people on GLP-1s actually need &mdash; without selling your data or running ads.</p>
+</div>
+</div>
+</section>
+
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-grid">
+<div>
+<div class="brand-statement">
+<span class="wordmark">MUSCLE GUARD</span>
+The GLP-1 companion built around muscle preservation. By <strong>HK Brand Expert (Pty) Ltd</strong>, Johannesburg, South Africa.
+<div class="disclaimer">Muscle Guard is a self-tracking companion app and is not a medical device. It does not provide medical advice. Always consult your prescriber for medical decisions. GLP-1 medication brands (Ozempic&reg;, Wegovy&reg;, Mounjaro&reg;, Zepbound&reg;, Rybelsus&reg;, Saxenda&reg;) are trademarks of their respective owners and referenced here only to describe app compatibility.</div>
+</div>
+</div>
+<div>
+<h4>Product</h4>
+<a href="/#features">Features</a>
+<a href="/#pricing">Pricing</a>
+<a href="/#download">Download</a>
+<a href="/for-doctors.html">For doctors</a>
+</div>
+<div>
+<h4>Learn</h4>
+<a href="/muscle-loss-on-glp1.html">Muscle preservation</a>
+<a href="/guides/">All guides</a>
+<a href="/faq.html">FAQ</a>
+<a href="/contact.html">Contact</a>
+</div>
+<div>
+<h4>Legal</h4>
+<a href="/privacy.html">Privacy policy</a>
+<a href="/terms.html">Terms of service</a>
+<a href="/delete-account.html">Delete account</a>
+<a href="mailto:support@muscleguardglp.com">support@muscleguardglp.com</a>
+</div>
+</div>
+<div class="copyright">
+<span>&copy; 2026 HK Brand Expert (Pty) Ltd. All rights reserved.</span>
+<span><a href="/regions/za.html">South Africa</a> &middot; <a href="/regions/us.html">United States</a> &middot; <a href="/regions/eu.html">Europe / UK</a></span>
+</div>
+</div>
+</footer>
+
+<script>
+(function() {
+  try {
+    var buttons = document.querySelectorAll('.pricing-toggle button');
+    if (!buttons.length) return;
+    buttons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var region = btn.getAttribute('data-region');
+        buttons.forEach(function(b) { b.classList.toggle('active', b === btn); });
+        document.querySelectorAll('[data-price]').forEach(function(el) {
+          el.hidden = el.getAttribute('data-price') !== region;
+        });
+        document.querySelectorAll('[data-yr]').forEach(function(el) {
+          el.hidden = el.getAttribute('data-yr') !== region;
+        });
+      });
+    });
+  } catch (e) {}
+})();
+(function() {
+  try {
+    var region = document.documentElement.getAttribute('data-region');
+    if (!region || region === 'za') return;
+    if (sessionStorage.getItem('mg-banner-dismissed')) return;
+    var banner = document.querySelector('.region-banner[data-r="' + region + '"]');
+    if (banner) banner.hidden = false;
+  } catch (e) {}
+})();
+</script>
+
+</body>
+</html>
