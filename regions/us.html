@@ -23,14 +23,11 @@
 })();
 </script>
 <link rel="canonical" href="https://muscleguardglp.com/regions/us.html">
+
 <link rel="alternate" hreflang="en-za" href="https://muscleguardglp.com/regions/za.html">
 <link rel="alternate" hreflang="en-us" href="https://muscleguardglp.com/regions/us.html">
 <link rel="alternate" hreflang="en-gb" href="https://muscleguardglp.com/regions/eu.html">
-<link rel="alternate" hreflang="de" href="https://muscleguardglp.com/regions/eu.html">
-<link rel="alternate" hreflang="es" href="https://muscleguardglp.com/regions/eu.html">
-<link rel="alternate" hreflang="fr" href="https://muscleguardglp.com/regions/eu.html">
 <link rel="alternate" hreflang="x-default" href="https://muscleguardglp.com/">
-
 <meta property="og:title" content="Muscle Guard for U.S. GLP-1 users — built around muscle preservation">
 <meta property="og:description" content="USD pricing, body composition tracking, doctor PDF, AI plate scan, protein adherence. The GLP-1 companion app for U.S. users on Wegovy, Mounjaro, Zepbound and Ozempic.">
 <meta property="og:type" content="website">
@@ -49,7 +46,7 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Muscle Guard",
-  "legalName": "Brand Expert (Pty) Ltd",
+  "legalName": "HK Brand Expert (Pty) Ltd",
   "url": "https://muscleguardglp.com",
   "logo": "https://muscleguardglp.com/logo.png",
   "address": {
@@ -71,17 +68,38 @@
   "name": "Muscle Guard",
   "operatingSystem": "iOS, ANDROID",
   "applicationCategory": "HealthApplication",
-  "description": "A GLP-1 companion app built around muscle preservation. Tracks injections, plate-scans meals with AI, generates a doctor report, monitors body composition, and helps users on Ozempic, Wegovy, Mounjaro, Zepbound, Rybelsus, Saxenda, and compounded semaglutide and tirzepatide protect their lean mass.",
+  "description": "A GLP-1 companion app built around muscle preservation. Tracks injections, plate-scans meals with AI, generates a doctor report, monitors body composition.",
   "offers": [
-    { "@type": "Offer", "name": "Free",        "price": "0",  "priceCurrency": "ZAR" },
-    { "@type": "Offer", "name": "Pro Monthly", "price": "99", "priceCurrency": "ZAR" },
-    { "@type": "Offer", "name": "Pro Annual",  "price": "899","priceCurrency": "ZAR" },
-    { "@type": "Offer", "name": "Pro Monthly (US)",  "price": "5.99",  "priceCurrency": "USD" },
-    { "@type": "Offer", "name": "Pro Annual (US)",   "price": "59.99", "priceCurrency": "USD" },
-    { "@type": "Offer", "name": "Pro Monthly (EU)",  "price": "5.99",  "priceCurrency": "EUR" },
-    { "@type": "Offer", "name": "Pro Annual (EU)",   "price": "59.99", "priceCurrency": "EUR" },
-    { "@type": "Offer", "name": "Pro Monthly (UK)",  "price": "4.99",  "priceCurrency": "GBP" },
-    { "@type": "Offer", "name": "Pro Annual (UK)",   "price": "49.99", "priceCurrency": "GBP" }
+    {
+      "@type": "Offer",
+      "name": "Free",
+      "price": "0",
+      "priceCurrency": "USD",
+      "eligibleRegion": {
+        "@type": "Country",
+        "name": "United States"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Pro Monthly",
+      "price": "5.99",
+      "priceCurrency": "USD",
+      "eligibleRegion": {
+        "@type": "Country",
+        "name": "United States"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Pro Annual",
+      "price": "59.99",
+      "priceCurrency": "USD",
+      "eligibleRegion": {
+        "@type": "Country",
+        "name": "United States"
+      }
+    }
   ]
 }
 </script>
@@ -95,6 +113,38 @@
      Fathom:
      <script src="https://cdn.usefathom.com/script.js" data-site="YOUR_SITE_ID" defer></script>
 ─────────────────────────────────────────────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the Muscle Guard Pro subscription HSA/FSA eligible?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not currently a flagged HSA/FSA eligible expense. Some users have successfully reimbursed via the App Store receipt \u2014 confirm with your plan administrator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Muscle Guard integrate with telehealth providers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not directly yet. The Doctor PDF works with any prescriber including telehealth \u2014 patients have used it with Ro, Hims, Sequence and traditional clinic settings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Muscle Guard CCPA-compliant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. California residents have full rights to access, deletion, correction, and opt-out of data sale (moot \u2014 we don't sell data)."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <header class="site-header">
@@ -106,12 +156,11 @@ fill="none" stroke="#0F7B6C" stroke-width="2.2" stroke-linejoin="round"/>
 </svg><span><span class="brand-wordmark">MUSCLE GUARD</span><br><span class="brand-tag">GLP-1 Companion</span></span></a>
 <button class="mobile-toggle" aria-label="Menu" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
 <nav class="nav">
-<a href="/muscle-loss-on-glp1.html">Muscle preservation</a>
-<a href="/guides/">Guides</a>
-<a href="/for-doctors.html">For doctors</a>
-<a href="/faq.html">FAQ</a>
+<a href="/research/">Research</a>
+<a href="/#features">How it works</a>
 <a href="/#pricing">Pricing</a>
-<a class="nav-cta" href="/#download">Download</a>
+<a href="/faq.html">FAQ</a>
+<a class="nav-cta" href="/#download">Get the app</a>
 </nav>
 </div>
 </header>
@@ -123,7 +172,7 @@ fill="none" stroke="#0F7B6C" stroke-width="2.2" stroke-linejoin="round"/>
 </div>
 </section>
 <article class="article">
-<div class="reviewer-line">⚕ Brand Expert (Pty) Ltd · 19 May 2026</div>
+<div class="reviewer-line">By the Muscle Guard research team · Last reviewed 2026-06-04</div>
 
 <div class="stat-band">
 <div class="stat"><div class="big">$5.99</div><div class="lbl">Pro / month</div></div>
@@ -158,22 +207,26 @@ fill="none" stroke="#0F7B6C" stroke-width="2.2" stroke-linejoin="round"/>
 </article>
 <footer class="site-footer">
 <div class="wrap">
-<div class="footer-grid">
-<div class="brand-statement">
-<span class="wordmark">MUSCLE GUARD</span>
-A GLP-1 companion built around muscle preservation. Track injections and tablets, scan plates with AI, generate doctor reports, monitor body composition, and protect your lean mass.
-<div class="disclaimer">A self-tracking app for people on GLP-1 medications. Not a medical device. Always consult your prescriber.</div>
-</div>
+<div class="footer-grid footer-grid-3">
 <div>
 <h4>Product</h4>
 <a href="/#features">Features</a>
 <a href="/#pricing">Pricing</a>
-<a href="/muscle-loss-on-glp1.html">Muscle preservation</a>
-<a href="/for-doctors.html">For doctors</a>
-<a href="/guides/">Guides</a>
+<a href="/#download">Download</a>
 </div>
 <div>
-<h4>Legal</h4>
+<h4>Research</h4>
+<a href="/research/">All articles</a>
+<a href="/evidence.pdf">Evidence PDF (12 pages)</a>
+<a href="/research/the-muscle-guard-score.html">The Muscle Guard Score</a>
+<a href="/research/#subscribe">Subscribe</a>
+</div>
+<div>
+<h4>More</h4>
+<a href="/story.html">Story</a>
+<a href="/faq.html">FAQ</a>
+<a href="/for-doctors.html">For doctors</a>
+<a href="/contact.html">Contact</a>
 <a href="/privacy.html">Privacy Policy</a>
 <a href="/terms.html">Terms of Service</a>
 <a href="/delete-account.html">Delete my account</a>
@@ -181,16 +234,12 @@ A GLP-1 companion built around muscle preservation. Track injections and tablets
 <a href="/regions/us.html">United States</a>
 <a href="/regions/eu.html">European Union</a>
 </div>
-<div>
-<h4>Support</h4>
-<a href="/contact.html">Contact</a>
-<a href="/faq.html">FAQ</a>
-<a href="mailto:support@muscleguardglp.com">support@muscleguardglp.com</a>
-<a href="mailto:clinical@muscleguardglp.com">clinical@muscleguardglp.com</a>
 </div>
+<div class="boundary-statement">
+Muscle Guard is a self-tracking companion and coach. Not a medical device. Not medical advice. Always consult your healthcare provider for personal decisions.
 </div>
 <div class="copyright">
-<span>© 2026 Brand Expert (Pty) Ltd. All rights reserved.</span>
+<span>© 2026 HK Brand Expert (Pty) Ltd · Johannesburg.</span>
 <span>Made with care in Johannesburg.</span>
 </div>
 </div>

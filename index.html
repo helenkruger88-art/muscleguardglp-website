@@ -4,28 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Muscle Guard — The GLP-1 companion built around muscle preservation</title>
-<meta name="description" content="Track your GLP-1 journey and protect your muscle. Built for Ozempic, Wegovy, Mounjaro, Zepbound, Rybelsus, Saxenda and compounded semaglutide / tirzepatide. AI plate scan, doctor PDF, body composition, 75 milestones.">
+<meta name="description" content="Track your GLP-1 journey and protect your muscle. Plain-English evidence library on GLP-1s, muscle loss, protein, and resistance training. Built for Ozempic, Wegovy, Mounjaro, Zepbound, Rybelsus, Saxenda and compounded preparations.">
 <script>
 (function() {
   try {
     var lang = (navigator.language || navigator.userLanguage || 'en-ZA').toLowerCase();
-    var tz = '';
-    try { tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || '').toLowerCase(); } catch (e) {}
-    // Default to ZA. Override only if BOTH timezone AND language agree.
-    // Catches SA users running default Windows en-US locale — they get ZA
-    // because their timezone is Africa/Johannesburg, not the false-positive
-    // US banner the old language-only detect would have shown.
     var region = 'za';
-    var isUsLang = lang === 'en-us' || lang === 'en-ca' || lang.indexOf('en-us') === 0 || lang.indexOf('en-ca') === 0;
-    var isEuLang = lang.indexOf('de') === 0 || lang.indexOf('fr') === 0 || lang.indexOf('es') === 0 ||
-                   lang.indexOf('it') === 0 || lang.indexOf('nl') === 0 || lang.indexOf('pt') === 0 ||
-                   lang.indexOf('pl') === 0 || lang.indexOf('sv') === 0 || lang.indexOf('da') === 0 ||
-                   lang.indexOf('en-gb') === 0 || lang.indexOf('en-ie') === 0;
-    if (tz.indexOf('africa/') === 0) {
-      region = 'za';
-    } else if (tz.indexOf('america/') === 0 && isUsLang) {
+    if (lang === 'en-us' || lang === 'en-ca' || lang.indexOf('en-us') === 0 || lang.indexOf('en-ca') === 0) {
       region = 'us';
-    } else if (tz.indexOf('europe/') === 0 || (isEuLang && tz.indexOf('europe/') === 0)) {
+    } else if (lang.indexOf('de') === 0 || lang.indexOf('fr') === 0 || lang.indexOf('es') === 0 ||
+               lang.indexOf('it') === 0 || lang.indexOf('nl') === 0 || lang.indexOf('pt') === 0 ||
+               lang.indexOf('pl') === 0 || lang.indexOf('sv') === 0 || lang.indexOf('da') === 0 ||
+               lang.indexOf('en-gb') === 0 || lang.indexOf('en-ie') === 0) {
       region = 'eu';
     }
     document.documentElement.setAttribute('data-region', region);
@@ -35,18 +25,19 @@
 <link rel="canonical" href="https://muscleguardglp.com/">
 
 <meta property="og:title" content="Muscle Guard — The GLP-1 companion built around muscle preservation">
-<meta property="og:description" content="Track your GLP-1 journey and protect your muscle. Built for Ozempic, Wegovy, Mounjaro, Zepbound, Rybelsus, Saxenda and compounded semaglutide / tirzepatide. AI plate scan, doctor PDF, body composition, 75 milestones.">
+<meta property="og:description" content="Track your GLP-1 journey. Protect your muscle. Plain-English research library on GLP-1s and lean mass.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://muscleguardglp.com/">
 <meta property="og:image" content="https://muscleguardglp.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Muscle Guard — The GLP-1 companion built around muscle preservation">
-<meta name="twitter:description" content="Track your GLP-1 journey and protect your muscle. Built for Ozempic, Wegovy, Mounjaro, Zepbound, Rybelsus, Saxenda and compounded semaglutide / tirzepatide. AI plate scan, doctor PDF, body composition, 75 milestones.">
+<meta name="twitter:description" content="Track your GLP-1 journey. Protect your muscle.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=20260601-5">
+<link rel="stylesheet" href="/styles.css">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -55,15 +46,24 @@
   "legalName": "HK Brand Expert (Pty) Ltd",
   "url": "https://muscleguardglp.com",
   "logo": "https://muscleguardglp.com/logo.png",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Johannesburg",
-    "addressCountry": "ZA"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "support@muscleguardglp.com",
-    "contactType": "customer support"
+  "address": {"@type": "PostalAddress", "addressLocality": "Johannesburg", "addressCountry": "ZA"},
+  "contactPoint": [
+    {"@type": "ContactPoint", "email": "hello@muscleguardglp.com", "contactType": "customer support"},
+    {"@type": "ContactPoint", "email": "research@muscleguardglp.com", "contactType": "research"},
+    {"@type": "ContactPoint", "email": "privacy@muscleguardglp.com", "contactType": "privacy"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Muscle Guard",
+  "url": "https://muscleguardglp.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://muscleguardglp.com/research/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
   }
 }
 </script>
@@ -74,17 +74,14 @@
   "name": "Muscle Guard",
   "operatingSystem": "iOS, ANDROID",
   "applicationCategory": "HealthApplication",
-  "description": "A GLP-1 companion app built around muscle preservation. Tracks injections, plate-scans meals with AI, generates a doctor report, monitors body composition, and helps users on Ozempic, Wegovy, Mounjaro, Zepbound, Rybelsus, Saxenda, and compounded semaglutide and tirzepatide protect their lean mass.",
+  "description": "A GLP-1 companion app built around muscle preservation. Track injections, scan meals, monitor body composition, and generate a one-page doctor PDF.",
   "offers": [
-    { "@type": "Offer", "name": "Free",        "price": "0",  "priceCurrency": "ZAR" },
-    { "@type": "Offer", "name": "Pro Monthly", "price": "99", "priceCurrency": "ZAR" },
-    { "@type": "Offer", "name": "Pro Annual",  "price": "899","priceCurrency": "ZAR" },
-    { "@type": "Offer", "name": "Pro Monthly (US)",  "price": "5.99",  "priceCurrency": "USD" },
-    { "@type": "Offer", "name": "Pro Annual (US)",   "price": "59.99", "priceCurrency": "USD" },
-    { "@type": "Offer", "name": "Pro Monthly (EU)",  "price": "5.99",  "priceCurrency": "EUR" },
-    { "@type": "Offer", "name": "Pro Annual (EU)",   "price": "59.99", "priceCurrency": "EUR" },
-    { "@type": "Offer", "name": "Pro Monthly (UK)",  "price": "4.99",  "priceCurrency": "GBP" },
-    { "@type": "Offer", "name": "Pro Annual (UK)",   "price": "49.99", "priceCurrency": "GBP" }
+    {"@type": "Offer", "name": "Pro Monthly (ZA)", "price": "99", "priceCurrency": "ZAR", "eligibleRegion": {"@type": "Country", "name": "ZA"}},
+    {"@type": "Offer", "name": "Pro Annual (ZA)", "price": "899", "priceCurrency": "ZAR", "eligibleRegion": {"@type": "Country", "name": "ZA"}},
+    {"@type": "Offer", "name": "Pro Monthly (US)", "price": "5.99", "priceCurrency": "USD", "eligibleRegion": {"@type": "Country", "name": "US"}},
+    {"@type": "Offer", "name": "Pro Annual (US)", "price": "59.99", "priceCurrency": "USD", "eligibleRegion": {"@type": "Country", "name": "US"}},
+    {"@type": "Offer", "name": "Pro Monthly (EU)", "price": "5.99", "priceCurrency": "EUR", "eligibleRegion": {"@type": "Place", "name": "European Union"}},
+    {"@type": "Offer", "name": "Pro Annual (EU)", "price": "59.99", "priceCurrency": "EUR", "eligibleRegion": {"@type": "Place", "name": "European Union"}}
   ]
 }
 </script>
@@ -93,92 +90,57 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is Muscle Guard a medical device?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Muscle Guard is a self-tracking companion app for people on GLP-1 medications. It is not a medical device and does not provide medical advice. Always consult your prescriber for medical decisions."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which GLP-1 medications does Muscle Guard support?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Muscle Guard supports Ozempic and Wegovy (semaglutide), Mounjaro and Zepbound (tirzepatide), Rybelsus (oral semaglutide), Saxenda (liraglutide), and compounded semaglutide and tirzepatide. The app knows the standard titration schedule for each."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why does muscle preservation matter on a GLP-1?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "GLP-1 medications suppress appetite so effectively that many users enter a severe calorie and protein deficit. Muscle is built from protein, so a sustained deficit can lead to loss of lean mass. Resistance training plus 1.2 to 1.6 g/kg/day of protein helps preserve muscle while you lose fat."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does Muscle Guard cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Muscle Guard Free is free forever. Muscle Guard Pro is R99 per month or R899 per year (about USD 6 / month or EUR 6 / month in equivalent regions), with a 7-day free trial. No card needed to start."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does it work with my doctor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The Doctor PDF export produces a one-page, branded report a prescriber can read in 60 seconds \u2014 injections logged, side effects flagged, weight and body composition trend, and the Muscle Guard Score. Hand it to them at your next consult."
-      }
-    }
+    {"@type": "Question", "name": "Is Muscle Guard a medical device?", "acceptedAnswer": {"@type": "Answer", "text": "No. Muscle Guard is a self-tracking companion and coach. Not a medical device, not for diagnosis. Always consult your healthcare provider."}},
+    {"@type": "Question", "name": "Which GLP-1 medications does Muscle Guard support?", "acceptedAnswer": {"@type": "Answer", "text": "Ozempic and Wegovy (semaglutide), Mounjaro and Zepbound (tirzepatide), Rybelsus (oral semaglutide), Saxenda (liraglutide), plus compounded semaglutide and tirzepatide preparations."}},
+    {"@type": "Question", "name": "Why does muscle preservation matter on a GLP-1?", "acceptedAnswer": {"@type": "Answer", "text": "Without intervention, 25 to 40 percent of weight lost on a GLP-1 can be lean muscle. With adequate protein (1.2 to 1.6 g/kg/day) and resistance training (2 to 4 sessions per week), that figure drops below 10 percent."}},
+    {"@type": "Question", "name": "How much does Muscle Guard cost?", "acceptedAnswer": {"@type": "Answer", "text": "Free forever for the basics. Pro is R99 per month or R899 per year in South Africa, $5.99/month in the US, €5.99/month in the EU. 7-day free trial, no card needed."}},
+    {"@type": "Question", "name": "How is Muscle Guard different from Shotsy, MeAgain, or Weight Watchers Med+?", "acceptedAnswer": {"@type": "Answer", "text": "The only one built around muscle preservation as the headline. Tracks protein adherence, resistance training, body composition, and produces a one-page doctor PDF — alongside the standard injection log."}}
   ]
 }
 </script>
-<!-- ───────────────────────────────────────────────────────────
-     Analytics placeholder
-     Drop in the snippet for Plausible or Fathom when ready.
-     Privacy-friendly, no cookie banner required.
-     ──────────────────────────────────────────────────────────
-     Plausible:
-     <script defer data-domain="muscleguardglp.com" src="https://plausible.io/js/script.js"></script>
-     Fathom:
-     <script src="https://cdn.usefathom.com/script.js" data-site="YOUR_SITE_ID" defer></script>
-─────────────────────────────────────────────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://muscleguardglp.com/"}
+  ]
+}
+</script>
+<!-- Analytics placeholder: drop Plausible / Fathom snippet here when ready -->
 </head>
 <body>
-<!-- Dismissible regional banner — appears for non-default regions -->
+
+<!-- Dismissible regional banner — for non-default regions -->
 <div class="region-banner" data-r="us" hidden>
-  <div class="wrap">
-    <span>Looks like you're in the United States — see our <a href="/regions/us.html">US page</a> for USD pricing, body composition tracking, and insurance context.</span>
+  <div class="wrap"><span>Looks like you're in the United States — see our <a href="/regions/us.html">US page</a> for USD pricing, body composition tracking, and insurance context.</span>
     <button class="region-banner-close" aria-label="Dismiss" onclick="this.parentElement.parentElement.hidden=true; try{sessionStorage.setItem('mg-banner-dismissed','1')}catch(e){}">×</button>
   </div>
 </div>
 <div class="region-banner" data-r="eu" hidden>
-  <div class="wrap">
-    <span>Looks like you're in Europe — see our <a href="/regions/eu.html">EU page</a> for EUR pricing, GDPR-native architecture, and oral semaglutide context.</span>
+  <div class="wrap"><span>Looks like you're in Europe — see our <a href="/regions/eu.html">EU page</a> for EUR pricing, GDPR-native architecture, and oral semaglutide context.</span>
     <button class="region-banner-close" aria-label="Dismiss" onclick="this.parentElement.parentElement.hidden=true; try{sessionStorage.setItem('mg-banner-dismissed','1')}catch(e){}">×</button>
   </div>
 </div>
+
 <header class="site-header">
 <div class="wrap">
 <a class="brand-mark" href="/"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-<path d="M16 3 L27 7 V16 C27 22.6 22.6 27.6 16 30 C9.4 27.6 5 22.6 5 16 V7 Z"
-fill="none" stroke="#0F7B6C" stroke-width="2.2" stroke-linejoin="round"/>
+<path d="M16 3 L27 7 V16 C27 22.6 22.6 27.6 16 30 C9.4 27.6 5 22.6 5 16 V7 Z" fill="none" stroke="#0F7B6C" stroke-width="2.2" stroke-linejoin="round"/>
 <path d="M11 16.5 L14.5 20 L21 13" fill="none" stroke="#0F7B6C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg><span><span class="brand-wordmark">MUSCLE GUARD</span><br><span class="brand-tag">GLP-1 Companion</span></span></a>
 <button class="mobile-toggle" aria-label="Menu" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
 <nav class="nav">
-<a href="/muscle-loss-on-glp1.html">Muscle preservation</a>
-<a href="/guides/">Guides</a>
-<a href="/for-doctors.html">For doctors</a>
-<a href="/faq.html">FAQ</a>
+<a href="/research/">Research</a>
+<a href="/#features">How it works</a>
 <a href="/#pricing">Pricing</a>
-<a class="nav-cta" href="/#download">Download</a>
+<a href="/faq.html">FAQ</a>
+<a class="nav-cta" href="/#download">Get the app</a>
 </nav>
 </div>
 </header>
+
+<!-- ═══ HERO ═══ -->
 <section class="hero hero-dark">
 <div class="hero-bg-grid" aria-hidden="true"></div>
 <div class="hero-bg-glow" aria-hidden="true"></div>
@@ -190,29 +152,105 @@ fill="none" stroke="#0F7B6C" stroke-width="2.2" stroke-linejoin="round"/>
   Track your GLP-1 journey.<br>
   <span class="hero-h1-accent">Protect your muscle.</span>
 </h1>
-<p class="lede" data-r="za">GLP-1 medications burn fat. They can also burn muscle. Muscle Guard is built in Johannesburg, around preserving your lean mass while you lose weight — across every GLP-1 South Africans actually take, including compounded semaglutide and tirzepatide.</p>
-<p class="lede" data-r="us">GLP-1 medications burn fat. They can also burn muscle — and the lifting community has been saying so for two years. Muscle Guard is built around the muscle-preservation playbook you already know: protein adherence, resistance training, body composition, and the Doctor PDF that turns your data into something a prescriber will actually use.</p>
-<p class="lede" data-r="eu">GLP-1 medications burn fat. They can also burn muscle. Muscle Guard is the companion app built around preserving your lean mass — quietly, privately, GDPR-native by architecture, with EU-region data hosting and oral semaglutide ready.</p>
+<p class="lede" data-r="za">GLP-1 medications burn fat. Without intervention, 25 to 40 percent of what you lose can be lean muscle, not fat. Muscle Guard tracks the protein-and-training playbook that drops that figure below 10 percent — across every GLP-1 South Africans actually take, including compounded semaglutide and tirzepatide.</p>
+<p class="lede" data-r="us">GLP-1 medications burn fat. Without intervention, 25 to 40 percent of what you lose can be lean muscle, not fat. Muscle Guard tracks the protein-and-training playbook that drops that figure below 10 percent — built around the body-composition, lean-mass language the lifting community already speaks.</p>
+<p class="lede" data-r="eu">GLP-1 medications burn fat. Without intervention, 25 to 40 percent of what you lose can be lean muscle, not fat. Muscle Guard tracks the protein-and-training playbook that drops that figure below 10 percent — quietly, privately, GDPR-native by architecture, with EU-region data hosting.</p>
 <p class="drugs" data-r="za">Built for <strong>compounded semaglutide and tirzepatide</strong>, plus <strong>Ozempic, Wegovy, Mounjaro, Zepbound, Rybelsus and Saxenda</strong>.</p>
 <p class="drugs" data-r="us">Built for <strong>Wegovy, Zepbound, Mounjaro and Ozempic</strong>, plus <strong>Rybelsus, Saxenda</strong> and compounded preparations.</p>
 <p class="drugs" data-r="eu">Built for <strong>Wegovy, Rybelsus, Saxenda and Mounjaro</strong>, plus <strong>Ozempic</strong> and compounded preparations. Oral semaglutide-ready.</p>
 <div class="cta-row hero-cta">
-<a class="store-btn store-btn-glow" href="#download"><span><span class="store-label">Download on the</span><span class="store-name">App Store</span></span></a>
-<a class="store-btn store-btn-glow" href="#download"><span><span class="store-label">Get it on</span><span class="store-name">Google Play</span></span></a>
+  <a class="btn btn-large" href="/research/">Read the evidence</a>
 </div>
-<p class="trust" data-r="za">Free to start  ·  R99/month or R899/year  ·  7-day Pro trial, no card needed</p>
-<p class="trust" data-r="us">Free to start  ·  $5.99/month  ·  7-day Pro trial, no card needed  ·  Cancel anytime</p>
+<div class="cta-row hero-cta-secondary">
+  <a class="store-btn store-btn-small" href="#download"><span><span class="store-label">Download on the</span><span class="store-name">App Store</span></span></a>
+  <a class="store-btn store-btn-small" href="#download"><span><span class="store-label">Get it on</span><span class="store-name">Google Play</span></span></a>
+</div>
+<p class="trust" data-r="za">Free to start  ·  R99/month  ·  7-day Pro trial, no card needed</p>
+<p class="trust" data-r="us">Free to start  ·  $5.99/month  ·  7-day Pro trial, no card needed</p>
 <p class="trust" data-r="eu">Free to start  ·  €5.99/month  ·  7-day Pro trial, no card needed  ·  GDPR-native, EU-hosted</p>
 </div>
 <div class="hero-phone-wrap">
 <div class="phone-glow"></div>
-<img class="hero-screenshot" src="/screenshots/01-home-dashboard.png" alt="Muscle Guard home dashboard — Muscle Guard Score, daily circles, body check" width="340">
+<div class="phone-mockup phone-hero" aria-label="Muscle Guard app dashboard preview">
+  <div class="phone-frame">
+    <div class="phone-notch"></div>
+    <div class="phone-screen">
+      <div class="phone-status"><span class="phone-time">9:41</span><span class="phone-status-icons"><span class="phone-signal"></span><span class="phone-wifi"></span><span class="phone-battery"></span></span></div>
+      <div class="phone-app">
+        <div class="phone-app-brand">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="phone-shield" aria-hidden="true">
+            <path d="M16 3 L27 7 V16 C27 22.6 22.6 27.6 16 30 C9.4 27.6 5 22.6 5 16 V7 Z" fill="none" stroke="#0F7B6C" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M11 16.5 L14.5 20 L21 13" fill="none" stroke="#0F7B6C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="phone-wordmark">MUSCLE GUARD</span>
+          <span class="phone-bell" aria-hidden="true">🔔</span>
+        </div>
+        <div class="phone-app-head">
+          <div class="phone-greeting">
+            <div class="phone-greet-tag">Wednesday · Week 9</div>
+            <div class="phone-greet-name">Good morning, Sarah</div>
+          </div>
+          <div class="phone-avatar">SK</div>
+        </div>
+        <div class="phone-score-card">
+          <div class="phone-score-label">Muscle Guard Score</div>
+          <div class="phone-score-wrap">
+            <svg class="phone-score-ring" viewBox="0 0 200 200" aria-hidden="true">
+              <circle cx="100" cy="100" r="84" fill="none" stroke="#E8F4F1" stroke-width="14"/>
+              <circle cx="100" cy="100" r="84" fill="none" stroke="#0F7B6C" stroke-width="14" stroke-dasharray="528" stroke-dashoffset="132" stroke-linecap="round" transform="rotate(-90 100 100)"/>
+            </svg>
+            <div class="phone-score-num">
+              <span class="phone-score-big">78</span>
+              <span class="phone-score-small">/ 100</span>
+            </div>
+          </div>
+          <div class="phone-score-trend"><span class="phone-arrow-up">▲</span> 4 vs last week  ·  <span class="muted">On track</span></div>
+        </div>
+        <div class="phone-mini-row">
+          <div class="phone-mini-card">
+            <div class="phone-mini-num">112<span class="phone-mini-unit">g</span></div>
+            <div class="phone-mini-lbl">Protein today</div>
+            <div class="phone-mini-bar"><span style="width: 88%"></span></div>
+          </div>
+          <div class="phone-mini-card">
+            <div class="phone-mini-num">3<span class="phone-mini-unit">/4</span></div>
+            <div class="phone-mini-lbl">Training this week</div>
+            <div class="phone-mini-bar"><span style="width: 75%"></span></div>
+          </div>
+        </div>
+        <div class="phone-section-label">This week's check-ins</div>
+        <div class="phone-week-grid">
+          <div class="phone-week-cell on"><span class="phone-week-day">M</span></div>
+          <div class="phone-week-cell on"><span class="phone-week-day">T</span></div>
+          <div class="phone-week-cell on"><span class="phone-week-day">W</span></div>
+          <div class="phone-week-cell partial"><span class="phone-week-day">T</span></div>
+          <div class="phone-week-cell"><span class="phone-week-day">F</span></div>
+          <div class="phone-week-cell"><span class="phone-week-day">S</span></div>
+          <div class="phone-week-cell"><span class="phone-week-day">S</span></div>
+        </div>
+        <div class="phone-shot-card">
+          <div class="phone-shot-icon">💉</div>
+          <div class="phone-shot-text">
+            <div class="phone-shot-title">Tirzepatide · Thursday</div>
+            <div class="phone-shot-meta">7.5 mg · Compounded · Due tomorrow</div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-nav">
+        <div class="phone-nav-item active">⌂</div>
+        <div class="phone-nav-item">📊</div>
+        <div class="phone-nav-item">📷</div>
+        <div class="phone-nav-item">⚕</div>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 </div>
 </div>
 </section>
 
+<!-- ═══ THESIS (with footnotes) ═══ -->
 <section class="thesis-band">
 <div class="wrap">
 <div class="thesis-kicker">The thing nobody else says out loud</div>
@@ -221,167 +259,111 @@ GLP-1 medications work.<br>
 <em>The question is</em><br>
 <span class="thesis-accent">what you're losing.</span>
 </h2>
-
 <div class="thesis-split">
 <div class="thesis-col">
 <div class="thesis-num thesis-num-bad">25&ndash;40<span class="thesis-pct">%</span></div>
-<div class="thesis-lbl"><span class="thesis-lbl-strong">of weight lost</span> on a GLP-1 can come from <strong>muscle</strong>, not fat. Without intervention.</div>
+<div class="thesis-lbl"><span class="thesis-lbl-strong">of weight lost</span> on a GLP-1 can come from <strong>muscle</strong>, not fat. Without intervention.<sup><a href="/research/glp1-and-muscle-loss.html#citations">[¹]</a></sup></div>
 </div>
 <div class="thesis-vs">vs</div>
 <div class="thesis-col">
 <div class="thesis-num thesis-num-good">&lt; 10<span class="thesis-pct">%</span></div>
-<div class="thesis-lbl"><span class="thesis-lbl-strong">with adequate protein</span> + <strong>resistance training</strong>. The muscle-preservation playbook.</div>
+<div class="thesis-lbl"><span class="thesis-lbl-strong">with adequate protein</span> + <strong>resistance training</strong>. The muscle-preservation playbook.<sup><a href="/research/glp1-and-muscle-loss.html#citations">[²]</a></sup></div>
 </div>
 </div>
-
 <p class="thesis-foot">Muscle Guard tracks the playbook for you, on every approved GLP-1.</p>
+<p style="text-align:center; margin-top: 24px;"><a class="btn btn-outline btn-on-dark" href="/research/">See the full evidence library →</a></p>
 </div>
 </section>
 
+<!-- ═══ FEATURES (9 cards, with new tenth on research library) ═══ -->
 <section id="features">
 <div class="wrap">
 <div class="section-head">
 <div class="eyebrow eyebrow-green">Built around muscle preservation</div>
 <h2>Everything you need on a GLP-1, in one app</h2>
-<p>Nine features, all working together — across every drug, every metric, every milestone.</p>
+<p>Nine features, all working together. Lead with the differentiator — track every drug, every metric, every milestone.</p>
 </div>
 <div class="feature-grid">
 <div class="feature hero-feature"><div class="feature-icon">★</div><h3>Muscle Guard Score</h3><p>The hero metric. Combines protein adherence, resistance training, weight trend and body composition into one number that captures fat-loss-without-muscle-loss.</p></div>
-<div class="feature hero-feature"><div class="feature-icon">⌂</div><h3>Privacy first</h3><p>Delete your account in one tap, all data is gone. No cookie banner. No third-party trackers. POPIA, GDPR and CCPA-ready.</p></div>
+<div class="feature hero-feature"><div class="feature-icon">⌂</div><h3>Privacy first</h3><p>Delete your account in one tap, all data is gone. No cookie banner. No third-party trackers. POPIA, GDPR and CCPA-ready by architecture, not retrofitted.</p></div>
 <div class="feature"><div class="feature-icon">💉</div><h3>Injection &amp; tablet tracking</h3><p>Knows the standard titration schedule for every approved GLP-1 — including Rybelsus oral pill and compounded vials.</p></div>
 <div class="feature"><div class="feature-icon">📷</div><h3>AI plate scan</h3><p>Snap your meal — get macros, protein target progress, and a quick logging interface. Powered by Open Food Facts + Google Gemini, transparently disclosed.</p></div>
-<div class="feature"><div class="feature-icon">🤖</div><h3>Personal Coach</h3><p>Pattern detection across symptoms, mood and logs. Spots stalls, side-effect clusters and protein gaps before they derail your journey.</p></div>
+<div class="feature"><div class="feature-icon">🤖</div><h3>Personal Coach</h3><p>Pattern detection across symptoms, mood and logs. Spots stalls, side-effect clusters and protein gaps before they derail your journey — and surfaces a specific next move.</p></div>
 <div class="feature"><div class="feature-icon">📄</div><h3>Doctor PDF export</h3><p>A branded one-page report your prescriber can read in 60 seconds. Hand it over instead of 12 weeks of WhatsApp screenshots.</p></div>
 <div class="feature"><div class="feature-icon">📸</div><h3>Progress photos</h3><p>Built-in pose guide, side-by-side compare, monthly reminders. Comparable photos that tell the truth.</p></div>
 <div class="feature"><div class="feature-icon">📊</div><h3>Body composition</h3><p>Waist, hip, neck, body-fat estimate, visceral-fat rating. The numbers that prove muscle is being preserved while fat is lost.</p></div>
-<div class="feature"><div class="feature-icon">🏆</div><h3>75 milestones</h3><p>Built for the emotional reality of a GLP-1 journey. Not “lost 1 kg” — milestones that respect the work.</p></div>
+<div class="feature"><div class="feature-icon">🏆</div><h3>75 milestones</h3><p>Built for the emotional reality of a GLP-1 journey. Not "lost 1 kg" — milestones that respect the work.</p></div>
+<div class="feature feature-research"><div class="feature-icon">📚</div><h3>Plain-English research library</h3><p>Every claim in the app links to the study behind it. Free to read, free to share, no email gate. <a href="/research/">See the library →</a></p></div>
 </div>
 </div>
 </section>
 
-<section class="alt">
+<!-- ═══ COMPARISON TABLE (NEW per spec 3.1 Section 4) ═══ -->
+<section class="comparison-section">
 <div class="wrap">
 <div class="section-head">
-<div class="eyebrow">The differentiator</div>
-<h2>How muscle preservation works on a GLP-1</h2>
-<p>The single concern that surfaces in every Reddit thread, every clinical paper, and every analysis of online discourse — and the one no other GLP-1 app puts in their headline.</p>
+<div class="eyebrow eyebrow-green">How we compare</div>
+<h2>Muscle Guard vs the category</h2>
+<p>The differences that matter, side by side.</p>
 </div>
-
-<div class="preservation-grid">
-  <div class="preservation-text">
-    <p>GLP-1 medications suppress appetite so effectively that many users enter a severe calorie and protein deficit. Muscle is built from protein, so a sustained deficit can lead to loss of lean mass — what users call &ldquo;muscle drain&rdquo; or &ldquo;Ozempic face&rdquo;.</p>
-    <p>The prevention plan is well-established: aim for <strong>1.2 to 1.6 g of protein per kg of body weight per day</strong>, perform <strong>resistance training 2 to 4 times per week</strong>, avoid extreme calorie restriction, and track strength and body composition — not just weight.</p>
-    <p>Muscle Guard is built around that plan. Every feature, every milestone, every metric is in service of one thing: fat loss without muscle loss.</p>
-    <p style="margin-top: 24px;"><a class="btn" href="/muscle-loss-on-glp1.html">Read the full muscle-preservation guide →</a></p>
-  </div>
-
-  <div class="preservation-chart-card">
-    <div class="chart-eyebrow">Lean mass loss as % of total weight loss</div>
-    <div class="chart-bars">
-      <div class="chart-row">
-        <div class="chart-row-label">Without intervention</div>
-        <div class="chart-row-bar"><div class="chart-row-fill chart-row-fill-bad" style="width: 88%"></div></div>
-        <div class="chart-row-val">25&nbsp;–&nbsp;40%</div>
-      </div>
-      <div class="chart-row">
-        <div class="chart-row-label">With protein + training</div>
-        <div class="chart-row-bar"><div class="chart-row-fill chart-row-fill-good" style="width: 22%"></div></div>
-        <div class="chart-row-val">&lt; 10%</div>
-      </div>
-    </div>
-    <div class="chart-footnote">Phase-3 trial body-composition data, structured-intervention arms. Source: published semaglutide and tirzepatide reviews, 2024.</div>
-  </div>
+<div class="comparison-wrap">
+<table class="comparison-table">
+<thead>
+<tr><th>&nbsp;</th><th class="us-col">Muscle Guard</th><th>Shotsy</th><th>MeAgain</th><th>WW Med+</th></tr>
+</thead>
+<tbody>
+<tr><td>Muscle preservation as headline</td><td class="us-col yes">Yes</td><td class="no">No</td><td class="no">No</td><td class="no">No</td></tr>
+<tr><td>Body composition tracking</td><td class="us-col yes">Yes</td><td class="no">No</td><td class="partial">Partial</td><td class="partial">Partial</td></tr>
+<tr><td>Compounded sema/tirz support</td><td class="us-col yes">First-class</td><td class="no">No</td><td class="partial">Limited</td><td class="no">No</td></tr>
+<tr><td>Doctor PDF export</td><td class="us-col yes">Yes</td><td class="no">No</td><td class="no">No</td><td class="no">No</td></tr>
+<tr><td>Free research library</td><td class="us-col yes">Yes</td><td class="no">No</td><td class="no">No</td><td class="no">No</td></tr>
+<tr><td>No third-party trackers</td><td class="us-col yes">Yes</td><td class="partial">Unclear</td><td class="no">No</td><td class="no">No</td></tr>
+</tbody>
+</table>
+<p class="comparison-foot">Compiled June 2026 from publicly available marketing pages. Inaccuracies? Email <a href="mailto:hello@muscleguardglp.com">hello@muscleguardglp.com</a>.</p>
 </div>
-
-<div class="stat-strip">
-  <div class="stat-strip-item">
-    <div class="stat-strip-num">400,000+</div>
-    <div class="stat-strip-lbl">Reddit posts analysed by Penn / Nature Health<br>to surface muscle loss as a top user concern</div>
-  </div>
-  <div class="stat-strip-item">
-    <div class="stat-strip-num">1.2 – 1.6 <span class="stat-strip-unit">g/kg</span></div>
-    <div class="stat-strip-lbl">Daily protein target Muscle Guard scores you against<br>across the active phase and maintenance</div>
-  </div>
-  <div class="stat-strip-item">
-    <div class="stat-strip-num">2 – 4 <span class="stat-strip-unit">/ week</span></div>
-    <div class="stat-strip-lbl">Resistance-training cadence the data supports for<br>preserving lean mass during the weight-loss phase</div>
-  </div>
-</div>
-
 </div>
 </section>
 
-<section class="drug-grid-section">
+<!-- ═══ FIELD NOTES (NEW per spec 3.1 Section 5) ═══ -->
+<section class="field-notes">
 <div class="wrap">
 <div class="section-head">
-<div class="eyebrow eyebrow-green">Built for every GLP-1</div>
-<h2>One app. Every approved medication.</h2>
-<p>Every brand. Every titration. Every protocol. Switch drugs without losing your data.</p>
+<div class="eyebrow">Field notes</div>
+<h2>The research, in plain English.</h2>
+<p>Four most recent articles from the Muscle Guard Research Hub.</p>
 </div>
-<div class="drug-grid">
-<div class="drug-card"><div class="drug-badge" style="background:#0F7B6C">Oz</div><span>Ozempic</span></div>
-<div class="drug-card"><div class="drug-badge" style="background:#5B6AB5">We</div><span>Wegovy</span></div>
-<div class="drug-card"><div class="drug-badge" style="background:#C97E1A">Mo</div><span>Mounjaro</span></div>
-<div class="drug-card"><div class="drug-badge" style="background:#A0563B">Ze</div><span>Zepbound</span></div>
-<div class="drug-card"><div class="drug-badge" style="background:#2E86AB">Ry</div><span>Rybelsus</span></div>
-<div class="drug-card"><div class="drug-badge" style="background:#7E4B85">Sa</div><span>Saxenda</span></div>
-<div class="drug-card"><div class="drug-badge" style="background:#0A5A4F">Tr</div><span>Trulicity</span></div>
-<div class="drug-card"><div class="drug-badge" style="background:#3A4A55">Cp</div><span>Compounded</span></div>
+<div class="field-notes-grid">
+  <a class="field-card" href="/research/glp1-and-muscle-loss.html">
+    <div class="field-card-date">2026-06-04 · 12 min read</div>
+    <h3>Do you lose muscle on a GLP-1? What the research shows.</h3>
+    <p>The lean-mass-loss evidence across 8 published trials. The 25–40% figure, where it comes from, and what changes it.</p>
+    <span class="field-card-read">Read →</span>
+  </a>
+  <a class="field-card" href="/research/protein-target.html">
+    <div class="field-card-date">2026-05-28 · 9 min read</div>
+    <h3>The protein target: 1.2 to 1.6 g/kg per day, in plain English.</h3>
+    <p>Where the range comes from, why the upper end matters most on a GLP-1, and the per-meal distribution that actually works.</p>
+    <span class="field-card-read">Read →</span>
+  </a>
+  <a class="field-card" href="/research/the-muscle-guard-score.html">
+    <div class="field-card-date">2026-05-21 · 8 min read</div>
+    <h3>The Muscle Guard Score, explained.</h3>
+    <p>Methodology, inputs, weights, and what "on track" looks like — the one number that captures fat-loss-without-muscle-loss.</p>
+    <span class="field-card-read">Read →</span>
+  </a>
+  <a class="field-card" href="/research/comparing-glp1s.html">
+    <div class="field-card-date">2026-05-14 · 10 min read</div>
+    <h3>Mounjaro vs Ozempic vs Wegovy: 2026 evidence comparison.</h3>
+    <p>Head-to-head on active ingredient, dosing, efficacy, side-effect profile, and regional cost.</p>
+    <span class="field-card-read">Read →</span>
+  </a>
 </div>
-</div>
-</section>
-
-<section class="feature-rows">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow eyebrow-green">See it in the app</div>
-<h2>Real screens from the real app</h2>
-<p>Not concept art. These are the screens you'll use every day on a GLP-1.</p>
-</div>
-
-<div class="feature-row">
-<div class="feature-row-img"><img width="320" loading="lazy" src="/screenshots/01-home-dashboard.png" alt="Home dashboard with Muscle Guard Score and daily circles"></div>
-<div class="feature-row-text">
-<div class="feature-row-eyebrow">Hero metric</div>
-<h3>The Muscle Guard Score — fat loss, without muscle loss</h3>
-<p>One number that captures whether you're losing fat the right way. Combines protein adherence, resistance training, weight trend and body composition. Updated every day from your actual logs.</p>
-<p>Plus daily circles for protein, calories, water and workouts — your week at a glance, the first thing you see every morning.</p>
-</div>
-</div>
-
-<div class="feature-row feature-row-reverse">
-<div class="feature-row-img"><img width="320" loading="lazy" src="/screenshots/03-body-check-measurements.png" alt="Body check measurements with waist, hip, neck and body-fat"></div>
-<div class="feature-row-text">
-<div class="feature-row-eyebrow">Body composition</div>
-<h3>The numbers that prove muscle is being preserved</h3>
-<p>Waist, hip, neck, chest. Body-fat estimate. Visceral-fat rating. The numbers your prescriber actually wants &mdash; and the ones that tell the truth when the scale lies during a recomposition phase.</p>
-<p>Body Check tracks your trends across 1, 3, 6 and 12-month ranges, so the pattern is visible long before the daily noise derails you.</p>
-</div>
-</div>
-
-<div class="feature-row">
-<div class="feature-row-img"><img width="320" loading="lazy" src="/screenshots/05-daily-protocol-checklist.png" alt="Daily protocol checklist with injection, hydration, protein and movement"></div>
-<div class="feature-row-text">
-<div class="feature-row-eyebrow">Daily playbook</div>
-<h3>The muscle-preservation protocol, drug-aware</h3>
-<p>Today's injection or tablet (if it's a dose day), hydration target, protein floor, and movement target &mdash; checked off as you go. Drug-aware and titration-aware: the protocol adjusts to your phase of treatment.</p>
-<p>Never wonder &ldquo;am I doing this right today.&rdquo; The app already knows.</p>
-</div>
-</div>
-
-<div class="feature-row feature-row-reverse">
-<div class="feature-row-img"><img width="320" loading="lazy" src="/screenshots/06-home-protocols.png" alt="Plateau Breaker and Nausea Mode protocols on Home dashboard"></div>
-<div class="feature-row-text">
-<div class="feature-row-eyebrow">When things go sideways</div>
-<h3>Plateau Breaker. Nausea Mode. For the real GLP-1 moments.</h3>
-<p><strong>Plateau Breaker</strong> &mdash; a 14-day metabolic reset for when weight loss stalls. Three pillars, daily auto-logging, gracefully restarts after a missed day. The intervention nobody tells you you'll need.</p>
-<p><strong>Nausea Mode</strong> &mdash; a guided protocol for rough days, with safe-bite suggestions and gentle re-introduction tracking. Because GLP-1s are great, except when they're not.</p>
-</div>
-</div>
-
+<p style="text-align: center; margin-top: 40px;"><a class="btn btn-outline" href="/research/">See all 14 articles →</a></p>
 </div>
 </section>
 
+<!-- ═══ PRICING ═══ -->
 <section id="pricing">
 <div class="wrap">
 <div class="section-head">
@@ -409,139 +391,147 @@ GLP-1 medications work.<br>
 <div class="plan-yr" data-yr="eu" hidden>or €59.99 / year</div>
 <div class="plan-yr" data-yr="gb" hidden>or £49.99 / year</div>
 <ul>
-<li><strong>Unlimited AI plate scans</strong> — camera, label, and barcode-AI rescue</li>
-<li><strong>Plateau Breaker</strong> — 14-day metabolic reset protocol</li>
-<li><strong>Doctor Report</strong> — PDF &amp; email export, branded one-pager</li>
-<li><strong>Pattern Detection</strong> across symptoms, mood, meals &amp; workouts</li>
-<li><strong>Pro Coach Insights</strong> — drug-aware titration &amp; rest-vs-training analysis</li>
-<li><strong>Long-Term Trend Analytics</strong> — 1, 3, 6 &amp; 12-month ranges</li>
-<li><strong>Unlimited progress photos</strong> &amp; side-by-side compares</li>
-<li><strong>All 75 milestones</strong> unlocked</li>
-<li><strong>Support independent development</strong> — built in South Africa for the global GLP-1 community</li>
+<li>Muscle Guard Score &amp; full body composition</li>
+<li>Unlimited AI plate scans</li>
+<li>Personal Coach pattern detection</li>
+<li>Branded Doctor PDF export</li>
+<li>Progress photos &amp; comparison</li>
+<li>All 75 milestones unlocked</li>
+<li>Priority support</li>
 </ul>
 <a class="btn" href="#download">Start free trial</a>
 </div>
 <div class="plan">
 <h3>Free</h3>
-<div class="price">Free</div>
-<div class="plan-yr">Daily logging never blocks. No card needed.</div>
+<div class="price">R0<small> forever</small></div>
+<div class="plan-yr">Track your basics, no card needed</div>
 <ul>
-<li>Injection &amp; tablet tracking — every approved GLP-1</li>
-<li>Manual &amp; barcode food logging — unlimited</li>
-<li>2 AI plate scans (lifetime trial, to see how it works)</li>
-<li>Muscle Guard Score &amp; body composition</li>
-<li>Daily weight, waist, mood &amp; symptom tracking</li>
-<li>14-day Trends analytics</li>
-<li>8 progress photos with 2 side-by-side compares</li>
-<li>Doctor Report — view in-app (PDF export is Pro)</li>
-<li>10 starter milestones</li>
+<li>Injection &amp; tablet tracking</li>
+<li>3 AI plate scans per day</li>
+<li>Basic weight &amp; trend tracking</li>
+<li>10 milestones</li>
 <li>Privacy-first deletion in one tap</li>
 </ul>
 <a class="btn btn-outline" href="#download">Download free</a>
 </div>
 </div>
-<div class="ai-cost-callout">
-<strong>AI cost transparency.</strong> Plate scan, Personal Coach and Gemini-powered features cost us money per request. Pro covers that and keeps the app honest. We will never sell your data to subsidise free AI.
+<p class="pricing-fine"><em>No card needed for the trial. No third-party trackers. Delete in one tap.</em></p>
+</div>
+</section>
+
+<!-- ═══ DIFFERENTIATOR ═══ -->
+<section class="alt">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">The differentiator</div>
+<h2>How muscle preservation works on a GLP-1</h2>
+<p>The mechanism, the prevention plan, and the studies that ground both.</p>
+</div>
+<div class="preservation-grid">
+  <div class="preservation-text">
+    <p>GLP-1 receptor agonists suppress appetite and slow gastric emptying so effectively that most users enter a sustained calorie and protein deficit. Without adequate protein intake and a resistance-training stimulus, the body mobilises both fat and muscle for energy — producing the lean-mass-loss share that shows up consistently in body-composition substudies of the major trials.</p>
+    <p>The prevention plan is well-established: <strong>1.2 to 1.6 g of protein per kg of body weight per day</strong>, <strong>resistance training 2 to 4 times per week</strong>, avoid extreme calorie restriction, and track strength and body composition — not just weight.</p>
+    <p>Muscle Guard is built around that plan. Every feature, every milestone, every metric is in service of one thing: fat loss without muscle loss.</p>
+    <p style="margin-top: 24px;"><a class="btn" href="/research/glp1-and-muscle-loss.html">Read the cornerstone article →</a></p>
+  </div>
+  <div class="preservation-chart-card">
+    <div class="chart-eyebrow">Lean mass loss as % of total weight loss</div>
+    <div class="chart-bars">
+      <div class="chart-row">
+        <div class="chart-row-label">Without intervention</div>
+        <div class="chart-row-bar"><div class="chart-row-fill chart-row-fill-bad" style="width: 88%"></div></div>
+        <div class="chart-row-val">25&nbsp;–&nbsp;40%</div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-row-label">With protein + training</div>
+        <div class="chart-row-bar"><div class="chart-row-fill chart-row-fill-good" style="width: 22%"></div></div>
+        <div class="chart-row-val">&lt; 10%</div>
+      </div>
+    </div>
+    <div class="chart-footnote">Phase-3 trial body-composition data, structured-intervention arms. Sources cited in <a href="/research/glp1-and-muscle-loss.html#citations">the cornerstone</a>.</div>
+  </div>
 </div>
 </div>
 </section>
 
-<section id="download" class="download-band">
+<!-- ═══ DOWNLOAD CTA ═══ -->
+<section id="download" class="cta-block cta-block-dark">
 <div class="wrap">
-<div class="section-head">
-<div class="eyebrow eyebrow-green">Download</div>
-<h2>Get Muscle Guard</h2>
-<p>Available on Google Play. Apple App Store version coming soon.</p>
-</div>
-<div class="cta-row download-cta">
-<a class="store-btn store-btn-glow" href="#" aria-disabled="true"><span><span class="store-label">Coming soon</span><span class="store-name">App Store</span></span></a>
-<a class="store-btn store-btn-glow" href="https://play.google.com/store/apps/details?id=com.muscleguard.app"><span><span class="store-label">Get it on</span><span class="store-name">Google Play</span></span></a>
-</div>
-<p class="trust" data-r="za">Free to start  ·  R99/month or R899/year  ·  7-day Pro trial, no card needed</p>
-<p class="trust" data-r="us">Free to start  ·  $5.99/month  ·  7-day Pro trial, no card needed  ·  Cancel anytime</p>
-<p class="trust" data-r="eu">Free to start  ·  €5.99/month  ·  7-day Pro trial, no card needed  ·  GDPR-native, EU-hosted</p>
-</div>
-</section>
-
-<section class="story-band">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow eyebrow-green">Built independently</div>
-<h2>Built in South Africa for the global GLP-1 community</h2>
-<p>Muscle Guard is made by a small independent team at HK Brand Expert (Pty) Ltd in Johannesburg. Your Pro subscription covers our AI costs, server costs, and lets us keep shipping features the people on GLP-1s actually need &mdash; without selling your data or running ads.</p>
+<div class="eyebrow" style="color: rgba(255,220,130,0.85);">Get started</div>
+<h2>Start your GLP-1 journey strong</h2>
+<p>Free to download. 7-day Pro trial. Cancel anytime. No card needed.</p>
+<div class="cta-row" style="justify-content: center;">
+<a class="store-btn" href="#"><span><span class="store-label">Download on the</span><span class="store-name">App Store</span></span></a>
+<a class="store-btn" href="#"><span><span class="store-label">Get it on</span><span class="store-name">Google Play</span></span></a>
 </div>
 </div>
 </section>
 
 <footer class="site-footer">
 <div class="wrap">
-<div class="footer-grid">
-<div>
-<div class="brand-statement">
-<span class="wordmark">MUSCLE GUARD</span>
-The GLP-1 companion built around muscle preservation. By <strong>HK Brand Expert (Pty) Ltd</strong>, Johannesburg, South Africa.
-<div class="disclaimer">Muscle Guard is a self-tracking companion app and is not a medical device. It does not provide medical advice. Always consult your prescriber for medical decisions. GLP-1 medication brands (Ozempic&reg;, Wegovy&reg;, Mounjaro&reg;, Zepbound&reg;, Rybelsus&reg;, Saxenda&reg;) are trademarks of their respective owners and referenced here only to describe app compatibility.</div>
-</div>
-</div>
+<div class="footer-grid footer-grid-3">
 <div>
 <h4>Product</h4>
 <a href="/#features">Features</a>
 <a href="/#pricing">Pricing</a>
 <a href="/#download">Download</a>
-<a href="/for-doctors.html">For doctors</a>
 </div>
 <div>
-<h4>Learn</h4>
-<a href="/muscle-loss-on-glp1.html">Muscle preservation</a>
-<a href="/guides/">All guides</a>
+<h4>Research</h4>
+<a href="/research/">All articles</a>
+<a href="/evidence.pdf">Evidence PDF (12 pages)</a>
+<a href="/research/the-muscle-guard-score.html">The Muscle Guard Score</a>
+<a href="/research/#subscribe">Subscribe</a>
+</div>
+<div>
+<h4>More</h4>
+<a href="/story.html">Story</a>
 <a href="/faq.html">FAQ</a>
+<a href="/for-doctors.html">For doctors</a>
 <a href="/contact.html">Contact</a>
+<a href="/privacy.html">Privacy Policy</a>
+<a href="/terms.html">Terms of Service</a>
+<a href="/delete-account.html">Delete my account</a>
+<a href="/regions/za.html">South Africa</a>
+<a href="/regions/us.html">United States</a>
+<a href="/regions/eu.html">European Union</a>
 </div>
-<div>
-<h4>Legal</h4>
-<a href="/privacy.html">Privacy policy</a>
-<a href="/terms.html">Terms of service</a>
-<a href="/delete-account.html">Delete account</a>
-<a href="mailto:support@muscleguardglp.com">support@muscleguardglp.com</a>
 </div>
+<div class="boundary-statement">
+Muscle Guard is a self-tracking companion and coach. Not a medical device. Not medical advice. Always consult your healthcare provider for personal decisions.
 </div>
 <div class="copyright">
-<span>&copy; 2026 HK Brand Expert (Pty) Ltd. All rights reserved.</span>
-<span><a href="/regions/za.html">South Africa</a> &middot; <a href="/regions/us.html">United States</a> &middot; <a href="/regions/eu.html">Europe / UK</a></span>
+<span>© 2026 HK Brand Expert (Pty) Ltd · Johannesburg.</span>
+<span>Made with care in Johannesburg.</span>
 </div>
 </div>
 </footer>
 
 <script>
-(function() {
-  try {
-    var buttons = document.querySelectorAll('.pricing-toggle button');
-    if (!buttons.length) return;
-    buttons.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var region = btn.getAttribute('data-region');
-        buttons.forEach(function(b) { b.classList.toggle('active', b === btn); });
-        document.querySelectorAll('[data-price]').forEach(function(el) {
-          el.hidden = el.getAttribute('data-price') !== region;
-        });
-        document.querySelectorAll('[data-yr]').forEach(function(el) {
-          el.hidden = el.getAttribute('data-yr') !== region;
-        });
-      });
-    });
-  } catch (e) {}
+// Regional pricing toggle (unchanged from prior)
+function applyPricing(region) {
+  document.querySelectorAll('.pricing-toggle button').forEach(b => {
+    b.classList.toggle('active', b.dataset.region === region);
+  });
+  document.querySelectorAll('[data-price]').forEach(el => { el.hidden = el.dataset.price !== region; });
+  document.querySelectorAll('[data-yr]').forEach(el => { el.hidden = el.dataset.yr !== region; });
+}
+(function initPricing() {
+  var detected = document.documentElement.getAttribute('data-region') || 'za';
+  var initial = detected === 'us' ? 'us' : detected === 'eu' ? 'eu' : 'za';
+  applyPricing(initial);
 })();
-(function() {
-  try {
-    var region = document.documentElement.getAttribute('data-region');
-    if (!region || region === 'za') return;
-    if (sessionStorage.getItem('mg-banner-dismissed')) return;
-    var banner = document.querySelector('.region-banner[data-r="' + region + '"]');
-    if (banner) banner.hidden = false;
-  } catch (e) {}
+document.querySelectorAll('.pricing-toggle button').forEach(btn => {
+  btn.addEventListener('click', () => applyPricing(btn.dataset.region));
+});
+
+(function initBanner() {
+  try { if (sessionStorage.getItem('mg-banner-dismissed') === '1') return; } catch (e) {}
+  var region = document.documentElement.getAttribute('data-region') || 'za';
+  if (region === 'za') return;
+  var b = document.querySelector('.region-banner[data-r="' + region + '"]');
+  if (b) b.hidden = false;
 })();
 </script>
-
 </body>
 </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

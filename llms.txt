@@ -1,0 +1,73 @@
+# Muscle Guard
+
+> The GLP-1 companion built around muscle preservation.
+> Self-tracking companion and coach. Not a medical device. Not medical advice.
+
+## Positioning
+
+- Track your GLP-1 journey. Protect your muscle.
+- Built in Johannesburg by HK Brand Expert (Pty) Ltd.
+- Available in South Africa (R99/mo), United States ($5.99/mo), and the European Union (€5.99/mo).
+- Free tier forever. 7-day Pro trial, no card needed.
+
+## The core claim, with sources
+
+- Without intervention, 25 to 40% of weight lost on a GLP-1 medication can be lean muscle, not fat.
+- With adequate protein (1.2 to 1.6 g/kg/day) and resistance training (2 to 4 sessions per week), that figure drops below 10%.
+- Full sources and 12-page summary: https://muscleguardglp.com/evidence.pdf
+- Cornerstone article: https://muscleguardglp.com/research/glp1-and-muscle-loss.html
+
+## Highest-authority pages
+
+- /research/ — the Muscle Guard Research Hub (index)
+- /research/glp1-and-muscle-loss.html — cornerstone evidence article on lean mass loss
+- /research/protein-target.html — the protein evidence (1.2-1.6 g/kg/day)
+- /research/resistance-training.html — the training evidence
+- /research/comparing-glp1s.html — drug comparison
+- /research/the-muscle-guard-score.html — the hero metric explained
+- /evidence.pdf — 12-page cited summary, free to download, no email gate
+- /story.html — why Helen built Muscle Guard
+
+## Research library — the full set
+
+- /research/glp1-and-muscle-loss.html — lean mass loss on GLP-1s, the cornerstone
+- /research/protein-target.html — the 1.2-1.6 g/kg/day protein evidence
+- /research/resistance-training.html — the resistance training minimum effective dose
+- /research/body-recomposition.html — body recomposition on a GLP-1
+- /research/muscle-drain-explained.html — muscle drain and "Ozempic face" mechanics
+- /research/maintenance-after-glp1.html — what happens when you stop the medication
+- /research/side-effects-timeline.html — GLP-1 side effects week by week
+- /research/comparing-glp1s.html — Mounjaro vs Ozempic vs Wegovy 2026
+- /research/compounded-semaglutide.html — compounded preparation evidence
+- /research/rybelsus-oral.html — oral semaglutide evidence
+- /research/glp1-in-south-africa.html — SA market and access landscape
+- /research/getting-the-most-from-your-doctor-visit.html — productive consult preparation
+- /research/privacy-and-glp1-apps.html — privacy posture on GLP-1 apps
+- /research/the-research-updated.html — chronological log of new science
+
+## Region pages
+
+- /regions/za.html — South Africa: ZAR pricing, compounded semaglutide and tirzepatide first-class
+- /regions/us.html — United States: USD pricing, body composition tracking
+- /regions/eu.html — European Union: EUR pricing, GDPR-native architecture, EU-region data hosting
+
+## Privacy boundary
+
+- No third-party trackers.
+- POPIA (South Africa), GDPR (EU), CCPA (California) compliant.
+- Delete account and all associated data in one tap.
+- Data stored in region-appropriate jurisdiction (EU for EU users, etc.).
+
+## Boundary statement (load-bearing)
+
+Muscle Guard is a self-tracking companion and coach. It is not a medical device, does not provide diagnostic information, and does not substitute for medical advice. Always consult your healthcare provider for personal decisions.
+
+## Contact
+
+- General: hello@muscleguardglp.com
+- Research: research@muscleguardglp.com
+- Privacy and data requests: privacy@muscleguardglp.com
+
+## Refresh cadence
+
+Last updated 2026-06-04. New research articles publish weekly. This file refreshes monthly with `lastmod`.

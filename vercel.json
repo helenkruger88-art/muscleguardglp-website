@@ -24,10 +24,37 @@
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
       ]
+    },
+    {
+      "source": "/evidence.pdf",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/llms.txt",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" },
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
+      ]
     }
   ],
   "redirects": [
-    { "source": "/guides/index.html", "destination": "/guides/", "permanent": true },
-    { "source": "/index.html", "destination": "/", "permanent": true }
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/muscle-loss-on-glp1.html", "destination": "/research/glp1-and-muscle-loss.html", "permanent": true },
+    { "source": "/guides", "destination": "/research/", "permanent": true },
+    { "source": "/guides/", "destination": "/research/", "permanent": true },
+    { "source": "/guides/index.html", "destination": "/research/", "permanent": true },
+    { "source": "/guides/protein-on-glp1.html", "destination": "/research/protein-target.html", "permanent": true },
+    { "source": "/guides/glp1-side-effects-week-by-week.html", "destination": "/research/side-effects-timeline.html", "permanent": true },
+    { "source": "/guides/mounjaro-vs-ozempic-vs-wegovy.html", "destination": "/research/comparing-glp1s.html", "permanent": true },
+    { "source": "/guides/body-recomposition-on-wegovy.html", "destination": "/research/body-recomposition.html", "permanent": true },
+    { "source": "/guides/compounded-semaglutide.html", "destination": "/research/compounded-semaglutide.html", "permanent": true },
+    { "source": "/guides/maintenance-after-glp1.html", "destination": "/research/maintenance-after-glp1.html", "permanent": true },
+    { "source": "/guides/muscle-guard-score-explained.html", "destination": "/research/the-muscle-guard-score.html", "permanent": true },
+    { "source": "/guides/ozempic-in-south-africa-2026.html", "destination": "/research/glp1-in-south-africa.html", "permanent": true },
+    { "source": "/guides/productive-glp1-doctor-visit.html", "destination": "/research/getting-the-most-from-your-doctor-visit.html", "permanent": true },
+    { "source": "/guides/rybelsus-oral-pill-tracker.html", "destination": "/research/rybelsus-oral.html", "permanent": true },
+    { "source": "/guides/gdpr-and-weight-loss-apps.html", "destination": "/research/privacy-and-glp1-apps.html", "permanent": true }
   ]
 }

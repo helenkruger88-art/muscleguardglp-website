@@ -1471,3 +1471,429 @@ section { padding: 88px 0; }
   /* Drop the "Hero feature" badge — no longer visually different */
   .feature.hero-feature::after { display: none !important; }
 }
+
+/* ════════════════════════════════════════════════════════════════════
+   Build Spec v2 — research hub, comparison table, field notes,
+   article template, story page, demoted for-doctors
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Breadcrumb (visible, every research article) ─────────────── */
+.breadcrumb {
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
+  padding: 12px 0;
+  font-size: 13px;
+}
+.breadcrumb .wrap { color: var(--muted); }
+.breadcrumb a { color: var(--muted); }
+.breadcrumb a:hover { color: var(--brand-green); }
+.bc-sep { color: var(--rule); margin: 0 6px; }
+.bc-current { color: var(--text-dark); font-weight: 500; }
+
+/* ── Article byline (research template) ───────────────────────── */
+.article-byline {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 12px;
+}
+
+/* ── Article boundary footer (load-bearing) ───────────────────── */
+.article-boundary {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+  background: var(--bg);
+  padding: 16px 20px;
+  border-radius: 8px;
+  border-left: 3px solid var(--brand-green);
+  margin: 48px 0 24px;
+  line-height: 1.55;
+}
+
+/* ── Article CTA block (App + Subscribe) ──────────────────────── */
+.article-cta-block {
+  background: var(--bg);
+  border-radius: 16px;
+  padding: 32px;
+  margin: 48px 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+@media (max-width: 720px) { .article-cta-block { grid-template-columns: 1fr; } }
+.article-cta-col h3 { font-size: 18px; margin-bottom: 8px; }
+.article-cta-col p { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+
+/* ── Subscribe form (used in /research/ + article footer) ─────── */
+.subscribe-form {
+  display: flex;
+  gap: 8px;
+  max-width: 420px;
+}
+.subscribe-form input[type=email] {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 14px;
+  background: var(--white);
+  color: var(--text-dark);
+}
+.subscribe-form input[type=email]:focus {
+  outline: none;
+  border-color: var(--brand-green);
+  box-shadow: 0 0 0 3px rgba(15,123,108,0.15);
+}
+.subscribe-form button {
+  background: var(--brand-green);
+  color: var(--white);
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.subscribe-form button:hover { background: var(--brand-green-dark); }
+
+/* ── Citations list ───────────────────────────────────────────── */
+.citations {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.citations li {
+  margin-bottom: 10px;
+  padding-left: 0;
+}
+
+/* ── Research Hub: hero ───────────────────────────────────────── */
+.research-hero {
+  background:
+    radial-gradient(ellipse 60% 50% at 100% 20%, rgba(15, 123, 108, 0.12) 0%, transparent 60%),
+    linear-gradient(180deg, var(--brand-green-bg) 0%, var(--white) 100%);
+  padding: 80px 0 64px;
+  text-align: center;
+}
+.research-hero h1 {
+  font-size: clamp(36px, 5.4vw, 56px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  max-width: 24ch;
+  margin: 8px auto 16px;
+  text-wrap: balance;
+}
+.research-hero-sub {
+  font-size: 19px;
+  color: var(--muted);
+  max-width: 50ch;
+  margin: 0 auto 12px;
+}
+.research-hero-meta {
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.3px;
+  margin-bottom: 36px;
+}
+.research-hero-cta {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-large {
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ── Research Hub: branches ───────────────────────────────────── */
+.research-branch { padding: 80px 0; }
+.research-branch.alt { background: var(--brand-green-bg); }
+.branch-head {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.branch-number {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 6px 14px;
+  border: 1px solid var(--gold-bg);
+  background: var(--gold-bg);
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+.branch-head h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.branch-head p {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.branch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.branch-grid-two { grid-template-columns: repeat(2, 1fr); max-width: 880px; }
+@media (max-width: 880px) { .branch-grid, .branch-grid-two { grid-template-columns: 1fr; } }
+
+.branch-card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none !important;
+  color: var(--text-dark) !important;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  position: relative;
+}
+.branch-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -15px rgba(15,123,108,0.25);
+  border-color: var(--brand-green);
+}
+.branch-card-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--brand-green-dark);
+  background: var(--brand-green-bg);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+.branch-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+}
+.branch-card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0 0 16px;
+  flex: 1;
+}
+.branch-card-read {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brand-green);
+}
+
+/* ── Research Hub: trust badge + subscribe block ──────────────── */
+.research-trust {
+  background: var(--bg);
+  padding: 60px 0;
+}
+.trust-badge {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 28px;
+  text-align: center;
+}
+.trust-badge-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.trust-badge-body {
+  font-size: 14px;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.research-subscribe {
+  background: linear-gradient(180deg, var(--white) 0%, var(--brand-green-bg) 100%);
+  padding: 60px 0;
+  text-align: center;
+}
+.research-subscribe h2 { font-size: clamp(24px, 3vw, 32px); }
+.research-subscribe p { color: var(--muted); margin-bottom: 24px; }
+.research-subscribe .subscribe-form { margin: 0 auto; }
+.subscribe-note { font-size: 12px; color: var(--muted); margin-top: 12px; }
+
+/* ── Homepage: comparison table ───────────────────────────────── */
+.comparison-section { background: var(--white); padding: 80px 0; }
+.comparison-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.comparison-table th, .comparison-table td {
+  padding: 14px 16px;
+  text-align: center;
+  border-bottom: 1px solid var(--rule);
+}
+.comparison-table th {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--muted);
+  background: var(--bg);
+}
+.comparison-table th.us-col, .comparison-table td.us-col {
+  background: var(--brand-green-bg);
+  color: var(--brand-green-dark);
+  font-weight: 600;
+}
+.comparison-table th.us-col { background: var(--brand-green); color: var(--white); }
+.comparison-table tbody td:first-child {
+  text-align: left;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+.comparison-table .yes { color: var(--brand-green); font-weight: 600; }
+.comparison-table .no { color: var(--muted); }
+.comparison-table .partial { color: var(--gold); }
+.comparison-foot {
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 16px;
+  font-style: italic;
+}
+
+/* ── Homepage: field notes ────────────────────────────────────── */
+.field-notes { background: var(--bg); padding: 80px 0; }
+.field-notes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+@media (max-width: 880px) { .field-notes-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .field-notes-grid { grid-template-columns: 1fr; } }
+.field-card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 20px;
+  text-decoration: none !important;
+  color: var(--text-dark) !important;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.field-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -12px rgba(15,123,108,0.18);
+}
+.field-card-date {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.field-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  line-height: 1.35;
+}
+.field-card p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 12px;
+  flex: 1;
+  line-height: 1.5;
+}
+.field-card-read {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--brand-green);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* ── Footer: 3-column rebuild + boundary statement ────────────── */
+.footer-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+@media (max-width: 720px) { .footer-grid-3 { grid-template-columns: 1fr; gap: 32px; } }
+.boundary-statement {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 24px 0;
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ── Story page ───────────────────────────────────────────────── */
+.story-article p { font-size: 16px; line-height: 1.7; }
+
+/* ── Hero CTA hierarchy: primary "Read the evidence" big, App store secondary smaller ─ */
+.hero-cta-secondary { margin-top: 16px; opacity: 0.85; }
+.store-btn-small {
+  padding: 10px 16px !important;
+  font-size: 13px !important;
+}
+.store-btn-small .store-name { font-size: 13px !important; }
+
+/* On-dark variant of btn-outline for the thesis section button */
+.btn-on-dark {
+  color: var(--white) !important;
+  border-color: rgba(255,255,255,0.4) !important;
+  background: transparent !important;
+}
+.btn-on-dark:hover {
+  background: rgba(255,255,255,0.08) !important;
+  border-color: var(--white) !important;
+  color: var(--white) !important;
+}
+
+/* Pricing fine print italic */
+.pricing-fine {
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 24px;
+  font-style: italic;
+}
+
+/* Feature: research card highlighted */
+.feature.feature-research { border: 2px dashed var(--brand-green); background: var(--brand-green-bg); }
+.feature.feature-research a { color: var(--brand-green-dark); font-weight: 600; }
