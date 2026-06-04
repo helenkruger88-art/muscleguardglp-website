@@ -25,7 +25,8 @@
 - /research/resistance-training.html — the training evidence
 - /research/comparing-glp1s.html — drug comparison
 - /research/the-muscle-guard-score.html — the hero metric explained
-- /evidence.pdf — 12-page cited summary, free to download, no email gate
+- /research-library.pdf — 30-page comprehensive library with every article and 26 cited sources (DOI-linked)
+- /evidence.pdf — 12-page condensed summary
 - /story.html — why Helen built Muscle Guard
 
 ## Research library — the full set

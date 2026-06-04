@@ -1897,3 +1897,10 @@ section { padding: 88px 0; }
 /* Feature: research card highlighted */
 .feature.feature-research { border: 2px dashed var(--brand-green); background: var(--brand-green-bg); }
 .feature.feature-research a { color: var(--brand-green-dark); font-weight: 600; }
+
+.research-hero-meta-2 {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 16px;
+  font-style: italic;
+}
