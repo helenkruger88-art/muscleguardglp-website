@@ -13,7 +13,7 @@
 ## The core claim, with sources
 
 - Without intervention, 25 to 40% of weight lost on a GLP-1 medication can be lean muscle, not fat.
-- With adequate protein (1.2 to 1.6 g/kg/day) and resistance training (2 to 4 sessions per week), that figure drops below 10%.
+- With adequate protein (1.2 to 1.6 g/kg/day) and resistance training (2 to 4 sessions per week), that figure drops substantially. Evidence for the magnitude of the drop is extrapolated from adjacent (non-GLP-1) intervention trials; a GLP-1-specific intervention trial reporting an exact figure is pending.
 - Full sources and 12-page summary: https://muscleguardglp.com/evidence.pdf
 - Cornerstone article: https://muscleguardglp.com/research/glp1-and-muscle-loss.html
 
