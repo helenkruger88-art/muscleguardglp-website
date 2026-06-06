@@ -1937,13 +1937,13 @@ section { padding: 88px 0; }
 }
 .screens-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  max-width: 1180px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 24px;
+  max-width: 1080px;
   margin: 0 auto;
 }
-@media (max-width: 980px) { .screens-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
-@media (max-width: 600px) { .screens-grid { grid-template-columns: 1fr; gap: 32px; } }
+@media (max-width: 880px) { .screens-grid { grid-template-columns: repeat(2, 1fr); gap: 36px 20px; } }
+@media (max-width: 540px) { .screens-grid { grid-template-columns: 1fr; gap: 36px; } }
 
 .screen-card {
   margin: 0;
@@ -1954,7 +1954,7 @@ section { padding: 88px 0; }
 }
 .screen-card .phone-mockup {
   width: 100%;
-  max-width: 220px;
+  max-width: 240px;
   margin: 0 0 18px;
 }
 .screen-card figcaption {
