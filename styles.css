@@ -1904,3 +1904,69 @@ section { padding: 88px 0; }
   margin-top: 16px;
   font-style: italic;
 }
+
+/* ════════════════════════════════════════════════════════════════════
+   Real app screenshots inside the existing phone frame
+   ═══════════════════════════════════════════════════════════════════ */
+
+.phone-mockup.phone-real .phone-screen-image {
+  padding: 0;
+  background: var(--text-dark);
+  overflow: hidden;
+  display: block;
+}
+.phone-mockup.phone-real .phone-screen-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+/* Make the screen container fill the frame for image mode */
+.phone-mockup.phone-real .phone-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: var(--text-dark);
+}
+
+/* ── Screens section (homepage) ───────────────────────────────── */
+.screens-section {
+  background: var(--bg);
+  padding: 88px 0;
+}
+.screens-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+@media (max-width: 980px) { .screens-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
+@media (max-width: 600px) { .screens-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.screen-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.screen-card .phone-mockup {
+  width: 100%;
+  max-width: 220px;
+  margin: 0 0 18px;
+}
+.screen-card figcaption {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.55;
+  max-width: 28ch;
+}
+.screen-card figcaption strong {
+  display: block;
+  color: var(--text-dark);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
