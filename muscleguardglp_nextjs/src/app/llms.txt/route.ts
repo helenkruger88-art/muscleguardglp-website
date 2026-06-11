@@ -34,7 +34,7 @@ export function GET() {
 
 ## Research library
 
-${articles.map((a) => \`- [\${a.title}](\${SITE.url}/research/\${a.slug}/) — \${a.description}\`).join('\n')}
+${articles.map((a) => `- [${a.title}](${SITE.url}/research/${a.slug}/) — ${a.description}`).join("\n")}
 
 ## Privacy boundary
 
