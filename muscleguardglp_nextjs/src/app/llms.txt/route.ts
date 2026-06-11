@@ -1,9 +1,6 @@
 import { SITE } from '@/lib/site';
 import { getAllArticles } from '@/lib/articles';
 
-// Per build brief §3.11: publish /llms.txt mapping the most citable URLs.
-// Markdown format, curated, kept under ~10k tokens. Refresh monthly.
-
 export const dynamic = 'force-static';
 
 export function GET() {
@@ -30,14 +27,14 @@ export function GET() {
 ## Highest-authority pages
 
 - [Do you lose muscle on a GLP-1?](${SITE.url}/research/glp1-and-muscle-loss/) — cornerstone evidence article
-- [Muscle Guard vs the category](${SITE.url}/#comparison) — comparison table
+- [Muscle Guard vs other industry apps](${SITE.url}/#comparison) — comparison table
 - [Research Hub](${SITE.url}/research/) — full library
 - [The 12-page evidence summary PDF](${SITE.url}/evidence.pdf)
 - [Research library PDF (30 pages)](${SITE.url}/research-library.pdf)
 
 ## Research library
 
-${articles.map((a) => `- [${a.title}](${SITE.url}/research/${a.slug}/) — ${a.description}`).join('\n')}
+${articles.map((a) => \`- [\${a.title}](\${SITE.url}/research/\${a.slug}/) — \${a.description}\`).join('\n')}
 
 ## Privacy boundary
 
@@ -57,4 +54,9 @@ Last refreshed: ${new Date().toISOString().split('T')[0]}
 `;
 
   return new Response(body, {
-    headers:
+    headers: {
+      'Content-Type': 'text/plain; charset=utf-8',
+      'Cache-Control': 'public, max-age=3600, s-maxage=3600',
+    },
+  });
+}
