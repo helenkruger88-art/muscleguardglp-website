@@ -5,6 +5,7 @@ import { StoreButtons } from '@/components/StoreButtons';
 import { TrustBadgeRow } from '@/components/TrustBadgeRow';
 import { ComparisonTable } from '@/components/ComparisonTable';
 import { PricingToggle } from '@/components/PricingToggle';
+import { HeroMockup } from '@/components/HeroMockup';
 import { MobileApplicationSchema } from '@/components/schema/MobileApplication';
 import { FAQPageSchema } from '@/components/schema/FAQPage';
 import { getLiveArticles } from '@/lib/articles';
@@ -81,21 +82,7 @@ export default function HomePage() {
               <p className="mt-5 text-[13px] text-white/60">{SITE.hero.priceLine}</p>
               <TrustBadgeRow />
             </div>
-            <div className="flex justify-center">
-              <div className="relative w-full max-w-[320px]">
-                <div className="overflow-hidden rounded-[36px] bg-ink shadow-mockup" style={{ padding: 8 }}>
-                  <div className="overflow-hidden rounded-[28px] bg-white">
-                    <Image
-                      src="/screenshots/01-home.jpg"
-                      alt="Muscle Guard Home Dashboard"
-                      width={1242} height={2688} priority
-                      sizes="(max-width: 768px) 90vw, 320px"
-                      style={{ width: '100%', height: 'auto', display: 'block' }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+            <HeroMockup />
           </div>
         </div>
       </section>
@@ -182,12 +169,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="comparison" className="bg-brand-green-bg py-20">
+      <section id="comparison" className="bg-brand-green py-20 text-white">
         <div className="wrap">
           <div className="mx-auto mb-12 max-w-3xl text-center">
-            <div className="eyebrow mb-3">The category</div>
-            <h2 className="mb-3">Muscle Guard vs other industry apps.</h2>
-            <p className="text-[17px] text-muted">The differences that matter, side by side.</p>
+            <div className="eyebrow mb-3" style={{ color: 'rgba(255,255,255,0.85)' }}>The category</div>
+            <h2 className="mb-3 text-white">Muscle Guard vs other industry apps.</h2>
+            <p className="text-[17px] text-white/80">The differences that matter, side by side.</p>
           </div>
           <ComparisonTable />
         </div>
@@ -226,8 +213,13 @@ export default function HomePage() {
       </section>
 
       {liveArticles.length > 0 && (
-        <section className="bg-bg py-20">
-          <div className="wrap">
+        <section
+          className="relative py-20 bg-cover bg-center"
+          style={{ backgroundImage: "url('/backgrounds/field-notes-bg.jpg')" }}
+        >
+          {/* 40% transparent white overlay so text stays readable on the green illustration */}
+          <div className="absolute inset-0 bg-white/60" aria-hidden="true"></div>
+          <div className="wrap relative">
             <div className="mx-auto mb-12 max-w-3xl text-center">
               <div className="eyebrow eyebrow-green mb-3">Field notes</div>
               <h2 className="mb-3">The research, in plain English.</h2>
