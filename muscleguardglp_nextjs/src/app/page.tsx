@@ -232,13 +232,13 @@ export default function HomePage() {
           className="relative py-20 bg-cover bg-center"
           style={{ backgroundImage: "url('/backgrounds/field-notes-bg.jpg')" }}
         >
-          {/* 40% transparent white overlay so text stays readable on the green illustration */}
-          <div className="absolute inset-0 bg-white/60" aria-hidden="true"></div>
+          {/* 40% white overlay so the green illustration shows through more */}
+          <div className="absolute inset-0 bg-white/40" aria-hidden="true"></div>
           <div className="wrap relative">
             <div className="mx-auto mb-12 max-w-3xl text-center">
-              <div className="eyebrow eyebrow-green mb-3">Field notes</div>
-              <h2 className="mb-3">The research, in plain English.</h2>
-              <p className="text-[17px] text-muted">
+              <div className="eyebrow eyebrow-green mb-3" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>Field notes</div>
+              <h2 className="mb-3" style={{ color: '#FFFFFF', textShadow: '0 2px 8px rgba(0,0,0,0.45)' }}>The research, in plain English.</h2>
+              <p className="text-[17px]" style={{ color: '#FFFFFF', textShadow: '0 1px 4px rgba(0,0,0,0.45)' }}>
                 A free, cited library of evidence on GLP-1s and muscle. Updated when the science updates.
               </p>
             </div>
