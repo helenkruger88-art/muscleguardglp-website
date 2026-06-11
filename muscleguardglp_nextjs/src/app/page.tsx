@@ -202,15 +202,15 @@ export default function HomePage() {
               <div
                 className="mb-5 font-extrabold leading-none"
                 style={{
-                  fontSize: 'clamp(56px, 8vw, 92px)',
-                  letterSpacing: '-0.03em',
+                  fontSize: 'clamp(44px, 5.5vw, 72px)',
+                  letterSpacing: '-0.025em',
                   color: '#FFFFFF',
                   textShadow: '0 8px 32px rgba(15,123,108,0.45)',
                 }}
               >
-                Substantially{' '}
+                <span className="block">Substantially</span>
                 <span
-                  className="italic"
+                  className="block italic"
                   style={{ color: '#5EE3C8', fontFamily: 'Georgia, "Times New Roman", serif' }}
                 >
                   less.
