@@ -232,7 +232,7 @@ export default function HomePage() {
           className="relative py-20 bg-cover bg-center"
           style={{ backgroundImage: "url('/backgrounds/field-notes-bg.jpg')" }}
         >
-          {/* 40% white overlay so the green illustration shows through more */}
+          {/* 40% white overlay so the green illustration shows through more — keep text readable with shadows below */}
           <div className="absolute inset-0 bg-white/40" aria-hidden="true"></div>
           <div className="wrap relative">
             <div className="mx-auto mb-12 max-w-3xl text-center">
