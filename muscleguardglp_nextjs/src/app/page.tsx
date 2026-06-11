@@ -273,6 +273,63 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="bg-brand-green-bg py-20">
+        <div className="wrap">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <div className="eyebrow eyebrow-green mb-3">The differentiator</div>
+            <h2 className="mb-3">How muscle preservation works on a GLP-1</h2>
+            <p className="text-[17px] text-muted">
+              The mechanism, the prevention plan, and the studies that ground both.
+            </p>
+          </div>
+          <div className="grid gap-12 md:grid-cols-2 md:items-center">
+            <div className="space-y-5 text-[15px] leading-relaxed text-ink">
+              <p>
+                GLP-1 receptor agonists suppress appetite and slow gastric emptying so effectively that most users enter a sustained calorie and protein deficit. Without adequate protein intake and a resistance-training stimulus, the body mobilises both fat and muscle for energy — producing the lean-mass-loss share that shows up consistently in body-composition substudies of the major trials.
+              </p>
+              <p>
+                The prevention plan is well-established: <strong>1.2 to 1.6 g of protein per kg of body weight per day</strong>, <strong>resistance training 2 to 4 times per week</strong>, avoid extreme calorie restriction, and track strength and body composition — not just weight.
+              </p>
+              <p>
+                Muscle Guard is built around that plan. Every feature, every milestone, every metric is in service of one thing: fat loss without muscle loss.
+              </p>
+              <div className="pt-2">
+                <Link className="btn" href="/research/glp1-and-muscle-loss/">
+                  Read the cornerstone article →
+                </Link>
+              </div>
+            </div>
+            <div className="rounded-card bg-white p-7 shadow-lg">
+              <div className="eyebrow mb-5 text-gold" style={{ letterSpacing: '1.6px' }}>
+                Lean mass loss as % of total weight loss
+              </div>
+              <div className="mb-2 text-[12px] font-semibold uppercase tracking-[1.2px] text-ink">
+                Without intervention
+              </div>
+              <div className="mb-2 h-3.5 w-full overflow-hidden rounded-full bg-brand-green-bg">
+                <div className="h-full rounded-full" style={{ width: '85%', background: '#C97E1A' }} />
+              </div>
+              <div className="mb-6 text-[17px] font-bold text-ink">25 – 40%</div>
+              <div className="mb-2 text-[12px] font-semibold uppercase tracking-[1.2px] text-ink">
+                With protein + training
+              </div>
+              <div className="mb-2 h-3.5 w-full overflow-hidden rounded-full bg-brand-green-bg">
+                <div className="h-full rounded-full" style={{ width: '18%', background: '#0F7B6C' }} />
+              </div>
+              <div className="mb-6 text-[17px] font-bold text-ink">Substantially less</div>
+              <hr className="my-5 border-rule" />
+              <p className="text-[12px] text-muted">
+                Phase-3 trial body-composition data, structured-intervention arms. Sources cited in{' '}
+                <Link className="text-brand-green underline" href="/research/glp1-and-muscle-loss/">
+                  the cornerstone
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="download" className="bg-brand-green py-20 text-white">
         <div className="wrap text-center">
           <div className="eyebrow mb-3" style={{ color: 'rgba(255,255,255,0.85)' }}>Get started</div>
