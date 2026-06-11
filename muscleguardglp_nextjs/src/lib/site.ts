@@ -36,7 +36,7 @@ export const SITE = {
       'GLP-1 medications burn fat. Without intervention, 25 to 40 percent of what you lose can be lean muscle, not fat. Muscle Guard tracks the protein-and-training playbook that drops that figure substantially — across every GLP-1 South Africans actually take, including compounded semaglutide and tirzepatide.',
     builtFor:
       'Compounded semaglutide and tirzepatide, plus Ozempic, Wegovy, Mounjaro, Zepbound, Rybelsus, Saxenda and Trulicity.',
-    priceLine: 'Free to start · R99/month · 7-day Pro trial, no card needed',
+    priceLine: 'Free forever · Pro R99/month · 7-day trial, no card needed',
   },
   disclaimer:
     'Muscle Guard is a self-tracking companion and coach. Not a medical device. Not medical advice. Always consult your healthcare provider for personal decisions.',
