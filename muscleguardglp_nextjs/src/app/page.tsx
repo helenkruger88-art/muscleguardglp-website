@@ -63,8 +63,8 @@ export default function HomePage() {
       <FAQPageSchema items={homepageFaq} />
 
       <section
-        className="py-16 md:py-20"
-        style={{ background: 'linear-gradient(180deg, var(--brand-green-bg) 0%, white 100%)' }}
+        className="py-16 md:py-20 text-white"
+        style={{ background: 'linear-gradient(180deg, #0A1F1A 0%, #1A2520 60%, #000 100%)' }}
       >
         <div className="wrap">
           <div className="grid items-center gap-14 md:grid-cols-[1.1fr_1fr]">
@@ -73,12 +73,12 @@ export default function HomePage() {
                 Track your <strong>GLP-1</strong> Journey.{' '}
                 <span className="text-brand-green">Protect your <strong>Muscle</strong>.</span>
               </h1>
-              <p className="my-7 max-w-[42ch] text-[17px] text-muted text-justify hyphens-auto">{SITE.hero.body}</p>
-              <p className="my-3 text-[14px] text-muted">
+              <p className="my-7 max-w-[42ch] text-[17px] text-white/70 text-justify hyphens-auto">{SITE.hero.body}</p>
+              <p className="my-3 text-[14px] text-white/60">
                 <strong>Built for:</strong> Compounded semaglutide and tirzepatide, plus Ozempic,<br />Wegovy, Mounjaro, Zepbound, Rybelsus, Saxenda and Trulicity.
               </p>
               <div className="my-6"><StoreButtons /></div>
-              <p className="mt-5 text-[13px] text-muted">{SITE.hero.priceLine}</p>
+              <p className="mt-5 text-[13px] text-white/60">{SITE.hero.priceLine}</p>
               <TrustBadgeRow />
             </div>
             <div className="flex justify-center">
