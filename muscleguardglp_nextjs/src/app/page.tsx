@@ -83,10 +83,11 @@ export default function HomePage() {
               <h1 className="mb-2">
                 <span className="block">Track your <strong>GLP-1</strong> Journey.</span>
                 <span
-                  className="block italic"
+                  className="italic"
                   style={{ color: '#E0B056', fontFamily: 'Georgia, "Times New Roman", serif' }}
                 >
-                  Protect your <strong>Muscle</strong>.
+                  <span className="block">Protect your</span>
+                  <span className="block"><strong>Muscle</strong>.</span>
                 </span>
               </h1>
               <p className="my-7 max-w-[42ch] text-[17px] text-white/70 text-justify hyphens-auto">{SITE.hero.body}</p>
