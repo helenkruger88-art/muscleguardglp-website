@@ -7,7 +7,7 @@ export function TrustBadgeRow() {
     'Built in Johannesburg',
   ];
   return (
-    <div className="mx-auto mt-12 flex max-w-3xl flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] text-muted">
+    <div className="mx-auto mt-12 flex max-w-3xl flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] text-white/60">
       {items.map((label, i) => (
         <span key={label} className="flex items-center gap-2">
           <span aria-hidden="true" className="text-brand-green">✓</span>
