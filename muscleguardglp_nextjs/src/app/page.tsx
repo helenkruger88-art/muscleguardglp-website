@@ -43,6 +43,8 @@ export default function HomePage() {
     { icon: '⌂', title: 'Privacy first', hero: true, body: 'No tracking, no ads, no data brokers. POPIA, GDPR and CCPA compliant. Delete your account and all data in one tap.' },
     { icon: '🔥', title: 'Plateau Protocol', hero: false, body: 'Three-pillar 14-day reset when the scale stalls. Protein floor 150 g, hydration uplift to 3 L, strength sessions on 5 of 7 days.' },
     { icon: '🤢', title: 'Nausea Protocol', hero: false, body: 'Safe Bites, hydration target, sleep guidance, and automatic symptom logging — for shot-day weeks.' },
+    { icon: '🏋', title: 'Training Hub', hero: false, body: 'The training command center. Strength streak with milestone trophies. Recent sessions with movement coverage (Squat, Hinge, Push, Pull, Core). Cardio with intensity zones Z1–Z5. Habit Hub heatmap across 30/90/180 days.' },
+    { icon: '📈', title: 'Trends', hero: false, body: 'The doctor view. Calendar of pillar adherence, protein and training charts, body transformation read, symptom timeline plotted against your injection dates. Pattern Detection surfaces what your data is telling you.' },
     { icon: '🤖', title: 'Pattern Read (Pro)', hero: false, body: 'Weekly AI verdict from Gemini on what is trending up and down across protein, training, hydration, and body comp. Polarity-aware.' },
     { icon: '📷', title: 'Snap to Log (Pro)', hero: false, body: 'Point the camera at a plate — Gemini identifies the foods and macros. Open Food Facts for packaged. Transparently disclosed provenance on every entry.' },
     { icon: '📐', title: 'Body Check + PoseGuide', hero: false, body: 'Built-in pose alignment overlay so progress photos are taken the same way every time. Side-by-side compare. WHtR and Visceral Fat gauge.' },
