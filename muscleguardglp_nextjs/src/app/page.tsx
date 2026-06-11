@@ -70,9 +70,24 @@ export default function HomePage() {
         <div className="wrap">
           <div className="grid items-center gap-14 md:grid-cols-[1.1fr_1fr]">
             <div>
+              <div
+                className="mb-6 inline-block rounded-full px-5 py-2 text-[11px] font-bold uppercase tracking-[1.6px]"
+                style={{
+                  background: 'rgba(255,255,255,0.04)',
+                  border: '1px solid rgba(255,255,255,0.12)',
+                  color: 'rgba(255,255,255,0.75)',
+                }}
+              >
+                The GLP-1 Companion Built Around <span style={{ color: '#E0B056' }}>Muscle Preservation</span>
+              </div>
               <h1 className="mb-2">
                 Track your <strong>GLP-1</strong> Journey.{' '}
-                <span className="text-brand-green">Protect your <strong>Muscle</strong>.</span>
+                <span
+                  className="italic"
+                  style={{ color: '#E0B056', fontFamily: 'Georgia, "Times New Roman", serif' }}
+                >
+                  Protect your <strong>Muscle</strong>.
+                </span>
               </h1>
               <p className="my-7 max-w-[42ch] text-[17px] text-white/70 text-justify hyphens-auto">{SITE.hero.body}</p>
               <p className="my-3 text-[14px] text-white/60">
