@@ -50,7 +50,7 @@ const sections = [
       },
       {
         q: 'Does it work with Apple Watch, Whoop, or Oura?',
-        a: 'Yes — HealthKit and Health Connect integration is available in v1.0. Strength sessions, weight, and step counts sync automatically.',
+        a: 'Yes — HealthKit and Health Connect integration is available. Strength sessions, weight, and step counts sync automatically.',
       },
       {
         q: 'Where is the AI plate scan data sent?',
@@ -66,7 +66,7 @@ const sections = [
       },
       {
         q: 'My GLP-1 has stopped working — what does Muscle Guard show me?',
-        a: 'Plateaus and tachyphylaxis are common. The app activates a 14-day Plateau Breaker protocol that adjusts macros and training, and tracks the change in your weekly Muscle Guard Score. You can also export a Clinical Report to share with your healthcare provider at your next visit.',
+        a: 'Plateaus and tachyphylaxis are common. The app activates a 14-day Plateau Protocol that adjusts macros and training, and tracks the change in your weekly Muscle Guard Score.',
       },
     ],
   },
@@ -83,7 +83,7 @@ const sections = [
       },
       {
         q: 'Do you use third-party trackers?',
-        a: 'No advertising or marketing trackers. We use privacy-friendly, cookieless analytics (Plausible) only to count page views by region — no personal data, no fingerprinting.',
+        a: 'No advertising or marketing trackers. We use privacy-friendly, cookieless analytics (Plausible) only.',
       },
       {
         q: 'Where is my data stored?',
@@ -134,4 +134,7 @@ export default function FAQPage() {
             </Link>
           </div>
         </div>
-      </
+      </section>
+    </>
+  );
+}
