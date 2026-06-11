@@ -103,30 +103,147 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="wrap">
-          <div className="mx-auto mb-10 max-w-3xl text-center">
-            <div className="eyebrow mb-3">The thing nobody else says out loud</div>
-            <h2 className="mb-3">GLP-1 medications work. The question is what you&apos;re losing.</h2>
+      <section
+        className="relative overflow-hidden py-24 text-white md:py-32"
+        style={{
+          background:
+            'radial-gradient(circle at 20% 30%, rgba(201,126,26,0.18) 0%, transparent 55%), radial-gradient(circle at 80% 70%, rgba(15,123,108,0.22) 0%, transparent 55%), linear-gradient(180deg, #0A1F1A 0%, #000 100%)',
+        }}
+      >
+        {/* Subtle grid overlay */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 opacity-[0.05]"
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
+            backgroundSize: '48px 48px',
+          }}
+        />
+
+        <div className="wrap relative">
+          <div className="mx-auto mb-16 max-w-3xl text-center">
+            <div className="eyebrow mb-4" style={{ color: '#E0B056' }}>The thing nobody else says out loud</div>
+            <h2 className="mb-4 text-white" style={{ fontSize: 'clamp(34px, 5vw, 56px)', lineHeight: 1.05 }}>
+              GLP-1 medications work.{' '}
+              <span
+                className="italic"
+                style={{ color: '#E0B056', fontFamily: 'Georgia, "Times New Roman", serif' }}
+              >
+                The question is what you&rsquo;re losing.
+              </span>
+            </h2>
+            <p className="mx-auto max-w-[55ch] text-[17px] text-white/70">
+              Every weight-loss number on the scale hides a second number — the one your doctor isn&rsquo;t asking about.
+            </p>
           </div>
-          <div className="mx-auto grid max-w-3xl items-center gap-6 text-center md:grid-cols-[1fr_auto_1fr]">
-            <div>
-              <div className="text-[44px] font-semibold text-gold leading-none">25&ndash;40%</div>
-              <div className="mt-3 text-[14px] text-muted">
-                of weight lost on a GLP-1 can be <strong className="text-ink">muscle</strong>, not fat. Without intervention.
+
+          {/* The big comparison */}
+          <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-2">
+            {/* Without intervention card */}
+            <div
+              className="relative overflow-hidden rounded-3xl p-8 md:p-10"
+              style={{
+                background: 'linear-gradient(160deg, rgba(201,126,26,0.18) 0%, rgba(0,0,0,0.4) 100%)',
+                border: '1px solid rgba(224,176,86,0.35)',
+                boxShadow: '0 30px 80px -20px rgba(201,126,26,0.25)',
+              }}
+            >
+              <div className="mb-5 flex items-center gap-3">
+                <div
+                  className="grid h-9 w-9 place-items-center rounded-full text-[18px] font-bold"
+                  style={{ background: 'rgba(224,176,86,0.18)', color: '#E0B056' }}
+                  aria-hidden="true"
+                >!</div>
+                <div className="text-[11px] font-bold uppercase tracking-[1.6px]" style={{ color: '#E0B056' }}>
+                  Without intervention
+                </div>
               </div>
+              <div
+                className="mb-5 font-extrabold leading-none"
+                style={{
+                  fontSize: 'clamp(72px, 11vw, 132px)',
+                  letterSpacing: '-0.04em',
+                  color: '#E0B056',
+                  textShadow: '0 8px 32px rgba(224,176,86,0.35)',
+                }}
+              >
+                25&ndash;40<span style={{ fontSize: '0.55em', verticalAlign: 'top', marginLeft: '0.05em' }}>%</span>
+              </div>
+              {/* Visual bar */}
+              <div className="mb-5 h-2.5 w-full overflow-hidden rounded-full" style={{ background: 'rgba(255,255,255,0.1)' }}>
+                <div className="h-full rounded-full" style={{ width: '82%', background: 'linear-gradient(90deg, #C97E1A 0%, #E0B056 100%)' }} />
+              </div>
+              <p className="text-[17px] leading-relaxed text-white/85">
+                of every kilo lost on a GLP-1 can be{' '}
+                <span className="font-bold text-white">lean muscle</span> — not fat. Strength gone. Posture gone. Metabolism slower than before you started.
+              </p>
             </div>
-            <div className="text-[18px] text-muted">vs</div>
-            <div>
-              <div className="text-[44px] font-semibold italic text-brand-green leading-none">substantially less</div>
-              <div className="mt-3 text-[14px] text-muted">
-                with adequate <strong className="text-ink">protein</strong> + <strong className="text-ink">resistance training</strong>.
+
+            {/* With protocol card */}
+            <div
+              className="relative overflow-hidden rounded-3xl p-8 md:p-10"
+              style={{
+                background: 'linear-gradient(160deg, rgba(15,123,108,0.22) 0%, rgba(0,0,0,0.4) 100%)',
+                border: '1px solid rgba(15,123,108,0.5)',
+                boxShadow: '0 30px 80px -20px rgba(15,123,108,0.35)',
+              }}
+            >
+              <div className="mb-5 flex items-center gap-3">
+                <div
+                  className="grid h-9 w-9 place-items-center rounded-full text-[18px] font-bold"
+                  style={{ background: 'rgba(15,123,108,0.25)', color: '#5EE3C8' }}
+                  aria-hidden="true"
+                >✓</div>
+                <div className="text-[11px] font-bold uppercase tracking-[1.6px]" style={{ color: '#5EE3C8' }}>
+                  With the Muscle Guard playbook
+                </div>
               </div>
+              <div
+                className="mb-5 font-extrabold leading-none"
+                style={{
+                  fontSize: 'clamp(56px, 8vw, 92px)',
+                  letterSpacing: '-0.03em',
+                  color: '#FFFFFF',
+                  textShadow: '0 8px 32px rgba(15,123,108,0.45)',
+                }}
+              >
+                Substantially{' '}
+                <span
+                  className="italic"
+                  style={{ color: '#5EE3C8', fontFamily: 'Georgia, "Times New Roman", serif' }}
+                >
+                  less.
+                </span>
+              </div>
+              {/* Visual bar */}
+              <div className="mb-5 h-2.5 w-full overflow-hidden rounded-full" style={{ background: 'rgba(255,255,255,0.1)' }}>
+                <div className="h-full rounded-full" style={{ width: '18%', background: 'linear-gradient(90deg, #0F7B6C 0%, #5EE3C8 100%)' }} />
+              </div>
+              <p className="text-[17px] leading-relaxed text-white/85">
+                With adequate <span className="font-bold text-white">protein</span> (1.2&ndash;1.6 g/kg/day) plus{' '}
+                <span className="font-bold text-white">resistance training</span> 2&ndash;4× a week. Muscle preserved. Fat lost. Result intact.
+              </p>
             </div>
           </div>
-          <p className="mt-10 text-center">
-            <Link className="btn btn-outline" href="/research/glp1-and-muscle-loss/">See the full evidence →</Link>
-          </p>
+
+          <div className="mt-14 text-center">
+            <Link
+              className="inline-flex items-center gap-2 rounded-full px-7 py-4 text-[15px] font-semibold no-underline transition"
+              href="/research/glp1-and-muscle-loss/"
+              style={{
+                background: '#FFFFFF',
+                color: '#0A1F1A',
+                boxShadow: '0 20px 50px -12px rgba(255,255,255,0.4)',
+              }}
+            >
+              See the full evidence
+              <span aria-hidden="true">→</span>
+            </Link>
+            <p className="mt-5 text-[13px] text-white/55">
+              Cited across 8 peer-reviewed trials. Updated when the science updates.
+            </p>
+          </div>
         </div>
       </section>
 
