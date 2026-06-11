@@ -71,7 +71,7 @@ export default function HomePage() {
                 {SITE.hero.h1Part1}{' '}
                 <span className="text-brand-green">{SITE.hero.h1Part2}</span>
               </h1>
-              <p className="my-7 max-w-[42ch] text-[17px] text-muted">{SITE.hero.body}</p>
+              <p className="my-7 max-w-[42ch] text-[17px] text-muted text-justify hyphens-auto">{SITE.hero.body}</p>
               <p className="my-3 text-[14px] text-muted">
                 <strong>Built for:</strong> {SITE.hero.builtFor}
               </p>
