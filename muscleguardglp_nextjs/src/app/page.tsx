@@ -81,9 +81,9 @@ export default function HomePage() {
                 The GLP-1 Companion Built Around <span style={{ color: '#E0B056' }}>Muscle Preservation</span>
               </div>
               <h1 className="mb-2">
-                Track your <strong>GLP-1</strong> Journey.{' '}
+                <span className="block">Track your <strong>GLP-1</strong> Journey.</span>
                 <span
-                  className="italic"
+                  className="block italic"
                   style={{ color: '#E0B056', fontFamily: 'Georgia, "Times New Roman", serif' }}
                 >
                   Protect your <strong>Muscle</strong>.
