@@ -68,12 +68,12 @@ export default function HomePage() {
           <div className="grid items-center gap-14 md:grid-cols-[1.1fr_1fr]">
             <div>
               <h1 className="mb-2">
-                {SITE.hero.h1Part1}{' '}
-                <span className="text-brand-green">{SITE.hero.h1Part2}</span>
+                Track your <strong>GLP-1</strong> Journey.{' '}
+                <span className="text-brand-green">Protect your <strong>Muscle</strong>.</span>
               </h1>
               <p className="my-7 max-w-[42ch] text-[17px] text-muted text-justify hyphens-auto">{SITE.hero.body}</p>
               <p className="my-3 text-[14px] text-muted">
-                <strong>Built for:</strong> {SITE.hero.builtFor}
+                <strong>Built for:</strong> Compounded semaglutide and tirzepatide, plus Ozempic,<br />Wegovy, Mounjaro, Zepbound, Rybelsus, Saxenda and Trulicity.
               </p>
               <div className="my-6"><StoreButtons /></div>
               <p className="mt-5 text-[13px] text-muted">{SITE.hero.priceLine}</p>
