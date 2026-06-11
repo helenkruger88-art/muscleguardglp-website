@@ -24,12 +24,12 @@ const sections = [
         a: 'No. Muscle Guard is a self-tracking companion and coach. It is not a medical device, does not provide diagnostic information, does not recommend dose changes, and does not substitute for clinical judgement. Always consult your healthcare provider for medical decisions.',
       },
       {
-        q: 'How is Muscle Guard different from other GLP-1 trackers?',
+        q: 'How is Muscle Guard different from other industry apps?',
         a: 'Muscle Guard is the only one built around muscle preservation as the headline. We are the only one with a free, cited research library on lean mass loss, and the only one whose hero metric (the Muscle Guard Score) combines protein adherence, training frequency, and body composition into a single weekly read.',
       },
       {
         q: 'Which GLP-1 medications does Muscle Guard support?',
-        a: 'Ozempic and Wegovy (semaglutide), Mounjaro and Zepbound (tirzepatide), Rybelsus (oral semaglutide), Saxenda (liraglutide), plus compounded semaglutide and tirzepatide preparations. The app knows the standard titration schedule for each.',
+        a: 'Ozempic and Wegovy (semaglutide), Mounjaro and Zepbound (tirzepatide), Rybelsus (oral semaglutide), Saxenda (liraglutide), Trulicity (dulaglutide), plus compounded semaglutide and tirzepatide preparations. The app knows the standard titration schedule for each.',
       },
       {
         q: 'Where is Muscle Guard built?',
@@ -134,7 +134,4 @@ export default function FAQPage() {
             </Link>
           </div>
         </div>
-      </section>
-    </>
-  );
-}
+      </

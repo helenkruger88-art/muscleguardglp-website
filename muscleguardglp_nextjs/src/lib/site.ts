@@ -32,7 +32,7 @@ export const SITE = {
       GBP: { monthly: '£4.99', yearly: '£49.99', monthlyAmount: '4.99', yearlyAmount: '49.99', currency: 'GBP', saving: '17%' }, // TODO open item §7: confirm GBP price
     },
   },
-  drugs: ['Ozempic', 'Wegovy', 'Mounjaro', 'Zepbound', 'Rybelsus', 'Saxenda'],
+  drugs: ['Ozempic', 'Wegovy', 'Mounjaro', 'Zepbound', 'Rybelsus', 'Saxenda', 'Trulicity'],
   // Canonical hero copy — single, server-rendered version per build brief §3.1.
   hero: {
     h1Part1: 'Track your GLP-1 journey.',
@@ -67,4 +67,3 @@ export const RESEARCH_BRANCHES = [
     summary:
       "A chronological log of every study, paper, and clinical analysis factored into the Research Hub. Updated monthly. If a new paper changes what we publish, we say so here first.",
   },
-] as const;
