@@ -435,12 +435,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="comparison" className="bg-brand-green py-20 text-white">
+      <section id="comparison" className="bg-white py-20">
         <div className="wrap">
           <div className="mx-auto mb-12 max-w-3xl text-center">
-            <div className="eyebrow mb-3" style={{ color: 'rgba(255,255,255,0.85)' }}>The category</div>
-            <h2 className="mb-3 text-white">Muscle Guard vs other industry apps.</h2>
-            <p className="text-[17px] text-white/80">The differences that matter, side by side.</p>
+            <div className="eyebrow mb-3">The category</div>
+            <h2 className="mb-3">Muscle Guard vs other industry apps.</h2>
+            <p className="text-[17px] text-muted">The differences that matter, side by side.</p>
           </div>
           <ComparisonTable />
         </div>
