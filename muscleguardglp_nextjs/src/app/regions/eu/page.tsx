@@ -31,7 +31,7 @@ const regionFaq = [
   },
   {
     q: 'How much is Muscle Guard Pro in EUR?',
-    a: '€5.99 per month or €59.99 per year. 7-day free trial, no card needed.',
+    a: '€5.99 per month or €54.99 per year. 7-day free trial, no card needed.',
   },
   {
     q: 'Does Muscle Guard support Rybelsus and oral semaglutide?',
@@ -56,7 +56,7 @@ export default function RegionEUPage() {
             <strong>Built for:</strong> Wegovy, Rybelsus, Saxenda and Mounjaro, plus Ozempic and compounded preparations. Oral semaglutide-ready.
           </p>
           <p className="mb-6 text-[14px] font-medium">
-            €5.99/month · €59.99/year · 7-day free trial, no card needed · GDPR-native, EU-hosted
+            €5.99/month · €54.99/year · 7-day free trial, no card needed · GDPR-native, EU-hosted
           </p>
           <StoreButtons />
         </div>
