@@ -15,7 +15,7 @@ export function GET() {
 
 - ${SITE.tagline}
 - Built in ${SITE.legalCity} by ${SITE.legalName}.
-- Available in ZA, US, EU. R99/mo, $5.99/mo, €5.99/mo, £4.99/mo.
+- Available in ZA, US, EU, UK. R99/mo, $5.99/mo, €5.99/mo, £5.49/mo.
 - Supported drugs: Ozempic, Wegovy, Mounjaro, Zepbound, Rybelsus, Saxenda, Trulicity, plus compounded semaglutide and tirzepatide.
 
 ## The core claim
