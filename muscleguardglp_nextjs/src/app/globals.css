@@ -18,16 +18,18 @@
   html { -webkit-text-size-adjust: 100%; }
   body {
     @apply font-sans text-ink antialiased;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.65;
   }
   h1, h2 { font-weight: 800; letter-spacing: -0.025em; line-height: 1.1; }
   h3 { font-weight: 700; letter-spacing: -0.015em; line-height: 1.2; }
   h4 { font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; }
-  h1 { font-size: clamp(34px, 5vw, 52px); }
-  h2 { font-size: clamp(26px, 3.5vw, 36px); }
-  h3 { font-size: 22px; }
-  h4 { font-size: 17px; }
+  h1 { font-size: clamp(38px, 5.4vw, 58px); }
+  h2 { font-size: clamp(28px, 3.8vw, 40px); }
+  h3 { font-size: 24px; }
+  h4 { font-size: 19px; }
+  p { font-size: 17px; }
+  small, .text-small { font-size: 14px; }
   a { @apply text-brand-green; }
   a:hover { @apply text-brand-green-dark underline; }
 }
@@ -36,7 +38,7 @@
   .wrap { @apply mx-auto max-w-wrap px-6; }
   .eyebrow {
     @apply uppercase font-bold text-gold;
-    font-size: 11px;
+    font-size: 13px;
     letter-spacing: 1.6px;
   }
   .eyebrow-green { @apply text-brand-green; }

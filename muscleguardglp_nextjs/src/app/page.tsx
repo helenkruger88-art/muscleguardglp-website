@@ -10,6 +10,51 @@ import { MobileApplicationSchema } from '@/components/schema/MobileApplication';
 import { FAQPageSchema } from '@/components/schema/FAQPage';
 import { getLiveArticles } from '@/lib/articles';
 
+// Small tile used by the bento feature grid. Accent variant tints the bg.
+function FeatureTile({
+  icon,
+  iconColor,
+  eyebrow,
+  label,
+  sub,
+  accent,
+}: {
+  icon: string;
+  iconColor: string;
+  eyebrow: string;
+  label?: string;
+  sub: string;
+  accent?: 'gold' | 'teal';
+}) {
+  const bg =
+    accent === 'gold'
+      ? 'rgba(224,176,86,0.15)'
+      : accent === 'teal'
+        ? 'rgba(15,123,108,0.18)'
+        : 'rgba(255,255,255,0.04)';
+  const border =
+    accent === 'gold'
+      ? 'rgba(224,176,86,0.4)'
+      : accent === 'teal'
+        ? 'rgba(15,123,108,0.4)'
+        : 'rgba(255,255,255,0.1)';
+  const eyebrowColor =
+    accent === 'gold' ? '#E0B056' : accent === 'teal' ? '#5EE3C8' : '#FFFFFF';
+  return (
+    <div
+      className="flex flex-col gap-2 rounded-2xl p-4 md:p-5"
+      style={{ background: bg, border: `1px solid ${border}` }}
+    >
+      <div className="flex items-center gap-2">
+        <span className="text-[16px]" style={{ color: iconColor }}>{icon}</span>
+        <div className="text-[12px] font-semibold uppercase tracking-[1px]" style={{ color: eyebrowColor, opacity: 0.95 }}>{eyebrow}</div>
+      </div>
+      {label && <div className="text-[16px] font-semibold leading-tight text-white">{label}</div>}
+      <div className="text-[13px] text-white">{sub}</div>
+    </div>
+  );
+}
+
 const homepageFaq = [
   {
     q: 'Is Muscle Guard a medical device?',
@@ -281,23 +326,111 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="features" className="py-20">
+      <section
+        id="features"
+        className="py-20 text-white"
+        style={{ background: 'linear-gradient(180deg, #0A1F1A 0%, #061612 100%)' }}
+      >
         <div className="wrap">
           <div className="mx-auto mb-12 max-w-3xl text-center">
-            <div className="eyebrow eyebrow-green mb-3">Built around muscle preservation</div>
-            <h2 className="mb-3">Every feature, one goal.</h2>
-            <p className="text-[17px] text-muted">
-              Track the four things that matter most during medically-supervised weight loss — protein, strength, hydration, body composition — and translate them into something a doctor can read in 60 seconds.
+            <div className="eyebrow mb-3" style={{ color: '#E0B056' }}>Every feature, one goal</div>
+            <h2 className="mb-3 text-white">Built around the Score.</h2>
+            <p className="text-[17px] text-white/85">
+              14 features. One number that tells you whether they&rsquo;re working.
             </p>
           </div>
-          <div className="grid gap-5 md:grid-cols-3">
-            {features.map((f) => (
-              <div key={f.title} className={`feature ${f.hero ? 'feature-hero' : ''}`}>
-                <div className="feature-icon">{f.icon}</div>
-                <h3 className="mb-2 text-[17px]">{f.title}</h3>
-                <p className="text-[14px] text-muted">{f.body}</p>
+
+          {/* Bento grid */}
+          <div
+            className="mx-auto grid max-w-5xl gap-3 md:gap-4"
+            style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}
+          >
+            {/* HERO — Muscle Guard Score, spans 2x2 */}
+            <div
+              className="rounded-2xl p-5 md:p-6 md:col-span-2 md:row-span-2 flex flex-col justify-between min-h-[280px]"
+              style={{
+                background: 'linear-gradient(135deg, #0F7B6C 0%, #0A5A4F 100%)',
+                border: '1px solid rgba(94,227,200,0.25)',
+              }}
+            >
+              <div className="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[1.4px] text-white">
+                <span style={{ color: '#E0B056' }}>★</span> Muscle Guard Score
               </div>
-            ))}
+              <div className="flex items-end gap-5">
+                <div className="relative" style={{ width: 130, height: 130, flexShrink: 0 }}>
+                  <svg viewBox="0 0 130 130" style={{ width: '100%', height: '100%' }}>
+                    <circle cx="65" cy="65" r="54" fill="none" stroke="rgba(255,255,255,0.18)" strokeWidth="9" />
+                    <circle cx="65" cy="65" r="54" fill="none" stroke="#E0B056" strokeWidth="9" strokeDasharray="339" strokeDashoffset="78" strokeLinecap="round" transform="rotate(-90 65 65)" />
+                  </svg>
+                  <div className="absolute inset-0 grid place-items-center">
+                    <div className="text-center">
+                      <div className="text-[44px] font-extrabold leading-none text-white">78</div>
+                      <div className="mt-1 text-[10px] font-semibold uppercase tracking-[1.2px]" style={{ color: '#E0B056' }}>Excellent</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="mb-1 flex justify-between text-[13px] text-white"><span>Protein</span><span className="font-semibold">86%</span></div>
+                  <div className="mb-3 h-1.5 w-full rounded-full" style={{ background: 'rgba(255,255,255,0.2)' }}>
+                    <div className="h-full rounded-full" style={{ width: '86%', background: '#E0B056' }} />
+                  </div>
+                  <div className="mb-1 flex justify-between text-[13px] text-white"><span>Training</span><span className="font-semibold">4/5</span></div>
+                  <div className="mb-3 h-1.5 w-full rounded-full" style={{ background: 'rgba(255,255,255,0.2)' }}>
+                    <div className="h-full rounded-full" style={{ width: '80%', background: '#FFFFFF' }} />
+                  </div>
+                  <div className="mb-1 flex justify-between text-[13px] text-white"><span>Body comp</span><span className="font-semibold">-3.2%</span></div>
+                  <div className="h-1.5 w-full rounded-full" style={{ background: 'rgba(255,255,255,0.2)' }}>
+                    <div className="h-full rounded-full" style={{ width: '65%', background: '#5EE3C8' }} />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Top right pair */}
+            <FeatureTile icon="🔒" iconColor="#5EE3C8" eyebrow="Privacy first" label="No trackers" sub="POPIA · GDPR · CCPA" />
+            <FeatureTile icon="🔥" iconColor="#E0B056" eyebrow="Plateau Protocol" label="Day 6/14" sub="3-pillar reset" />
+
+            {/* Row 2 right pair */}
+            <FeatureTile icon="🤢" iconColor="#5EE3C8" eyebrow="Nausea Protocol" label="Safe bites" sub="Shot-day weeks" />
+            <FeatureTile icon="🏋" iconColor="#5EE3C8" eyebrow="Training Hub" label="4/5 sessions" sub="Z1–Z5 cardio" />
+
+            {/* Row 3 — accent tiles */}
+            <FeatureTile icon="📈" iconColor="#5EE3C8" eyebrow="Trends" sub="Doctor view" accent="teal" />
+            <FeatureTile icon="🤖" iconColor="#E0B056" eyebrow="Pattern Read" sub="AI weekly · Pro" accent="gold" />
+            <FeatureTile icon="📷" iconColor="#E0B056" eyebrow="Snap to Log" sub="AI plate · Pro" accent="gold" />
+            <FeatureTile icon="📐" iconColor="#5EE3C8" eyebrow="Body Check" sub="PoseGuide + WHtR" />
+
+            {/* Row 4 — utility */}
+            <FeatureTile icon="📄" iconColor="#5EE3C8" eyebrow="Clinical PDF" sub="10-min visit" />
+            <FeatureTile icon="⚕" iconColor="#5EE3C8" eyebrow="Symptom Log" sub="17 categories" />
+            <FeatureTile icon="💊" iconColor="#5EE3C8" eyebrow="Drug Reference" sub="Per-brand titration" />
+            <FeatureTile icon="⌚" iconColor="#5EE3C8" eyebrow="Apple Health" sub="+ Health Connect" />
+          </div>
+
+          {/* Achievements strip */}
+          <div
+            className="mx-auto mt-4 flex max-w-5xl items-center justify-between gap-4 rounded-2xl px-5 py-4"
+            style={{
+              background: 'linear-gradient(90deg, rgba(224,176,86,0.18) 0%, rgba(15,123,108,0.18) 100%)',
+              border: '1px solid rgba(224,176,86,0.3)',
+            }}
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-[22px]" style={{ color: '#E0B056' }}>🏆</span>
+              <div>
+                <div className="text-[12px] font-semibold uppercase tracking-[1.2px]" style={{ color: '#E0B056' }}>30+ achievements</div>
+                <div className="text-[14px] font-medium text-white">Streaks · pillar milestones · shareable cards</div>
+              </div>
+            </div>
+            <div className="hidden gap-2 sm:flex">
+              {[3, 7, 30, 100].map((n, i) => (
+                <div
+                  key={n}
+                  className="grid h-8 w-8 place-items-center rounded-full text-[12px] font-semibold text-white"
+                  style={{ background: i === 3 ? 'rgba(224,176,86,0.5)' : 'rgba(224,176,86,0.3)' }}
+                >{n}</div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
