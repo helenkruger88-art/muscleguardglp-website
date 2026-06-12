@@ -13,9 +13,11 @@ export const metadata: Metadata = {
 };
 
 export default function ResearchHubPage() {
-  const allArticles = getAllArticles();
-  const liveCount = allArticles.filter((a) => a.status === 'live').length;
-  const lastUpdated = allArticles[0]?.dateModified ?? '2026-06-10';
+  // Only show live articles publicly. Stubs are tracked in the codebase
+  // but hidden from the Hub until their content + citations are finished.
+  const liveArticles = getAllArticles().filter((a) => a.status === 'live');
+  const liveCount = liveArticles.length;
+  const lastUpdated = liveArticles[0]?.dateModified ?? '2026-06-10';
 
   return (
     <>
@@ -29,7 +31,7 @@ export default function ResearchHubPage() {
         data={{
           '@context': 'https://schema.org',
           '@type': 'ItemList',
-          itemListElement: allArticles.map((a, i) => ({
+          itemListElement: liveArticles.map((a, i) => ({
             '@type': 'ListItem',
             position: i + 1,
             url: `${SITE.url}/research/${a.slug}/`,
@@ -49,11 +51,11 @@ export default function ResearchHubPage() {
             In plain English. Cited. Updated when the science updates. Free to read, free to share.
           </p>
           <p className="mb-6 text-[14px] text-muted">
-            {allArticles.length} articles · {liveCount} live · last updated {lastUpdated}
+            {liveCount} articles · cited · last updated {lastUpdated}
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link className="btn" href="/evidence.pdf">
-              Download the 12-page summary (PDF, no email needed)
+            <Link className="btn" href="/research/glp1-and-muscle-loss/">
+              Read the cornerstone: GLP-1 and muscle loss
             </Link>
             <Link className="btn btn-outline" href="#branches">
               Browse the library →
@@ -65,7 +67,8 @@ export default function ResearchHubPage() {
       <section id="branches" className="py-16">
         <div className="wrap">
           {RESEARCH_BRANCHES.map((branch) => {
-            const branchArticles = getArticlesByBranch(branch.slug);
+            const branchArticles = getArticlesByBranch(branch.slug).filter((a) => a.status === 'live');
+            if (branchArticles.length === 0) return null;
             return (
               <div key={branch.slug} className="mb-16">
                 <h2 className="mb-3">{branch.title}</h2>
@@ -77,11 +80,6 @@ export default function ResearchHubPage() {
                       href={`/research/${a.slug}/`}
                       className="block rounded-card border border-rule bg-white p-6 no-underline transition hover:border-brand-green"
                     >
-                      {a.status === 'stub' && (
-                        <div className="mb-2 inline-block rounded-full bg-gold-bg px-2 py-0.5 text-[11px] font-medium uppercase tracking-wider text-gold">
-                          Coming soon
-                        </div>
-                      )}
                       <h3 className="mb-2 text-[18px] text-ink">{a.title}</h3>
                       <p className="text-[14px] text-muted">{a.description}</p>
                       <div className="mt-4 text-[12px] uppercase tracking-[1px] text-muted">
