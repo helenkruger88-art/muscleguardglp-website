@@ -108,6 +108,7 @@ export default function HomePage() {
       <MobileApplicationSchema />
       <FAQPageSchema items={homepageFaq} />
 
+
       <section
         className="py-16 md:py-20 text-white"
         style={{ background: 'linear-gradient(180deg, #0A1F1A 0%, #1A2520 60%, #000 100%)' }}
@@ -140,7 +141,10 @@ export default function HomePage() {
                 <strong>Built for:</strong> Compounded semaglutide and tirzepatide, plus Ozempic,<br />Wegovy, Mounjaro, Zepbound, Rybelsus, Saxenda and Trulicity.
               </p>
               <div className="my-6"><StoreButtons /></div>
-              <p className="mt-5 text-[13px] text-white/60">{SITE.hero.priceLine}</p>
+              <div className="mt-5 inline-flex items-center gap-2 rounded-full px-4 py-2" style={{ background: 'rgba(94,227,200,0.12)', border: '1px solid rgba(94,227,200,0.35)', color: '#FFFFFF', fontSize: 14, fontWeight: 500 }}>
+                <span aria-hidden="true" style={{ color: '#5EE3C8', fontSize: 16 }}>★</span>
+                <span>{SITE.hero.priceLine}</span>
+              </div>
               <TrustBadgeRow />
             </div>
             <HeroMockup />
@@ -292,39 +296,78 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-bg py-20">
+      <section className="bg-brand-green-bg py-20">
         <div className="wrap">
           <div className="mx-auto mb-12 max-w-3xl text-center">
-            <div className="eyebrow eyebrow-green mb-3">Inside the app</div>
-            <h2 className="mb-3">Six screens that do most of the work.</h2>
+            <div className="eyebrow eyebrow-green mb-3">The differentiator</div>
+            <h2 className="mb-3">How muscle preservation works on a GLP-1</h2>
             <p className="text-[17px] text-muted">
-              From the Muscle Guard Score on the home dashboard through the daily protocols, the body-composition check, and the visceral fat trend — the places your week actually lives.
+              The mechanism, the prevention plan, and the studies that ground both.
             </p>
           </div>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {screens.map((s) => (
-              <figure key={s.src} className="text-center">
-                <div className="relative mx-auto w-full max-w-[260px]">
-                  <div className="overflow-hidden rounded-[30px] bg-ink shadow-mockup" style={{ padding: 6 }}>
-                    <div className="overflow-hidden rounded-[24px] bg-white">
-                      <Image
-                        src={s.src} alt={s.alt}
-                        width={1242} height={2688} loading="lazy"
-                        sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 260px"
-                        style={{ width: '100%', height: 'auto', display: 'block' }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <figcaption className="mt-4">
-                  <div className="text-[12px] uppercase tracking-[1.5px] text-brand-green">{s.label}</div>
-                  <div className="mt-1 text-[15px] text-ink">{s.caption}</div>
-                </figcaption>
-              </figure>
-            ))}
+          <div className="grid gap-12 md:grid-cols-2 md:items-center">
+            <div className="space-y-5 text-[15px] leading-relaxed text-ink">
+              <p>
+                GLP-1 receptor agonists suppress appetite and slow gastric emptying so effectively that most users enter a sustained calorie and protein deficit. Without adequate protein intake and a resistance-training stimulus, the body mobilises both fat and muscle for energy — producing the lean-mass-loss share that shows up consistently in body-composition substudies of the major trials.
+              </p>
+              <p>
+                The prevention plan is well-established: <strong>1.2 to 1.6 g of protein per kg of body weight per day</strong>, <strong>resistance training 2 to 4 times per week</strong>, avoid extreme calorie restriction, and track strength and body composition — not just weight.
+              </p>
+              <p>
+                Muscle Guard is built around that plan. Every feature, every milestone, every metric is in service of one thing: fat loss without muscle loss.
+              </p>
+              <div className="pt-2">
+                <Link className="btn" href="/research/glp1-and-muscle-loss/">
+                  Read the cornerstone article →
+                </Link>
+              </div>
+            </div>
+            <div className="rounded-card bg-white p-7 shadow-lg">
+              <div className="eyebrow mb-5 text-gold" style={{ letterSpacing: '1.6px' }}>
+                Lean mass loss as % of total weight loss
+              </div>
+              <div className="mb-2 text-[12px] font-semibold uppercase tracking-[1.2px] text-ink">
+                Without intervention
+              </div>
+              <div className="mb-2 h-3.5 w-full overflow-hidden rounded-full bg-brand-green-bg">
+                <div className="h-full rounded-full" style={{ width: '85%', background: '#C97E1A' }} />
+              </div>
+              <div className="mb-6 text-[17px] font-bold text-ink">25 – 40%</div>
+              <div className="mb-2 text-[12px] font-semibold uppercase tracking-[1.2px] text-ink">
+                With protein + training
+              </div>
+              <div className="mb-2 h-3.5 w-full overflow-hidden rounded-full bg-brand-green-bg">
+                <div className="h-full rounded-full" style={{ width: '18%', background: '#0F7B6C' }} />
+              </div>
+              <div className="mb-6 text-[17px] font-bold text-ink">Substantially less</div>
+              <hr className="my-5 border-rule" />
+              <p className="text-[12px] text-muted">
+                Phase-3 trial body-composition data, structured-intervention arms. Sources cited in{' '}
+                <Link className="text-brand-green underline" href="/research/glp1-and-muscle-loss/">
+                  the cornerstone
+                </Link>
+                .
+              </p>
+            </div>
           </div>
         </div>
       </section>
+
+
+      <section className="bg-brand-green py-12 text-white">
+        <div className="wrap">
+          <div className="mx-auto flex max-w-4xl flex-col items-center gap-5 text-center md:flex-row md:justify-between md:text-left">
+            <div>
+              <div className="text-[14px] font-semibold uppercase tracking-[1.5px] text-white/85">Track the plan in 30 seconds</div>
+              <h3 className="mt-1 text-[22px] text-white">Build it into your day — free.</h3>
+            </div>
+            <div className="flex items-center gap-4">
+              <StoreButtons variant="light" />
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       <section
         id="features"
@@ -435,6 +478,40 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="bg-bg py-20">
+        <div className="wrap">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <div className="eyebrow eyebrow-green mb-3">Inside the app</div>
+            <h2 className="mb-3">Six screens that do most of the work.</h2>
+            <p className="text-[17px] text-muted">
+              From the Muscle Guard Score on the home dashboard through the daily protocols, the body-composition check, and the visceral fat trend — the places your week actually lives.
+            </p>
+          </div>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {screens.map((s) => (
+              <figure key={s.src} className="text-center">
+                <div className="relative mx-auto w-full max-w-[260px]">
+                  <div className="overflow-hidden rounded-[30px] bg-ink shadow-mockup" style={{ padding: 6 }}>
+                    <div className="overflow-hidden rounded-[24px] bg-white">
+                      <Image
+                        src={s.src} alt={s.alt}
+                        width={1242} height={2688} loading="lazy"
+                        sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 260px"
+                        style={{ width: '100%', height: 'auto', display: 'block' }}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <figcaption className="mt-4">
+                  <div className="text-[12px] uppercase tracking-[1.5px] text-brand-green">{s.label}</div>
+                  <div className="mt-1 text-[15px] text-ink">{s.caption}</div>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="comparison" className="bg-white py-20">
         <div className="wrap">
           <div className="mx-auto mb-12 max-w-3xl text-center">
@@ -446,37 +523,45 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20">
+
+      <section className="py-14" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #E8F4F1 100%)' }}>
         <div className="wrap">
-          <div className="mx-auto mb-12 max-w-3xl text-center">
-            <div className="eyebrow eyebrow-green mb-3">Three things that make us different</div>
-            <h2 className="mb-3">Built for GLP-1. Tuned for muscle. Ready for your doctor.</h2>
-          </div>
-          <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
-            <div className="rounded-card border border-rule bg-white p-6">
-              <div className="text-[14px] uppercase tracking-[1.5px] text-brand-green">01</div>
-              <h3 className="mt-3 text-[18px]">GLP-1-first design</h3>
-              <p className="mt-2 text-[14px] text-muted">
-                Every feature is tuned for the GLP-1 user — reduced appetite, nausea protocols, food noise tracking, plateau science, injection rotation, titration schedules. Not a generic weight-loss tracker bolted onto a meds reminder.
-              </p>
-            </div>
-            <div className="rounded-card border border-rule bg-white p-6">
-              <div className="text-[14px] uppercase tracking-[1.5px] text-brand-green">02</div>
-              <h3 className="mt-3 text-[18px]">Muscle protection as the headline</h3>
-              <p className="mt-2 text-[14px] text-muted">
-                What you keep matters more than what you lose. The Muscle Guard Score, the 40% protein weighting, the strength-streak hero, the Plateau Protocol — they all point at the same idea: don&apos;t end this journey weaker than you started.
-              </p>
-            </div>
-            <div className="rounded-card border border-rule bg-white p-6">
-              <div className="text-[14px] uppercase tracking-[1.5px] text-brand-green">03</div>
-              <h3 className="mt-3 text-[18px]">Clinician-ready data</h3>
-              <p className="mt-2 text-[14px] text-muted">
-                The Clinical Summary PDF is designed to land cleanly in a 10-minute doctor visit. Not a wall of charts — a structured report with patterns surfaced, symptom timelines plotted against injections, and clear caveats about what the app does and does not claim.
-              </p>
-            </div>
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="eyebrow eyebrow-green mb-3">Verdict</div>
+            <h3 className="mb-3 text-[26px]">6 / 6 on the differentiators that matter.</h3>
+            <p className="mb-7 text-[16px] text-muted">{SITE.hero.priceLine}</p>
+            <div className="flex justify-center"><StoreButtons /></div>
           </div>
         </div>
       </section>
+
+
+
+      <section className="bg-bg py-16">
+        <div className="wrap">
+          <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-3">
+            <div className="text-center md:col-span-1">
+              <div className="text-[40px] font-extrabold leading-none text-brand-green">14</div>
+              <div className="mt-2 text-[13px] uppercase tracking-[1px] text-muted">cited research articles in the public hub</div>
+            </div>
+            <div className="text-center md:col-span-1">
+              <div className="text-[40px] font-extrabold leading-none text-brand-green">8</div>
+              <div className="mt-2 text-[13px] uppercase tracking-[1px] text-muted">approved GLP-1s supported, incl. compounded</div>
+            </div>
+            <div className="text-center md:col-span-1">
+              <div className="text-[40px] font-extrabold leading-none text-brand-green">0</div>
+              <div className="mt-2 text-[13px] uppercase tracking-[1px] text-muted">third-party trackers · ever</div>
+            </div>
+          </div>
+          <div className="mx-auto mt-12 max-w-3xl rounded-card bg-white p-7 shadow-lg" style={{ borderLeft: '4px solid #0F7B6C' }}>
+            <p className="text-[18px] italic text-ink leading-relaxed">
+              &ldquo;Most GLP-1 trackers count calories. Muscle Guard is the first I&rsquo;ve seen that counts what you&rsquo;re keeping.&rdquo;
+            </p>
+            <div className="mt-4 text-[14px] text-muted">— Early access user, Johannesburg · June 2026</div>
+          </div>
+        </div>
+      </section>
+
 
       {liveArticles.length > 0 && (
         <section
@@ -523,63 +608,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-brand-green-bg py-20">
-        <div className="wrap">
-          <div className="mx-auto mb-12 max-w-3xl text-center">
-            <div className="eyebrow eyebrow-green mb-3">The differentiator</div>
-            <h2 className="mb-3">How muscle preservation works on a GLP-1</h2>
-            <p className="text-[17px] text-muted">
-              The mechanism, the prevention plan, and the studies that ground both.
-            </p>
-          </div>
-          <div className="grid gap-12 md:grid-cols-2 md:items-center">
-            <div className="space-y-5 text-[15px] leading-relaxed text-ink">
-              <p>
-                GLP-1 receptor agonists suppress appetite and slow gastric emptying so effectively that most users enter a sustained calorie and protein deficit. Without adequate protein intake and a resistance-training stimulus, the body mobilises both fat and muscle for energy — producing the lean-mass-loss share that shows up consistently in body-composition substudies of the major trials.
-              </p>
-              <p>
-                The prevention plan is well-established: <strong>1.2 to 1.6 g of protein per kg of body weight per day</strong>, <strong>resistance training 2 to 4 times per week</strong>, avoid extreme calorie restriction, and track strength and body composition — not just weight.
-              </p>
-              <p>
-                Muscle Guard is built around that plan. Every feature, every milestone, every metric is in service of one thing: fat loss without muscle loss.
-              </p>
-              <div className="pt-2">
-                <Link className="btn" href="/research/glp1-and-muscle-loss/">
-                  Read the cornerstone article →
-                </Link>
-              </div>
-            </div>
-            <div className="rounded-card bg-white p-7 shadow-lg">
-              <div className="eyebrow mb-5 text-gold" style={{ letterSpacing: '1.6px' }}>
-                Lean mass loss as % of total weight loss
-              </div>
-              <div className="mb-2 text-[12px] font-semibold uppercase tracking-[1.2px] text-ink">
-                Without intervention
-              </div>
-              <div className="mb-2 h-3.5 w-full overflow-hidden rounded-full bg-brand-green-bg">
-                <div className="h-full rounded-full" style={{ width: '85%', background: '#C97E1A' }} />
-              </div>
-              <div className="mb-6 text-[17px] font-bold text-ink">25 – 40%</div>
-              <div className="mb-2 text-[12px] font-semibold uppercase tracking-[1.2px] text-ink">
-                With protein + training
-              </div>
-              <div className="mb-2 h-3.5 w-full overflow-hidden rounded-full bg-brand-green-bg">
-                <div className="h-full rounded-full" style={{ width: '18%', background: '#0F7B6C' }} />
-              </div>
-              <div className="mb-6 text-[17px] font-bold text-ink">Substantially less</div>
-              <hr className="my-5 border-rule" />
-              <p className="text-[12px] text-muted">
-                Phase-3 trial body-composition data, structured-intervention arms. Sources cited in{' '}
-                <Link className="text-brand-green underline" href="/research/glp1-and-muscle-loss/">
-                  the cornerstone
-                </Link>
-                .
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="download" className="bg-brand-green py-20 text-white">
         <div className="wrap text-center">
           <div className="eyebrow mb-3" style={{ color: 'rgba(255,255,255,0.85)' }}>Get started</div>
@@ -588,6 +616,7 @@ export default function HomePage() {
           <div className="flex justify-center"><StoreButtons variant="light" /></div>
         </div>
       </section>
+
     </>
   );
 }
