@@ -42,7 +42,7 @@ const sections = [
     items: [
       {
         q: 'How much does Muscle Guard cost?',
-        a: 'Free forever for the basics. Pro is R99 per month or R899 per year (approximately USD 5.99, EUR 5.99, GBP 4.99 in equivalent regions), with a 7-day free trial. No card needed to start.',
+        a: 'Free forever for the basics. Pro is R99 per month or R899 per year (approximately USD 5.99, EUR 5.99, GBP 5.49 in equivalent regions), with a 7-day free trial. No card needed to start.',
       },
       {
         q: 'How do I cancel Pro?',
@@ -50,7 +50,7 @@ const sections = [
       },
       {
         q: 'Does it work with Apple Watch, Whoop, or Oura?',
-        a: 'Yes — HealthKit and Health Connect integration is available. Strength sessions, weight, and step counts sync automatically.',
+        a: 'Yes — but with one important step. Muscle Guard reads from Apple Health on iOS and Health Connect on Android, NOT from your wearable directly. So you first need your wearable (Apple Watch, Whoop, Oura, Garmin, Fitbit, etc.) to be syncing into Apple Health or Health Connect. Once that link is in place, grant Muscle Guard permission inside Profile → Connect Apple Health / Health Connect. Strength sessions, heart rate, workouts, weight, and step counts then flow through automatically — deduplicated across all your sources so a workout logged on Apple Watch + iPhone does not get counted twice. If you skip the iOS/Android Health setup, your wearable data will not reach Muscle Guard.',
       },
       {
         q: 'Where is the AI plate scan data sent?',
