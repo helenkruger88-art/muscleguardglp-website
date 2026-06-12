@@ -16,8 +16,20 @@ export const SITE = {
   },
   social: {},
   stores: {
+    // Default (global) store URLs. Swap for real listings once the app ships.
     appStore: '#download',
     playStore: '#download',
+    // Per-region store URLs. Used by region pages (e.g. /regions/za) and pricing
+    // toggle to send users to the right App Store / Play Store country listing.
+    // When you ship to the App Store, the URL format is:
+    //   https://apps.apple.com/{country}/app/muscle-guard/id{appId}
+    //   https://play.google.com/store/apps/details?id={packageId}&hl={lang}&gl={country}
+    regions: {
+      za: { appStore: '#download', playStore: '#download' },
+      us: { appStore: '#download', playStore: '#download' },
+      eu: { appStore: '#download', playStore: '#download' },
+      gb: { appStore: '#download', playStore: '#download' },
+    },
   },
   pricing: {
     default: 'ZAR',
