@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brand-aligned base layer — ported from existing styles.css */
+@layer base {
+  :root {
+    --brand-green: #0F7B6C;
+    --brand-green-dark: #0A5A4F;
+    --brand-green-bg: #E8F4F1;
+    --gold: #C97E1A;
+    --gold-bg: #FFF3E0;
+    --ink: #1A2520;
+    --muted: #5F6E69;
+    --rule: #E5E7E6;
+  }
+
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    @apply font-sans text-ink antialiased;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  h1, h2 { font-weight: 800; letter-spacing: -0.025em; line-height: 1.1; }
+  h3 { font-weight: 700; letter-spacing: -0.015em; line-height: 1.2; }
+  h4 { font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; }
+  h1 { font-size: clamp(38px, 5.4vw, 58px); }
+  h2 { font-size: clamp(28px, 3.8vw, 40px); }
+  h3 { font-size: 24px; }
+  h4 { font-size: 19px; }
+  p { font-size: 17px; }
+  small, .text-small { font-size: 14px; }
+  a { @apply text-brand-green; }
+  a:hover { @apply text-brand-green-dark underline; }
+}
+
+@layer components {
+  .wrap { @apply mx-auto max-w-wrap px-6; }
+  .eyebrow {
+    @apply uppercase font-bold text-gold;
+    font-size: 13px;
+    letter-spacing: 1.6px;
+  }
+  .eyebrow-green { @apply text-brand-green; }
+  .btn {
+    @apply inline-block rounded-lg bg-brand-green px-6 py-3 text-sm font-medium text-white no-underline;
+  }
+  .btn:hover { @apply bg-brand-green-dark no-underline; }
+  .btn-outline {
+    @apply border-[1.5px] border-brand-green bg-transparent text-brand-green;
+  }
+  .btn-outline:hover { @apply bg-brand-green text-white; }
+  .store-btn {
+    @apply inline-flex items-center gap-2 rounded-[10px] bg-ink px-5 py-3 text-white no-underline;
+  }
+  .store-btn:hover { @apply bg-black no-underline; }
+  .feature {
+    @apply rounded-card border border-rule bg-white p-6;
+  }
+  .feature-hero { @apply border-2 border-brand-green; }
+  .feature-icon {
+    @apply mb-4 grid h-10 w-10 place-items-center rounded-[10px] bg-brand-green-bg text-brand-green;
+  }
+}
+
+/* Article prose styles */
+.article-prose {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.article-prose h2 { @apply mt-12 mb-3; }
+.article-prose h3 { @apply mt-8 mb-3; }
+.article-prose p { @apply my-4; }
+.article-prose ul, .article-prose ol { @apply my-4 pl-6; }
+.article-prose li { @apply mb-2; }
+.article-prose ul { @apply list-disc; }
+.article-prose ol { @apply list-decimal; }
+.article-prose blockquote {
+  @apply my-6 rounded-r-lg border-l-4 border-brand-green bg-brand-green-bg px-5 py-4;
+}
+.article-prose strong { @apply font-semibold text-ink; }
+.article-prose a { @apply text-brand-green underline; }
+.article-prose sup a { @apply text-brand-green no-underline; }
