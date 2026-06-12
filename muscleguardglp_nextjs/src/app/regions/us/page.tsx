@@ -8,7 +8,7 @@ import { FAQPageSchema } from '@/components/schema/FAQPage';
 export const metadata: Metadata = {
   title: 'Muscle Guard US — GLP-1 muscle preservation tracker',
   description:
-    'The GLP-1 companion built around muscle preservation. $5.99/month, $59.99/year, 7-day free trial. Built for Wegovy, Zepbound, Mounjaro, Ozempic, plus compounded preparations.',
+    'The GLP-1 companion built around muscle preservation. $5.99/month, $54.99/year, 7-day free trial. Built for Wegovy, Zepbound, Mounjaro, Ozempic, plus compounded preparations.',
   alternates: {
     canonical: `${SITE.url}/regions/us/`,
     languages: {
@@ -31,7 +31,7 @@ const regionFaq = [
   },
   {
     q: 'How much is Muscle Guard Pro in USD?',
-    a: '$5.99 per month or $59.99 per year. 7-day free trial, no card needed.',
+    a: '$5.99 per month or $54.99 per year. 7-day free trial, no card needed.',
   },
 ];
 
@@ -52,7 +52,7 @@ export default function RegionUSPage() {
             <strong>Built for:</strong> Wegovy, Zepbound, Mounjaro and Ozempic, plus Rybelsus, Saxenda and compounded preparations.
           </p>
           <p className="mb-6 text-[14px] font-medium">
-            $5.99/month · $59.99/year · 7-day free trial, no card needed · Cancel anytime
+            $5.99/month · $54.99/year · 7-day free trial, no card needed · Cancel anytime
           </p>
           <StoreButtons />
         </div>
