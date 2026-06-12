@@ -7,7 +7,23 @@ import rehypeSlug from 'rehype-slug';
 import { getArticleBySlug, getArticleSlugs, getAllArticles } from '@/lib/articles';
 import { MedicalWebPageSchema } from '@/components/schema/MedicalWebPage';
 import { BreadcrumbSchema } from '@/components/schema/BreadcrumbList';
+import { ArticleSchema } from '@/components/schema/Article';
+import { HowToSchema } from '@/components/schema/HowTo';
 import { SITE } from '@/lib/site';
+
+// The muscle-preservation prevention plan — extracted as HowTo schema for the cornerstone article.
+// Source: Phase-3 GLP-1 body-composition substudies; structured-intervention arms.
+const PRESERVATION_HOWTO = {
+  name: 'How to preserve muscle on a GLP-1',
+  description: 'The four-pillar prevention plan that drops lean-mass-loss share on GLP-1 medications.',
+  totalTime: 'P12W',
+  steps: [
+    { name: 'Hit a daily protein floor', text: 'Aim for 1.2 to 1.6 g of protein per kg of body weight per day — about 90 to 120 g for many adults.' },
+    { name: 'Resistance train 2–4× per week', text: 'Hit each major movement pattern (squat, hinge, push, pull, core) at least once a week.' },
+    { name: 'Avoid extreme calorie restriction', text: 'A moderate deficit preserves lean mass. Below 1,200 kcal accelerates muscle loss.' },
+    { name: 'Track strength and body composition', text: 'Weight alone hides the loss. Track waist, hip, neck, training volume, and weekly photos.' },
+  ],
+};
 
 export async function generateStaticParams() {
   return getArticleSlugs().map((slug) => ({ slug }));
@@ -52,6 +68,22 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         dateModified={article.dateModified}
         citations={article.citations}
       />
+      <ArticleSchema
+        headline={article.title}
+        description={article.description}
+        url={`${SITE.url}/research/${article.slug}/`}
+        datePublished={article.datePublished}
+        dateModified={article.dateModified}
+        speakableSelectors={['h1', '.article-prose p:first-of-type', '.article-prose h2 + p']}
+      />
+      {article.slug === 'glp1-and-muscle-loss' && (
+        <HowToSchema
+          name={PRESERVATION_HOWTO.name}
+          description={PRESERVATION_HOWTO.description}
+          totalTime={PRESERVATION_HOWTO.totalTime}
+          steps={PRESERVATION_HOWTO.steps}
+        />
+      )}
       <BreadcrumbSchema
         items={[
           { name: 'Home', path: '/' },
