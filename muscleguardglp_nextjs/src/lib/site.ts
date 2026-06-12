@@ -35,9 +35,9 @@ export const SITE = {
     default: 'ZAR',
     plans: {
       ZAR: { monthly: 'R99', yearly: 'R899', monthlyAmount: '99', yearlyAmount: '899', currency: 'ZAR', saving: '24%' },
-      USD: { monthly: '$5.99', yearly: '$59.99', monthlyAmount: '5.99', yearlyAmount: '59.99', currency: 'USD', saving: '17%' },
-      EUR: { monthly: '€5.99', yearly: '€59.99', monthlyAmount: '5.99', yearlyAmount: '59.99', currency: 'EUR', saving: '17%' },
-      GBP: { monthly: '£4.99', yearly: '£49.99', monthlyAmount: '4.99', yearlyAmount: '49.99', currency: 'GBP', saving: '17%' },
+      USD: { monthly: '$5.99', yearly: '$54.99', monthlyAmount: '5.99', yearlyAmount: '54.99', currency: 'USD', saving: '23%' },
+      EUR: { monthly: '€5.99', yearly: '€54.99', monthlyAmount: '5.99', yearlyAmount: '54.99', currency: 'EUR', saving: '23%' },
+      GBP: { monthly: '£5.49', yearly: '£49.49', monthlyAmount: '5.49', yearlyAmount: '49.49', currency: 'GBP', saving: '25%' },
     },
   },
   drugs: ['Ozempic', 'Wegovy', 'Mounjaro', 'Zepbound', 'Rybelsus', 'Saxenda', 'Trulicity'],
