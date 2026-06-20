@@ -26,7 +26,7 @@ export default function PrivacyPage() {
           <div className="mb-10">
             <div className="eyebrow eyebrow-green mb-3">Privacy Policy</div>
             <h1 className="mb-4">Privacy Policy</h1>
-            <p className="text-[15px] text-muted">Last updated: 19 May 2026</p>
+            <p className="text-[15px] text-muted">Last updated: 20 June 2026</p>
           </div>
 
           <div className="article-prose">
@@ -94,12 +94,17 @@ export default function PrivacyPage() {
             </p>
 
             <h3>1.5 AI inputs you submit</h3>
-            <p>When you use AI features, the following is sent to Google&rsquo;s Gemini API via our Firebase Cloud Functions:</p>
+            <p>
+              Muscle Guard uses Google&rsquo;s Gemini API <strong>only for food-logging features</strong>. When you use those features, the following is sent to the API via our Firebase Cloud Functions:
+            </p>
             <ul>
-              <li><strong>Smart AI (food estimation):</strong> the free-text food description you typed.</li>
+              <li><strong>Smart AI (food search fallback):</strong> the free-text food description you typed when an Open Food Facts lookup returns no results.</li>
               <li><strong>Plate Scan:</strong> the photograph you took of your meal.</li>
-              <li><strong>Coach AI (Pro feature):</strong> an anonymised summary blob assembled from your recent logs (weight trend, protein intake, symptoms, mood). No persistent user identifier is included.</li>
+              <li><strong>Nutrition label OCR:</strong> the photograph of a printed nutrition label.</li>
             </ul>
+            <p>
+              All other features in the app — including the Coach insights, the Training Read, the Pattern Read, the weekly Blueprint summary, the doctor talking points, the Muscle Guard Score, and pattern detection — are produced by deterministic rule engines and templates that read directly from your logged data. <strong>No part of those features uses generative AI.</strong>
+            </p>
             <p>
               Inputs are processed transiently for each request and are not retained by us beyond the duration of the request. Google&rsquo;s data handling of these requests is governed by Google&rsquo;s{' '}
               <a href="https://policies.google.com/terms/generative-ai" target="_blank" rel="noopener noreferrer">Generative AI Additional Terms</a>.
@@ -111,7 +116,7 @@ export default function PrivacyPage() {
               <li>To provide the core tracking, dashboards, charts, reports, and reminders the app advertises.</li>
               <li>To allow you to export your data as a Clinical Summary PDF for sharing with your physician.</li>
               <li>To detect patterns or warning signs that warrant a clinician check-in (for example, red-flag symptoms associated with pancreatitis or dehydration).</li>
-              <li>To power AI-assisted features (Smart AI, Plate Scan, Coach AI) at your request.</li>
+              <li>To power AI-assisted food-logging features (Smart AI food search fallback, Plate Scan, nutrition label OCR) at your request.</li>
               <li>To maintain your active subscription entitlement through RevenueCat.</li>
               <li>To investigate crashes and improve app stability.</li>
               <li>To send essential service notifications (account-deletion confirmations, security alerts, material changes to these terms).</li>
@@ -143,7 +148,7 @@ export default function PrivacyPage() {
                     ['Google LLC — Firebase Firestore', 'Profile and daily logs', 'Profile data and any data you log in the app'],
                     ['Google LLC — Firebase Cloud Storage', 'Photo storage', 'Avatar and progress photos'],
                     ['Google LLC — Firebase Cloud Functions', 'Backend logic', 'Transient request payloads'],
-                    ['Google LLC — Gemini API', 'AI features', 'Food descriptions, plate photos, anonymised summary blobs'],
+                    ['Google LLC — Gemini API', 'Food-logging AI features', 'Food descriptions, plate photos, nutrition label photos'],
                     ['RevenueCat, Inc.', 'Subscription entitlement', 'Firebase UID, subscription state, RevenueCat subscriber ID'],
                     ['Apple Inc. / Google LLC', 'Payment processing', 'Payment information (handled by them, not us)'],
                   ].map(([p, u, d]) => (
@@ -218,21 +223,24 @@ export default function PrivacyPage() {
 
             <h2>7. AI processing disclosure</h2>
             <p>
-              Muscle Guard uses Google&rsquo;s <strong>Gemini</strong> large-language model (via the <code>generativelanguage.googleapis.com</code> endpoint of Google Cloud) for three features:
+              Muscle Guard uses Google&rsquo;s <strong>Gemini</strong> large-language model (via the <code>generativelanguage.googleapis.com</code> endpoint of Google Cloud) for <strong>food-logging features only</strong>:
             </p>
             <ol>
-              <li><strong>Smart AI</strong> — estimating macros for a food you describe in text.</li>
+              <li><strong>Smart AI</strong> — estimating macros for a food you describe in text when an Open Food Facts lookup returns no match.</li>
               <li><strong>Plate Scan</strong> — identifying foods from a photo of your meal.</li>
-              <li><strong>Coach AI</strong> (Pro feature) — generating weekly summaries and doctor-talking-point suggestions from your logged data.</li>
+              <li><strong>Nutrition label OCR</strong> — reading a printed nutrition label from a photo.</li>
             </ol>
             <p>
-              For each AI request, we send only the data needed for that specific request. No persistent user identifier is included. The outputs are AI-generated estimates that can be inaccurate, and are labelled in the app accordingly. They are not medical advice.
+              All other features in the app — the Coach insights, the Training Read, the Pattern Read, the weekly Blueprint summary, the doctor talking points, the Muscle Guard Score, pattern detection, and every other narrative the app shows you — are produced by deterministic rule engines and templates that read your own logged numbers. <strong>No generative AI is used outside food logging.</strong>
+            </p>
+            <p>
+              For each food-AI request, we send only the data needed for that specific request. No persistent user identifier is included. The outputs are AI-generated estimates that can be inaccurate, and are labelled in the app accordingly. They are not medical advice.
             </p>
             <p>
               Each AI request is processed by Google&rsquo;s API with the following safety guardrails enabled at the API boundary: harassment, hate speech, sexually explicit content, and dangerous content categories are all blocked. Outputs that trigger a safety block are not shown to you.
             </p>
             <p>
-              You can opt out of all AI features by simply not using them. The non-AI parts of the app (manual food entry, Open Food Facts barcode lookup, all tracking, all dashboards) work normally without any AI involvement.
+              You can opt out of all AI features by simply not using them. The non-AI parts of the app (manual food entry, Open Food Facts barcode lookup, all tracking, all dashboards, all Coach narratives) work normally without any AI involvement.
             </p>
 
             <h2>8. Health-data-specific commitments</h2>
@@ -247,7 +255,7 @@ export default function PrivacyPage() {
               <li>We do not promise specific health outcomes from using the app.</li>
             </ul>
             <p>
-              The pattern-detection features (Coach AI, red-flag symptom alerts) are designed to surface possible warning signs that may warrant a clinician check-in. They are <strong>observations from logged data, not diagnoses</strong>. If you are concerned about a symptom, contact your prescribing physician.
+              The pattern-detection features (Coach insights, red-flag symptom alerts) are designed to surface possible warning signs that may warrant a clinician check-in. They are <strong>observations from logged data, not diagnoses</strong>. If you are concerned about a symptom, contact your prescribing physician.
             </p>
 
             <h2>9. Children</h2>
