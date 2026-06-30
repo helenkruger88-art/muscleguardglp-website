@@ -14,7 +14,7 @@ const rows: Row[] = [
   { feature: 'Body composition tracking', mg: { verdict: 'yes', label: 'Yes' }, other: { verdict: 'partial', label: 'Limited or partial' } },
   { feature: 'Compounded sema / tirz support', mg: { verdict: 'star', label: 'First-class' }, other: { verdict: 'partial', label: 'Rare or limited' } },
   { feature: 'Clinical Summary PDF', mg: { verdict: 'yes', label: 'Yes' }, other: { verdict: 'no', label: 'No' } },
-  { feature: 'Free, cited research library', mg: { verdict: 'yes', label: 'Yes' }, other: { verdict: 'no', label: 'No' } },
+  { feature: 'Open-access research hub', mg: { verdict: 'yes', label: 'Yes' }, other: { verdict: 'partial', label: 'Limited or behind email gate' } },
   { feature: 'No third-party trackers', mg: { verdict: 'yes', label: 'Yes' }, other: { verdict: 'partial', label: 'Varies; many use trackers' } },
 ];
 

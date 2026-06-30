@@ -70,7 +70,7 @@ const homepageFaq = [
   },
   {
     q: 'How much does Muscle Guard cost?',
-    a: 'Free forever for the basics. Pro is R99 per month or R899 per year (approximately USD 5.99 / EUR 5.99 / GBP equivalents) with a 7-day free trial — no card needed to start.',
+    a: 'Free for the basics. Pro is R99 per month or R899 per year (approximately USD 5.99 / EUR 5.99 / GBP equivalents) with a 7-day free trial — no card needed to start.',
   },
 ];
 

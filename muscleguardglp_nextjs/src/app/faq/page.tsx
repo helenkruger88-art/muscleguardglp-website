@@ -25,7 +25,7 @@ const sections = [
       },
       {
         q: 'How is Muscle Guard different from other industry apps?',
-        a: 'Muscle Guard is the only one built around muscle preservation as the headline. We are the only one with a free, cited research library on lean mass loss, and the only one whose hero metric (the Muscle Guard Score) combines protein adherence, training frequency, and body composition into a single weekly read.',
+        a: 'Muscle Guard is the only one built around muscle preservation as the headline. We publish an open-access, cited research library on lean mass loss, and the only one whose hero metric (the Muscle Guard Score) combines protein adherence, training frequency, and body composition into a single weekly read.',
       },
       {
         q: 'Which GLP-1 medications does Muscle Guard support?',
@@ -42,7 +42,7 @@ const sections = [
     items: [
       {
         q: 'How much does Muscle Guard cost?',
-        a: 'Free forever for the basics. Pro is R99 per month or R899 per year (approximately USD 5.99, EUR 5.99, GBP 5.49 in equivalent regions), with a 7-day free trial. No card needed to start.',
+        a: 'Free for the basics. Pro is R99 per month or R899 per year (approximately USD 5.99, EUR 5.99, GBP 5.49 in equivalent regions), with a 7-day free trial. No card needed to start.',
       },
       {
         q: 'How do I cancel Pro?',
