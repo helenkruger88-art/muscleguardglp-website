@@ -159,5 +159,11 @@
       "destination": "/research/privacy-and-glp1-apps.html",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/googleb8cb12b70a35c50d.html",
+      "destination": "/googleb8cb12b70a35c50d"
+    }
   ]
 }
