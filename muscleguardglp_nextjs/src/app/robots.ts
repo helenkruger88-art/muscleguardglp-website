@@ -18,6 +18,7 @@ export default function robots(): MetadataRoute.Robots {
     'Applebot-Extended',
     'meta-externalagent',
     'cohere-ai',
+    'CCBot', // Common Crawl — corpus used to train many LLMs
   ];
 
   return {
