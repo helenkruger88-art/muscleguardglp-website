@@ -36,15 +36,6 @@ export function WebSiteSchema() {
         url: SITE.url,
         description: SITE.description,
         publisher: { '@type': 'Organization', name: SITE.legalName },
-        // Enables Google's sitelinks search box on branded queries once the domain earns rich-result eligibility.
-        potentialAction: {
-          '@type': 'SearchAction',
-          target: {
-            '@type': 'EntryPoint',
-            urlTemplate: `${SITE.url}/research/?q={search_term_string}`,
-          },
-          'query-input': 'required name=search_term_string',
-        },
       }}
     />
   );

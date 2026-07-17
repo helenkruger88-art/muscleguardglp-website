@@ -54,7 +54,19 @@ const sections = [
       },
       {
         q: 'Where is the AI plate scan data sent?',
-        a: 'Macro detection runs through Google Gemini. The image is not stored after processing. Packaged-food lookups use Open Food Facts. Both are disclosed transparently in-app.',
+        a: 'Macro detection runs through Google Gemini for both plate scans and nutrition-label reads. The image is not stored after processing. Packaged-food lookups use Open Food Facts. All three paths are disclosed transparently in-app.',
+      },
+      {
+        q: 'What is the Meal Planner and how does it work?',
+        a: 'Pro users get a 7-day plan built from a curated GLP-1 and muscle-preservation recipe library. Choose 3, 4, or 5 meals a day — the 5-meal layout adds two snacks, common for hitting protein when appetite is small. The planner respects your daily protein target within your carb and fat caps; if a day cannot reach protein, it suggests a shake. Swap any meal, regenerate any week, and export a deduped shopping list as a PDF.',
+      },
+      {
+        q: 'What does the Correlations engine actually tell me?',
+        a: 'From day 14 with an early-signal tier (or day 21 for clear patterns), the Correlations card surfaces habit pairs from your own log using Spearman rank correlations — hydration and energy, protein and loss rate, carb-heavy days and next-day symptoms, injection day and mood. When a pair does not correlate for you, we say so honestly instead of inventing a pattern.',
+      },
+      {
+        q: 'What are Cycle Signals?',
+        a: 'For weekly injectors, Cycle Signals identifies which day of your dose cycle is your best day and which is your hardest, plus a per-cycle diary of feeling and symptom averages. It answers the "when in the week do I feel worst" question every GLP-1 user asks.',
       },
       {
         q: 'Is Muscle Guard available in my country?',

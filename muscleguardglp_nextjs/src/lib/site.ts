@@ -17,7 +17,7 @@ export const SITE = {
   social: {},
   stores: {
     // Default (global) store URLs. Swap for real listings once the app ships.
-    appStore: 'https://apps.apple.com/app/id6775769796',
+    appStore: '#download',
     playStore: 'https://play.google.com/store/apps/details?id=com.muscleguard.app',
     // Per-region store URLs. Used by region pages (e.g. /regions/za) and pricing
     // toggle to send users to the right App Store / Play Store country listing.
@@ -25,10 +25,10 @@ export const SITE = {
     //   https://apps.apple.com/{country}/app/muscle-guard/id{appId}
     //   https://play.google.com/store/apps/details?id={packageId}&hl={lang}&gl={country}
     regions: {
-      za: { appStore: 'https://apps.apple.com/app/id6775769796', playStore: 'https://play.google.com/store/apps/details?id=com.muscleguard.app' },
-      us: { appStore: 'https://apps.apple.com/app/id6775769796', playStore: 'https://play.google.com/store/apps/details?id=com.muscleguard.app' },
-      eu: { appStore: 'https://apps.apple.com/app/id6775769796', playStore: 'https://play.google.com/store/apps/details?id=com.muscleguard.app' },
-      gb: { appStore: 'https://apps.apple.com/app/id6775769796', playStore: 'https://play.google.com/store/apps/details?id=com.muscleguard.app' },
+      za: { appStore: '#download', playStore: 'https://play.google.com/store/apps/details?id=com.muscleguard.app' },
+      us: { appStore: '#download', playStore: 'https://play.google.com/store/apps/details?id=com.muscleguard.app' },
+      eu: { appStore: '#download', playStore: 'https://play.google.com/store/apps/details?id=com.muscleguard.app' },
+      gb: { appStore: '#download', playStore: 'https://play.google.com/store/apps/details?id=com.muscleguard.app' },
     },
   },
   pricing: {

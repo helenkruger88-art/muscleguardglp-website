@@ -14,6 +14,10 @@ const rows: Row[] = [
   { feature: 'Body composition tracking', mg: { verdict: 'yes', label: 'Yes' }, other: { verdict: 'partial', label: 'Limited or partial' } },
   { feature: 'Compounded sema / tirz support', mg: { verdict: 'star', label: 'First-class' }, other: { verdict: 'partial', label: 'Rare or limited' } },
   { feature: 'Clinical Summary PDF', mg: { verdict: 'yes', label: 'Yes' }, other: { verdict: 'no', label: 'No' } },
+  // v1.2 (2026-07-14) — Meal Planner + Correlations + Cycle Signals shipped as Pro.
+  { feature: 'GLP-1 aware meal planner', mg: { verdict: 'star', label: 'Full weekly plan + shopping list' }, other: { verdict: 'no', label: 'No' } },
+  { feature: 'Personal habit correlations', mg: { verdict: 'yes', label: 'From your own log' }, other: { verdict: 'no', label: 'No' } },
+  { feature: 'Dose-cycle pattern analysis', mg: { verdict: 'yes', label: 'Yes' }, other: { verdict: 'no', label: 'No' } },
   { feature: 'Open-access research hub', mg: { verdict: 'yes', label: 'Yes' }, other: { verdict: 'partial', label: 'Limited or behind email gate' } },
   { feature: 'No third-party trackers', mg: { verdict: 'yes', label: 'Yes' }, other: { verdict: 'partial', label: 'Varies; many use trackers' } },
 ];

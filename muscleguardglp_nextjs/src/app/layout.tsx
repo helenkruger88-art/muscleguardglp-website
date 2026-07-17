@@ -34,9 +34,6 @@ export const metadata: Metadata = {
     icon: '/favicon.svg',
   },
   alternates: { canonical: SITE.url },
-  verification: {
-    google: 'RlDtlgw1xTxFnNg19PLwgQvmC-qUtqeo824oFYsTxok',
-  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
