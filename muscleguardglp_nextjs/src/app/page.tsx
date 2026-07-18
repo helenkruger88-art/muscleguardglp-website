@@ -385,7 +385,7 @@ export default function HomePage() {
             <div className="eyebrow mb-3" style={{ color: '#E0B056' }}>Every feature, one goal</div>
             <h2 className="mb-3 text-white">Built around the Score.</h2>
             <p className="text-[17px] text-white/85">
-              14 features. One number that tells you whether they&rsquo;re working.
+              17 features. One number that tells you whether they&rsquo;re working.
             </p>
           </div>
 
@@ -454,6 +454,12 @@ export default function HomePage() {
             <FeatureTile icon="⚕" iconColor="#5EE3C8" eyebrow="Symptom Log" sub="17 categories" />
             <FeatureTile icon="💊" iconColor="#5EE3C8" eyebrow="Drug Reference" sub="Per-brand titration" />
             <FeatureTile icon="⌚" iconColor="#5EE3C8" eyebrow="Apple Health" sub="+ Health Connect" />
+
+            {/* Row 5 — v1.2 Pro flagship additions (2026-07-14) */}
+            <FeatureTile icon="🍽" iconColor="#E0B056" eyebrow="Meal Planner" label="7-day plan" sub="Shopping list · Pro" accent="gold" />
+            <FeatureTile icon="🔗" iconColor="#E0B056" eyebrow="Correlations" sub="From your log · Pro" accent="gold" />
+            <FeatureTile icon="📊" iconColor="#E0B056" eyebrow="Cycle Signals" sub="Dose-cycle · Pro" accent="gold" />
+            <FeatureTile icon="🛡" iconColor="#5EE3C8" eyebrow="Safety flags" sub="Rapid-loss watch" />
           </div>
 
           {/* Achievements strip */}
