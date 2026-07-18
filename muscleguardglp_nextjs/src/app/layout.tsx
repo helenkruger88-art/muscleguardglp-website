@@ -31,9 +31,17 @@ export const metadata: Metadata = {
     images: [`${SITE.url}/og.png`],
   },
   icons: {
-    icon: '/favicon.svg',
+    icon: [
+      { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/icon-96.png', sizes: '96x96', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
   },
   alternates: { canonical: SITE.url },
+  verification: {
+    google: 'RlDtlgw1xTxFnNg19PLwgQvmC-qUtqeo824oFYsTxok',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
