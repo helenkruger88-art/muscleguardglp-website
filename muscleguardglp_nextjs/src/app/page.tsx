@@ -524,6 +524,89 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* v1.2 Meal Planner showcase — flagship Pro feature */}
+      <section
+        className="py-20 text-white md:py-24"
+        style={{ background: 'linear-gradient(180deg, #061612 0%, #0A1F1A 100%)' }}
+      >
+        <div className="wrap">
+          <div className="mx-auto grid max-w-5xl items-center gap-12 md:grid-cols-[1.1fr_1fr]">
+            <div>
+              <div className="eyebrow mb-3" style={{ color: '#E0B056' }}>Meal Planner · Pro</div>
+              <h2 className="mb-4 text-white">
+                <span className="block">Feed the plan.</span>
+                <span
+                  className="block italic"
+                  style={{ color: '#E0B056', fontFamily: 'Georgia, "Times New Roman", serif' }}
+                >
+                  Not the guesswork.
+                </span>
+              </h2>
+              <p className="mb-8 text-[16px] leading-relaxed text-white/75">
+                Muscle Guard builds a 7-day plan from a curated GLP-1 recipe library. Every day hits your protein target within your carb and fat caps &mdash; if a day can&rsquo;t reach protein, it nudges you to add a shake.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span aria-hidden="true" className="mt-0.5 grid h-6 w-6 flex-shrink-0 place-items-center rounded-md text-[12px]" style={{ background: 'rgba(224,176,86,0.2)', color: '#E0B056' }}>&#9670;</span>
+                  <span className="text-[15px] leading-snug">
+                    <span className="font-medium text-white">3, 4, or 5 meals a day</span>
+                    <span className="text-white/60"> &mdash; the 5-meal layout adds two snacks, common when appetite is small on a GLP-1.</span>
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span aria-hidden="true" className="mt-0.5 grid h-6 w-6 flex-shrink-0 place-items-center rounded-md text-[12px]" style={{ background: 'rgba(224,176,86,0.2)', color: '#E0B056' }}>&#9670;</span>
+                  <span className="text-[15px] leading-snug">
+                    <span className="font-medium text-white">Swap any meal, regenerate any week</span>
+                    <span className="text-white/60"> &mdash; the planner rebalances your macros as you go.</span>
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span aria-hidden="true" className="mt-0.5 grid h-6 w-6 flex-shrink-0 place-items-center rounded-md text-[12px]" style={{ background: 'rgba(224,176,86,0.2)', color: '#E0B056' }}>&#9670;</span>
+                  <span className="text-[15px] leading-snug">
+                    <span className="font-medium text-white">Deduped shopping list, one-tap PDF</span>
+                    <span className="text-white/60"> &mdash; grouped by aisle so a Sunday shop takes twenty minutes.</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex justify-center">
+              <div className="rounded-[36px] p-2" style={{ background: '#1A2520', boxShadow: '0 30px 60px -20px rgba(0,0,0,0.5)', maxWidth: 280 }}>
+                <div className="rounded-[28px] bg-white p-4">
+                  <div className="mb-3 flex items-center justify-between">
+                    <div className="text-[10px] font-semibold uppercase tracking-[1.4px] text-muted">Meal Planner</div>
+                    <div className="rounded px-2 py-0.5 text-[9px] font-semibold" style={{ background: 'rgba(224,176,86,0.15)', color: '#C97E1A' }}>PRO</div>
+                  </div>
+                  <div className="text-[15px] font-semibold text-ink">Wednesday</div>
+                  <div className="mb-4 text-[11px] text-muted">152 g protein &middot; 1,840 kcal</div>
+                  <div className="mb-2 rounded-lg bg-brand-green-bg p-3">
+                    <div className="mb-0.5 text-[9px] font-semibold uppercase tracking-[1px] text-muted">Breakfast</div>
+                    <div className="text-[13px] font-medium text-ink">Overnight oats + whey</div>
+                    <div className="text-[10px]" style={{ color: '#0F7B6C' }}>40 g &middot; 380 kcal</div>
+                  </div>
+                  <div className="mb-2 rounded-lg bg-brand-green-bg p-3">
+                    <div className="mb-0.5 text-[9px] font-semibold uppercase tracking-[1px] text-muted">Lunch</div>
+                    <div className="text-[13px] font-medium text-ink">Chicken quinoa bowl</div>
+                    <div className="text-[10px]" style={{ color: '#0F7B6C' }}>42 g &middot; 520 kcal</div>
+                  </div>
+                  <div className="mb-2 rounded-lg bg-brand-green-bg p-3">
+                    <div className="mb-0.5 text-[9px] font-semibold uppercase tracking-[1px] text-muted">Snack</div>
+                    <div className="text-[13px] font-medium text-ink">Cottage cheese + berries</div>
+                    <div className="text-[10px]" style={{ color: '#0F7B6C' }}>28 g &middot; 220 kcal</div>
+                  </div>
+                  <div className="mb-3 rounded-lg bg-brand-green-bg p-3">
+                    <div className="mb-0.5 text-[9px] font-semibold uppercase tracking-[1px] text-muted">Dinner</div>
+                    <div className="text-[13px] font-medium text-ink">Mackerel + greens</div>
+                    <div className="text-[10px]" style={{ color: '#0F7B6C' }}>42 g &middot; 720 kcal</div>
+                  </div>
+                  <div className="rounded-lg py-2 text-center text-[11px] font-semibold text-white" style={{ background: '#0F7B6C' }}>Export shopping list</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="comparison" className="bg-white py-20">
         <div className="wrap">
           <div className="mx-auto mb-12 max-w-3xl text-center">
