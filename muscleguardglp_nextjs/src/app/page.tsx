@@ -623,7 +623,7 @@ export default function HomePage() {
         <div className="wrap">
           <div className="mx-auto max-w-3xl text-center">
             <div className="eyebrow eyebrow-green mb-3">Verdict</div>
-            <h3 className="mb-3 text-[26px]">6 / 6 on the differentiators that matter.</h3>
+            <h3 className="mb-3 text-[26px]">9 / 9 on the differentiators that matter.</h3>
             <p className="mb-7 text-[16px] text-muted">{SITE.hero.priceLine}</p>
             <div className="flex justify-center"><StoreButtons /></div>
           </div>
