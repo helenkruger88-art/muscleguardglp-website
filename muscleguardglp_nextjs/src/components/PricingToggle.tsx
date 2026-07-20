@@ -42,10 +42,13 @@ export function PricingToggle() {
   const currencies: Currency[] = ['ZAR', 'USD', 'EUR', 'GBP'];
 
   const proFeatures = [
-    'Pattern Read — weekly AI verdict on what is trending up and down',
+    'Plateau Protocol — 14-day three-pillar stall-breaker (protein floor 150g, hydration uplift, 5-of-7 strength days)',
+    'Meal Planner — 7-day plan built from a curated GLP-1 recipe library, macro-aware swap + regenerate, deduped shopping list PDF',
+    'Correlations engine — Spearman rank correlations across your own log (hydration-energy, protein-loss-rate, injection-day-mood) from day 14',
+    'Cycle Signals — best and worst day of your dose cycle plus a per-cycle diary of feeling and symptom averages',
+    'Pattern Read — weekly AI verdict on what is trending up and down, with grade transparency and safety-aware overrides',
     'Deep Coach insights (Gemini-personalised, refreshed daily)',
-    'Snap-to-Log — AI plate scan for foods and macros',
-    'Pattern Detection in Trends (protein-on-training-days, plateau predictors, food noise quieting)',
+    'Snap-to-Log + Label Scan — AI plate scan and nutrition-label OCR for foods and macros',
     'Full Clinical Summary PDF features',
     'Customizable goals',
     'Unlimited progress photos + side-by-side compares',
@@ -53,7 +56,6 @@ export function PricingToggle() {
 
   const freeFeatures = [
     'Core tracking — food, water, weight, workouts, symptoms, body measurements, photos',
-    'Plateau Protocol — 14-day three-pillar reset',
     'Nausea Protocol — Safe Bites + hydration + sleep guidance',
     'Symptom Log — 17 categories, severity 0–3, red-flag detection',
     'Muscle Guard Score + Visceral Fat Rating',
